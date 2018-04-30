@@ -1,2 +1,0 @@
-module DramasHelper
-end

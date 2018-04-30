@@ -1,2 +1,0 @@
-class Drama < ApplicationRecord
-end
