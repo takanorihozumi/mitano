@@ -6,7 +6,7 @@
      <h2>アカウント作成</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render 'partial/deviceErrorMsg' %>
+    <%= render 'partial/deviseErrorMsg' %>
     <hr>
     <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class:"btn btn-facebook" %>
     <hr>
