@@ -1,0 +1,15 @@
+<!-- classを差し替え -->
+<script type="text/javascript">
+  $(function(){
+    $(".navbar").removeClass("navbar-device");
+    $(".navbar").addClass("navbar-default")
+  })
+</script>
+<div class="jumbotron">
+  <%= render 'partial/navbar' %>
+  <div>
+    <h1 class="display-3" color="white">感想を共有しよう</h1>
+    <p class="sub-title">ドラマを観て感じた感動も、興奮も</p>
+    <p class="sub-title">mitanoで同じエピソードを隣で観ているかのように語り合おう</p> 
+  </div>
+</div>

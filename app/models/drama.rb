@@ -1,0 +1,2 @@
+class Drama < ApplicationRecord
+end
