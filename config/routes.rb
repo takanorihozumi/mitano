@@ -7,5 +7,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
+  resources :dramas
+
+
   get 'manage-impression/:id/basics' => 'impressions#basics', as: 'manage_impression_basics'
 end
