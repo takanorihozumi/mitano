@@ -13,11 +13,12 @@
         <% @dramas.each do |drama|%>
             <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
               <span style="vertical-align:middle;">
-                <%= image_tag("#{drama.asin}")  %>
+                <%= link_to image_tag("#{drama.asin}"), drama_path(drama)  %>
                 </span>
                 <p class="text-info hidden-xs .bg-info"><%= drama.over_view =%></p>
             </div>
         <% end %>
       </div>
     </div>
+    <%= fa_icon 'star' %>
   </section>

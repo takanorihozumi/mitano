@@ -1,0 +1,107 @@
+ <%= render "partial/navbar" %>
+
+ <div class="container">
+  <div class="row">
+    <div class="col-md-12 drama-title">
+      <ul class="nav nav-tabs">
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン１</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン２</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">メニュー1</a>
+      ...
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン３</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">メニュー1</a>
+      ...
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン４</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">メニュー1</a>
+      ...
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン５</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">メニュー1</a>
+      ...
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン６</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">メニュー1</a>
+      ...
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン７</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">メニュー1</a>
+    </div>
+  </li>
+</ul>
+    <h1 class="drama-title2">
+      <%= @drama.title %> 
+    </h1>
+    </div>
+
+  </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
+          <span style="vertical-align:middle;">
+            <%= image_tag("#{@drama.asin}",:align => 'center') %>
+          </span>
+          <p class="text-info hidden-xs .bg-info"><%= @drama.over_view =%></p>
+        </div>
+        <div class="row">
+        <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+
+        </div>
+      </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">話数</th>
+      <th scope="col">タイトル</th>
+      <th scope="col">感想シェア数</th>
+      <th scope="col">この感想をシェアする</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><%= link_to "冬の訪れ","#" %></td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>キングズロード</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>スノウ卿</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
