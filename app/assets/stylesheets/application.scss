@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+@import "font-awesome";
 
 .jumbotron {
     padding-top: 0px;
@@ -39,7 +40,7 @@
 }
 
 .container {
-    color: white;
+    color: black;
     height: 450px;
 }
 
@@ -149,5 +150,19 @@ body {
 
 .image-adjust{
   width: 300px;
-height: 200px;
+  height: 200px;
+}
+
+.drama-title{
+  color:black;
+  position: relative;
+  padding: 0.25em 0;
+}
+.drama-title:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -moz-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+  background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+  background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
 }

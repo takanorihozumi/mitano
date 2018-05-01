@@ -14,6 +14,7 @@ gem 'omniauth-facebook'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'toastr-rails'
+gem 'font-awesome-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
