@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#amazon
+gem 'amazon-ecs'
 # Devise
 gem 'devise'
 gem 'omniauth-twitter'
