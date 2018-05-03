@@ -97,7 +97,7 @@ border-color: #3e6962;
 
 body {
     color: #222;
-    background-color: #F8F8F8;
+    background-color: white;
 }
 
 //facebookボタン
@@ -165,4 +165,8 @@ body {
   background: -moz-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
   background: -webkit-linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
   background: linear-gradient(to right, rgb(255, 186, 115), #ffb2b2);
+}
+
+.table{
+  background-color: white;
 }
