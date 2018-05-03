@@ -31,24 +31,15 @@
       </tr>
     </thead>
     <tbody>
+      <% @count=0 %>
+      <% @episodes.each do |episode| %>
       <tr>
-        <th scope="row">1</th>
-        <td><%= link_to "冬の訪れ","#" %></td>
+        <th scope="row"><%= @count += 1 %></th>
+        <td><%= link_to "#{episode.episode_name}","#" %></td>
         <td>Otto</td>
-        <td>@mdo</td>
+        <td>share</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>キングズロード</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>スノウ卿</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
+      <% end %>
     </tbody>
   </table>
 
