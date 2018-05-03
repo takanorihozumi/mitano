@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  over_view: MyText
+  episode_count: 1
+  drama: one
+
+two:
+  title: MyString
+  over_view: MyText
+  episode_count: 1
+  drama: two
