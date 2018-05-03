@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # resources :seasons
 
     resources :dramas do
-    resources :seasons
+    resources :seasons, shallow: true
   end
 
   get 'manage-impression/:id/basics' => 'impressions#basics', as: 'manage_impression_basics'

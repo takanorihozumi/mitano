@@ -7,7 +7,7 @@
       </li>
       <% drama.season_count.times do |i| %>
       <li class="nav-item dropdown">
-        <%= link_to "シーズン #{i+1}",drama_season_path(i+1)%>
+        <%= link_to "シーズン #{i+1}",season_path(i+1)%>
       </li>
       <% end %>
     </ul>
