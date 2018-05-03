@@ -1,0 +1,24 @@
+ <%= render "partial/navbar" %>
+
+ <div class="container">
+  <% drama= @episode.season.drama%>
+  <%= render "partial/seasonTab", drama: drama %>
+
+   <div class="row">
+    <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
+      <span style="vertical-align:middle;">
+        <%= image_tag("#{drama.image_url}",:align => 'center') %>
+      </span>
+      <p class="text-info hidden-xs .bg-info"><%= @episode.season.over_view =%></p>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
+        <h2>Pick UP！</h2>
+
+
+      </div>
+    </div>
+  </div>
+
+
+

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do  
+  get 'episodes/show'
+
   get 'seasons/show'
 
   resources :impressions,:episodes
