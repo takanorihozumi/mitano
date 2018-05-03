@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12 drama-title">
+    <ul class="nav nav-tabs">
+      <li class="nav-item dropdown">
+        <%= link_to "全て",drama_path(drama) %>
+
+      </li>
+      <% drama.season_count.times do |i| %>
+      <li class="nav-item dropdown">
+        <%= link_to "シーズン #{i+1}",season_path(i+1)%>
+      </li>
+      <% end %>
+    </ul>
+    <h1 class="drama-title2">
+      <%= drama.title %> 
+    </h1>
+  </div>
+</div>

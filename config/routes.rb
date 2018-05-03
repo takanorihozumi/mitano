@@ -1,4 +1,6 @@
 Rails.application.routes.draw do  
+  get 'seasons/show'
+
   resources :impressions
 
   root :to => 'pages#index'
@@ -7,8 +9,13 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  resources :dramas
+  # resources :dramas
 
+  # resources :seasons
+
+    resources :dramas do
+    resources :seasons, shallow: true
+  end
 
   get 'manage-impression/:id/basics' => 'impressions#basics', as: 'manage_impression_basics'
 end
