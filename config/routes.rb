@@ -1,17 +1,13 @@
 Rails.application.routes.draw do  
   get 'seasons/show'
 
-  resources :impressions
+  resources :impressions,:episodes
 
   root :to => 'pages#index'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",:registrations => 'registrations' }
 
   resources :users, only: [:show]
-
-  # resources :dramas
-
-  # resources :seasons
 
     resources :dramas do
     resources :seasons, shallow: true

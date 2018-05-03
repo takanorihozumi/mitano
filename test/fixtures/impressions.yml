@@ -1,19 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  season: 1
-  episode: 1
+  impression_type: 1
+  impressoin: MyText
   evaluation: 1
-  netabare: false
-  content: MyText
+  is_secret: false
   user: one
+  drama: one
+  season: one
+  episode: one
 
 two:
-  title: MyString
-  season: 1
-  episode: 1
+  impression_type: 1
+  impressoin: MyText
   evaluation: 1
-  netabare: false
-  content: MyText
+  is_secret: false
   user: two
+  drama: two
+  season: two
+  episode: two
