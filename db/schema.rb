@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180503020000) do
+ActiveRecord::Schema.define(version: 20180503081540) do
 
   create_table "dramas", force: :cascade do |t|
     t.string "title"
@@ -22,15 +22,19 @@ ActiveRecord::Schema.define(version: 20180503020000) do
   end
 
   create_table "impressions", force: :cascade do |t|
-    t.string "title"
-    t.integer "season"
-    t.integer "episode"
+    t.integer "impression_type"
+    t.text "impressoin"
     t.integer "evaluation"
-    t.boolean "netabare"
-    t.text "content"
+    t.boolean "is_secret"
     t.integer "user_id"
+    t.integer "drama_id"
+    t.integer "season_id"
+    t.integer "episode_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["drama_id"], name: "index_impressions_on_drama_id"
+    t.index ["episode_id"], name: "index_impressions_on_episode_id"
+    t.index ["season_id"], name: "index_impressions_on_season_id"
     t.index ["user_id"], name: "index_impressions_on_user_id"
   end
 

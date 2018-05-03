@@ -9,10 +9,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
 
-  # resources :dramas
-
-  # resources :seasons
-
     resources :dramas do
     resources :seasons, shallow: true
   end
