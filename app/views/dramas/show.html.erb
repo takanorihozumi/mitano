@@ -4,51 +4,12 @@
   <div class="row">
     <div class="col-md-12 drama-title">
       <ul class="nav nav-tabs">
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン１</a>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン２</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">メニュー1</a>
-      ...
-    </div>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン３</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">メニュー1</a>
-      ...
-    </div>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン４</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">メニュー1</a>
-      ...
-    </div>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン５</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">メニュー1</a>
-      ...
-    </div>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン６</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">メニュー1</a>
-      ...
-    </div>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン７</a>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">メニュー1</a>
-    </div>
-  </li>
-</ul>
+        <% @drama.season_count.times do |i| %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">シーズン<%= "#{i+1}" %></a>
+        </li>
+        <% end %>
+      </ul>
     <h1 class="drama-title2">
       <%= @drama.title %> 
     </h1>
@@ -58,7 +19,7 @@
       <div class="row">
         <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
           <span style="vertical-align:middle;">
-            <%= image_tag("#{@drama.asin}",:align => 'center') %>
+            <%= image_tag("#{@drama.image_url}",:align => 'center') %>
           </span>
           <p class="text-info hidden-xs .bg-info"><%= @drama.over_view =%></p>
         </div>

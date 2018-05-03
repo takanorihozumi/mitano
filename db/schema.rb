@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180430070944) do
+ActiveRecord::Schema.define(version: 20180503011720) do
 
   create_table "dramas", force: :cascade do |t|
     t.string "title"
     t.text "over_view"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "asin"
+    t.string "image_url"
+    t.integer "season_count", default: 1, null: false
   end
 
   create_table "impressions", force: :cascade do |t|
