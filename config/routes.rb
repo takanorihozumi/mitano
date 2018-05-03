@@ -1,7 +1,7 @@
 Rails.application.routes.draw do  
   get 'seasons/show'
 
-  resources :impressions
+  resources :impressions,:episodes
 
   root :to => 'pages#index'
 
