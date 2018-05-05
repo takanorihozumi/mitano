@@ -16,7 +16,7 @@
             <div class="col-md-12 select">
               <div class="form-group">
                 <label>タイトル</label>
-                <%= f.select :title, [["ゲームオブスローンズ ","ゲームオブスローンズ"], ["ウォーキング・デッド","ウォーキング・デッド"], ["アパート","アパート"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+                <%= select_tag 'title', options_for_select([@drama.title]), class: 'form-control' %>
               </div>
             </div>
           </div>
