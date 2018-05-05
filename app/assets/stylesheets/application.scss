@@ -39,10 +39,6 @@
     background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(mitano.jpg);
 }
 
-.container {
-    color: black;
-    height: 450px;
-}
 
 .navbar {
   background-color: black;
@@ -169,4 +165,20 @@ body {
 
 .table{
   background-color: white;
+}
+
+section h2.section-heading {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+
+}
+section h3.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
 }
