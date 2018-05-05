@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180504011033) do
+ActiveRecord::Schema.define(version: 20180505055621) do
 
   create_table "dramas", force: :cascade do |t|
     t.string "title"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 20180504011033) do
     t.integer "drama_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "season_no", default: 0, null: false
     t.index ["drama_id"], name: "index_seasons_on_drama_id"
   end
 
