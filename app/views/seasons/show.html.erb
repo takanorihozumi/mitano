@@ -1,46 +1,51 @@
  <%= render "partial/navbar" %>
+ <section id="season-show" class="bg-light-gray row-space-top-4 row-space-4">
+   <div class="container">
+    <%= render "partial/seasonTab", drama: @drama %>
 
- <div class="container">
-  <%= render "partial/seasonTab", drama: @drama %>
-
-   <div class="row">
-    <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
-      <span style="vertical-align:middle;">
-        <%= image_tag("#{@drama.image_url}",:align => 'center') %>
-        <%= image_tag "share_season" %>
-      </span>
-      <p class="text-info hidden-xs .bg-info"><%= @drama.over_view =%></p>
-    </div>
     <div class="row">
-      <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+      <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
+        <span style="vertical-align:middle;">
+          <%= image_tag("#{@drama.image_url}",:align => 'center') %>
+          <%= link_to image_tag("share_season"),
+           new_impression_path(impression_type: '1', season_id: 'some') %>
+
+        </span>
+        <p class="text-info hidden-xs .bg-info"><%= @drama.over_view =%></p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+          <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+        </div>
       </div>
     </div>
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">話数</th>
-        <th scope="col">タイトル</th>
-        <th scope="col">感想シェア数</th>
-        <th scope="col">この話の感想をシェアする</th>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">話数</th>
+          <th scope="col">タイトル</th>
+          <th scope="col">感想シェア数</th>
+          <th scope="col">この話の感想をシェアする</th>
 
-      </tr>
-    </thead>
-    <tbody>
-      <% @count=0 %>
-      <% @episodes.each do |episode| %>
-      <tr>
-        <th scope="row"><%= @count += 1 %></th>
-        <td><%= link_to "#{episode.episode_name}",episode_path(episode) %></td>
-        <td>0</td>
-        <td><%= image_tag "share" %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+        </tr>
+      </thead>
+      <tbody>
+        <% @count=0 %>
+        <% @episodes.each do |episode| %>
+        <tr>
+          <th scope="row"><%= @count += 1 %></th>
+          <td><%= link_to "#{episode.episode_name}",episode_path(episode) %></td>
+          <td>0</td>
+          <td><%= link_to image_tag("share"),
+           new_impression_path(impression_type: '2', episode_id: episode.id) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+  <%= render 'partial/footer' %>
 
 
