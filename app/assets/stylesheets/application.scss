@@ -248,3 +248,127 @@ footer ul.quicklinks {
     text-transform: uppercase;
     text-transform: none;
 }
+
+.balloon5 {
+    width: 100%;
+    margin: 1.5em 0;
+    overflow: hidden;
+}
+
+.balloon5 .faceicon {
+    float: left;
+    margin-right: -90px;
+    width: 80px;
+}
+
+.balloon5 .faceicon img{
+    width: 100%;
+    height: auto;
+    border: solid 3px #d7ebfe;
+    border-radius: 50%;
+}
+
+.balloon5 .chatting {
+    width: 100%;
+}
+
+.says {
+    display: inline-block;
+    position: relative; 
+    margin: 5px 0 0 105px;
+    padding: 17px 13px;
+    border-radius: 12px;
+    background: #d7ebfe;
+}
+
+.says:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 18px; 
+    left: -24px;
+    border: 12px solid transparent;
+    border-right: 12px solid #d7ebfe;
+}
+
+.says p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.episode-title{
+  position: relative;
+  padding: .75em 1em .75em 1.5em;
+  border: 1px solid #ccc;
+}
+.episode-title::after {
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  content: '';
+  width: 6px;
+  height: -webkit-calc(100% - 1em);
+  height: calc(100% - 1em);
+  background-color: #3498db;
+  border-radius: 4px;
+}
+
+.box1 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px #000000;
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.episode-overview{
+
+    margin-top: 0;
+
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.episode-overview p {
+
+}
+
+.episode-summary {
+  padding: .5em .75em;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #ccc;
+  word-wrap:break-word;
+}
+
+.impression-overview{
+    position: relative;
+    border: solid 2px #ffcb8a;
+    border-radius: 3px 0 3px 0;
+}
+.impression-overview:before,.impression-overview:after
+{
+    content: '';
+    position: absolute;
+    width:10px;
+    height: 10px;
+    border: solid 2px #ffcb8a;
+    border-radius: 50%;
+}
+.impression-overview:after {
+    top:-12px;
+    left:-12px;
+}
+.impression-overview:before {
+    bottom:-12px;
+    right:-12px;
+}
+
+
+
+
+ 
