@@ -1,24 +1,68 @@
- <%= render "partial/navbar" %>
 
+<%= render "partial/navbar" %>
+<section id="episode-show" class="bg-light-gray row-space-top-4 row-space-4">
  <div class="container">
   <% drama= @episode.season.drama%>
   <%= render "partial/seasonTab", drama: drama %>
-
-   <div class="row">
-    <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
+  <div class="episode-overview col-md-12">
+    <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block">
       <span style="vertical-align:middle;">
         <%= image_tag("#{drama.image_url}",:align => 'center') %>
+        <%= image_tag "share_drama" %>
       </span>
       <p class="text-info hidden-xs .bg-info"><%= @episode.season.over_view =%></p>
     </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
-        <h2>Pick UP！</h2>
-
+    <div class="col-md-8 col-sm-4 portfolio-item">
+      <h3 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h3>
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="episode-summary"><%= "シリーズ第1話。ナイツウォッチからの脱走者の報告に、戸惑うネッド スターク公。ロバート王とラニスター家の者たちが、ウィンターフェルに到着。亡命していたヴィセーリス･ターガリエンは、新たに強力な忠誠を誓う。" %></h3>
+        </div>
 
       </div>
     </div>
-  </div>
-<%= render 'partial/footer' %>
+  </div>  
+</div>
+</section>
+<section id="portfolio" class="bg-light-gray row-space-top-4 row-space-4">
+  <div class="container">
+    <div class="row row-space-2">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">みんなの感想</h3>
+          <h3 class="section-subheading"><%= drama.title %></h4>
+            <div class="row ">
+              <% @impressions.each do |impression|%>
+              <div class="col-md-8 col-sm-6 col-md-offset-2 portfolio-item row-space-2 impression-overview">
+                <div class="portfolio-caption">
+                  <span style="font-weight: bold;"></span>
+                  <!--吹き出しはじまり-->
+                  <div class="balloon5">
+                    <div class="faceicon">
+                     ★ここに画像を入れる <img~>★
+                     <p><%= impression.user.name %>さん</p>
 
+                   </div>
 
+                   <div class="chatting">
+                    <div class="says">
+                      <p><%= simple_format(impression.impression, :calss => "hoz") %></p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--吹き出し終わり-->
+              </div>
+            </div>
+            <div class="col-md-2">
+              <a href="https://px.a8.net/svt/ejp?a8mat=2ZADUI+6YNJ8A+3TXU+67RK1" target="_blank" rel="nofollow">
+                <img border="0" width="120" height="600" alt="" src="https://www29.a8.net/svt/bgt?aid=180203418421&wid=002&eno=01&mid=s00000017877001044000&mc=1"></a>
+                <img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=2ZADUI+6YNJ8A+3TXU+67RK1" alt="">
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%= render 'partial/footer' %>

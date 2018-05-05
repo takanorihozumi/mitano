@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180505060131) do
+ActiveRecord::Schema.define(version: 20180505064825) do
 
   create_table "dramas", force: :cascade do |t|
     t.string "title"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20180505060131) do
 
   create_table "impressions", force: :cascade do |t|
     t.integer "impression_type"
-    t.text "impressoin"
+    t.text "impression"
     t.integer "evaluation"
     t.boolean "is_secret"
     t.integer "user_id"
