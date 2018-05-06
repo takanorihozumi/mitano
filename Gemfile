@@ -27,7 +27,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -37,7 +37,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 #bootstrap
 gem 'bootstrap-sass', '~> 3.3.7'
-
+gem 'figaro', '~> 1.1.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -64,7 +64,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.20.0'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
