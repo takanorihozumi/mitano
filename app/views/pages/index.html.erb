@@ -50,8 +50,6 @@
           <h2 class="section-heading">おすすめのレビュー</h3>
             <h3 class="section-subheading">今話題のドラマの感想です</h4>
               <div class="row">
-                <% @users.each do |user|%>
-                <% if !user.impressions.blank?%>
                 <div class="col-md-4 col-sm-6 portfolio-item row-space-2">
                   <div class="portfolio-caption">
                     <!--吹き出しはじまり-->
@@ -103,8 +101,6 @@
                 </div>
                 
               </div>
-              <% end %>
-              <% end %>
             </div>
           </div>
         </div>
