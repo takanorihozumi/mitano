@@ -54,30 +54,63 @@
                 <% if !user.impressions.blank?%>
                 <div class="col-md-4 col-sm-6 portfolio-item row-space-2">
                   <div class="portfolio-caption">
-                    <span style="font-weight: bold;"><%= user.name %>さん</span>
-<!--吹き出しはじまり-->
-<div class="balloon5">
-  <div class="faceicon">
-   ★ここに画像を入れる <img~>★
-  </div>
-  <div class="chatting">
-    <div class="says">
-      <p>★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★
-      ★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★★文章を入れる★</p>
-    </div>
-  </div>
-</div>
-<!--吹き出し終わり-->
+                    <!--吹き出しはじまり-->
+                    <div class="balloon5">
+                      <div class="faceicon">
+                       <%= image_tag 'https://images-fe.ssl-images-amazon.com/images/I/51yB9jHqkFL._SL300_.jpg' %>                     </div>
+                     <div class="chatting">
+                      <div class="says">
+                        <p>ゲームオブスローンズが最近会社の同僚の中で話題だったので、このGWを利用して一気に見ました。
+                        見始めのシーズン１では、とにかく登場人物が多く、wikiの人物相関図を見ながらなんとか見続けました。。</p>
+                      </div>
+                    </div>
                   </div>
+                  <!--吹き出し終わり-->
                 </div>
-                <% end %>
-                <% end %>
+
               </div>
+                <div class="col-md-4 col-sm-6 portfolio-item row-space-2">
+                  <div class="portfolio-caption">
+                    <!--吹き出しはじまり-->
+                    <div class="balloon5">
+                      <div class="faceicon">
+                       <%= image_tag 'https://images-fe.ssl-images-amazon.com/images/I/51x0TJQ4lyL._SL300_.jpg' %>  
+                     </div>
+                     <div class="chatting">
+                      <div class="says">
+                        <p>２４時間の中でリアルタイムに進行するこのドラマは最高です！
+                      </div>
+                    </div>
+                  </div>
+                  <!--吹き出し終わり-->
+                </div>
+                
+              </div>
+                <div class="col-md-4 col-sm-6 portfolio-item row-space-2">
+                  <div class="portfolio-caption">
+                    <!--吹き出しはじまり-->
+                    <div class="balloon5">
+                      <div class="faceicon">
+                       <%= image_tag 'https://images-fe.ssl-images-amazon.com/images/I/516zb9SR%2B-L._SL300_.jpg' %>
+                     </div>
+                     <div class="chatting">
+                      <div class="says">
+                        <p>アメリカの富裕層の学生は毎日パーティーをしていてハッピーな日々を送っている、そんな様子がこのドラマから見て取れました</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!--吹き出し終わり-->
+                </div>
+                
+              </div>
+              <% end %>
+              <% end %>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </div>
-    <%= render 'partial/footer' %>
+  </div>
+  <%= render 'partial/footer' %>
 
