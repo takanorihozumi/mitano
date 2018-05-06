@@ -14,7 +14,7 @@ Season.create(title: "第5章", over_view: "", drama_id: 6, season_no: 5)
 Season.create(title: "第6章", over_view: "", drama_id: 6, season_no: 6)
 Season.create(title: "第7章", over_view: "", drama_id: 6, season_no: 7)
 
-Episode.create(episode_name: "冬来たる", over_view: "", season_id: 1), episode_no: 1
+Episode.create(episode_name: "冬来たる", over_view: "", season_id: 1, episode_no: 1)
 Episode.create(episode_name: "王の道", over_view: "", season_id: 1, episode_no: 2)
 Episode.create(episode_name: "冥夜の守人", over_view: "", season_id: 1, episode_no: 3)
 Episode.create(episode_name: "壊れたものたち", over_view: "", season_id: 1, episode_no: 4)
