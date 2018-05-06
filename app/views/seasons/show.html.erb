@@ -40,7 +40,7 @@
       <tr>
         <th scope="row"><%= @count += 1 %></th>
         <td><%= link_to "#{episode.episode_name}",episode_path(episode) %></td>
-        <td>0</td>
+        <td><%= 0 %></td>
         <td><%= link_to image_tag("share"),
         new_impression_path(impression_type: '2', episode_id: episode.id) %></td>
       </tr>

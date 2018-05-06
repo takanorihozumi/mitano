@@ -1,28 +1,26 @@
  <%= render "partial/navbar" %>
- <section id="drama-show" class="bg-light-gray row-space-top-4 row-space-4">
+    <section id="drama-show" class="bg-light-gray row-space-top-4 row-space-4">
+     <div class="container">
+      <% drama= @drama%>
+      <%= render "partial/seasonTab", drama: drama %>
+      <div class="episode-overview col-md-12">
+        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block">
+          <span style="vertical-align:middle;">
+            <%= image_tag("#{drama.image_url}",:align => 'center') %>
+            <%= image_tag "share_drama" %>
+          </span>
+        </div>
+        <div class="col-md-8 col-sm-4 portfolio-item">
+          <h3 class="episode-title"><%= @drama.title %></h3>
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="episode-summary"><%= @drama.over_view %></h3>
+            </div>
 
- <div class="container">
-  <%= render "partial/seasonTab", drama: @drama %>
-
-   <div class="row">
-    <div class="col-md-4 col-sm-4 portfolio-item row-space-2 center-block">
-      <span style="vertical-align:middle;">
-        <%= image_tag("#{@drama.image_url}",:align => 'center') %>
-        <%= image_tag "share_drama" %>
-
-      </span>
-      <p class="text-info hidden-xs .bg-info"><%= @drama.over_view =%></p>
+          </div>
+        </div>
+      </div>  
     </div>
-    <div class="row">
-      <div class="col-md-4 col-sm-4 portfolio-item row-space-2 ">
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-        <p>原作：aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 <%= render 'partial/footer' %>
 
