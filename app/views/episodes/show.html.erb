@@ -12,10 +12,10 @@
       </span>
       <p class="text-info hidden-xs .bg-info"><%= @episode.season.over_view =%></p>
     </div>
-    <div class="col-md-8 col-sm-4 portfolio-item">
+    <div class="col-md-8 col-sm-8 portfolio-item">
       <h3 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h3>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
           <h3 class="episode-summary"><%= "シリーズ第1話。ナイツウォッチからの脱走者の報告に、戸惑うネッド スターク公。ロバート王とラニスター家の者たちが、ウィンターフェルに到着。亡命していたヴィセーリス･ターガリエンは、新たに強力な忠誠を誓う。" %></h3>
         </div>
 
@@ -32,7 +32,7 @@
           <h3 class="section-subheading"><%= drama.title %></h4>
             <div class="row ">
               <% @impressions.each do |impression|%>
-              <div class="col-md-8 col-sm-6 col-md-offset-2 portfolio-item row-space-2 impression-overview">
+              <div class="col-md-8 col-sm-12 col-md-offset-2 portfolio-item row-space-2 impression-overview">
                 <div class="portfolio-caption">
                   <span style="font-weight: bold;"></span>
                   <!--吹き出しはじまり-->
