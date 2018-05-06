@@ -12,7 +12,7 @@ class ImpressionsController < ApplicationController
   def create
     @impression = current_user.impressions.build(impression_params)
     if @impression.save
-      redirect_to edit_impression_path(@impression), notice: "作成しました"
+      redirect_to episode_path(impression_params[:episode_id]), notice: "作成しました"
     else
       redirect_to new_impression_path, notice: "failed...."
     end
