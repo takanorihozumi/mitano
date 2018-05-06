@@ -4,9 +4,14 @@ class ImpressionsController < ApplicationController
 
   def new
     @impression = current_user.impressions.build
-
-    @episode = Episode.find(params[:episode_id]) #if !params[:impression_type].nil?
-    @drama = @episode.season.drama #if !params[:impression_type].nil?
+    @titles = Array.new
+    if((params[:impression_type]) != "0" && !(params[:impression_type]).nil? ) then
+      @episode = Episode.find(params[:episode_id]) #if !params[:impression_type].nil?
+      @drama = @episode.season.drama #if !params[:impression_type].nil?
+      @titles.push(@drama.title)
+    else
+      @titles = Drama.pluck(:title)
+    end
   end
 
   def create
@@ -14,7 +19,8 @@ class ImpressionsController < ApplicationController
     if @impression.save
       redirect_to episode_path(impression_params[:episode_id]), notice: "作成しました"
     else
-      redirect_to new_impression_path, notice: "failed...."
+      # redirect_to new_impression_path, notice: "failed...."
+      redirect_to dramas_path
     end
   end
 

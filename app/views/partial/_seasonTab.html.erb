@@ -5,9 +5,9 @@
         <%= link_to "全て",drama_path(drama) %>
 
       </li>
-      <% drama.seasons.size.times do |i| %>
+      <% drama.seasons.each do |season| %>
       <li class="nav-item dropdown">
-        <%= link_to "シーズン #{i+1}",season_path(i+1)%>
+        <%= link_to "シーズン #{season.season_no}",season_path(season)%>
       </li>
       <% end %>
     </ul>
