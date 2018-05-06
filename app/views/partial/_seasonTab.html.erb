@@ -5,7 +5,7 @@
         <%= link_to "全て",drama_path(drama) %>
 
       </li>
-      <% drama.seasons.each do |season| %>
+      <% drama.seasons.order(:id).each do |season| %>
       <li class="nav-item dropdown">
         <%= link_to "シーズン #{season.season_no}",season_path(season)%>
       </li>
