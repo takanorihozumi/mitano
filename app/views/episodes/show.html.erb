@@ -16,7 +16,7 @@
       <h3 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h3>
       <div class="row">
         <div class="col-md-12 col-sm-12">
-          <h3 class="episode-summary"><%= "シリーズ第1話。ナイツウォッチからの脱走者の報告に、戸惑うネッド スターク公。ロバート王とラニスター家の者たちが、ウィンターフェルに到着。亡命していたヴィセーリス･ターガリエンは、新たに強力な忠誠を誓う。" %></h3>
+          <h3 class="episode-summary"><%= @episode.over_view %></h3>
         </div>
 
       </div>
