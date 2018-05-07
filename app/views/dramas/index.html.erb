@@ -11,15 +11,16 @@
 
     <div class="row">
       <% @dramas.each do |drama|%>
-      <div class="col-md-4 col-sm-6 portfolio-item row-space-2 ">
+      <% if drama.id != 0 %>
+      <div class="col-md-4 col-sm-6 portfolio-item ">
         <span style="vertical-align:middle;">
           <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
         </span>
         <p class="text-info hidden-xs .bg-info"><%= drama.title =%></p>
       </div>
       <% end %>
+      <% end %>
     </div>
   </div>
-  <%= fa_icon 'star' %>
 </section>
 <%= render 'partial/footer' %>
