@@ -38,8 +38,10 @@
                   <!--吹き出しはじまり-->
                   <div class="balloon5">
                     <div class="faceicon">
-                     ★ここに画像を入れる <img~>★
+                      <% if !impression.user.image.nil? %>
+                    <%= image_tag impression.user.image, class:"img-circle profile-0" %>
                      <p><%= impression.user.name %>さん</p>
+                     <% end %>
 
                    </div>
 

@@ -34,7 +34,7 @@
               <div class="form-group">
                 <label>シーズン</label>
                 <%= select_tag 'season_no', options_for_select([@season.season_no]), class: 'form-control' %>
-                <%= f.hidden_field :season_id, :value => "0" %>
+                <%= f.hidden_field :season_id, :value => params[:season_id] %>
                 <%= f.hidden_field :episode_id, :value => "0" %>
               </div>
             </div>
