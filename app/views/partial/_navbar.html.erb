@@ -26,6 +26,7 @@
           <% if (!user_signed_in?) %>
 
           <li><a href="#">利用の流れ</a></li>
+          <li><%= link_to "話題のドラマ", dramas_path %></li>
           <li><%= link_to "感想を投稿", new_impression_path %></li>
           <li><%= link_to "アカウント作成", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>

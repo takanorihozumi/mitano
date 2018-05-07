@@ -5,7 +5,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="text-center">
-            <span style="font-size:24px;">ドラマの感想を掲載する</span>
+            <span style="font-size:24px;"><%= @impression_title_preffix %>に対して感想を掲載する</span>
           </div>
         </div>
         
@@ -25,10 +25,24 @@
           </div>
           <br>
           <% if params[:impression_type] == "0" %>
-            <%= f.hidden_field :season_id, :value => "1"%>
-            <%= f.hidden_field :episode_id, :value => "1"%>
+            <%= f.hidden_field :season_id, :value => "0"%>
+            <%= f.hidden_field :episode_id, :value => "0"%>
           <% end %>
           <% if params[:impression_type] != "0" %>
+          <div class="row">
+            <div class="col-md-12 select">
+              <div class="form-group">
+                <label>シーズン</label>
+                <%= select_tag 'season_no', options_for_select([@season.season_no]), class: 'form-control' %>
+                <%= f.hidden_field :season_id, :value => @season.id %>
+                <%= f.hidden_field :episode_id, :value => "0" %>
+              </div>
+            </div>
+          </div>
+          <br>
+          <% end %>
+
+          <% if params[:impression_type] == "2" %>
           <div class="row">
             <div class="col-md-12 select">
               <div class="form-group">

@@ -5,19 +5,27 @@ class ImpressionsController < ApplicationController
   def new
     @impression = current_user.impressions.build
     @titles = Array.new
-    if((params[:impression_type]) != "0" && !(params[:impression_type]).nil? ) then
-      @episode = Episode.find(params[:episode_id]) #if !params[:impression_type].nil?
-      @drama = @episode.season.drama #if !params[:impression_type].nil?
+    if (params[:impression_type]) == "1" then #season
+      @season = Season.find(params[:season_id])
+      @titles.push(@season.drama.title)
+      @impression_title_preffix ="このシーズン"
+    elsif (params[:impression_type]) == "2" then #episode
+      @episode = Episode.find(params[:episode_id])
+      @drama = @episode.season.drama
       @titles.push(@drama.title)
-    else
+      @impression_title_preffix ="このエピソード"
+
+    else #drama
       @titles = Drama.pluck(:title)
+      @impression_title_preffix ="ドラマ全体"
     end
   end
 
   def create
     @impression = current_user.impressions.build(impression_params)
     if @impression.save
-      redirect_to episode_path(impression_params[:episode_id]), notice: "作成しました"
+      redirect_to season_path(@impression.season_id), notice: "作成しました" if impression_params[:impression_type] == "1"
+      redirect_to episode_path(impression_params[:episode_id]), notice: "作成しました" if impression_params[:impression_type] == "2"
     else
       # redirect_to new_impression_path, notice: "failed...."
       redirect_to dramas_path

@@ -9,7 +9,8 @@
         <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block">
           <span style="vertical-align:middle;">
             <%= image_tag("#{drama.image_url}",:align => 'center') %>
-            <%= image_tag "share_drama" %>
+            <%= link_to image_tag("share_season"),
+        new_impression_path(impression_type: '1', season_id: @season.id) %>
           </span>
         </div>
         <div class="col-md-8 col-sm-8 portfolio-item">
@@ -48,6 +49,42 @@
     </tbody>
   </table>
 </section>
+
+<section id="portfolio" class="bg-light-gray row-space-top-4 row-space-4">
+  <div class="container">
+    <div class="row row-space-2">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">みんなの感想</h3>
+          <h3 class="section-subheading"><%= drama.title %></h4>
+            <div class="row ">
+              <% @impressions.each do |impression|%>
+              <div class="col-md-8 col-sm-12 col-md-offset-2 portfolio-item row-space-2 impression-overview">
+                <div class="portfolio-caption">
+                  <span style="font-weight: bold;"></span>
+                  <!--吹き出しはじまり-->
+                  <div class="balloon5">
+                    <div class="faceicon">
+                     ★ここに画像を入れる <img~>★
+                     <p><%= impression.user.name %>さん</p>
+
+                   </div>
+
+                   <div class="chatting">
+                    <div class="says">
+                      <p><%= simple_format(impression.impression, :calss => "hoz") %></p>
+                    </div>
+
+                  </div>
+                </div>
+                <!--吹き出し終わり-->
+              </div>
+            </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 <%= render 'partial/footer' %>
 
 
