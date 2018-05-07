@@ -12,6 +12,7 @@ class ImpressionsController < ApplicationController
     elsif (params[:impression_type]) == "2" then #episode
       @episode = Episode.find(params[:episode_id])
       @drama = @episode.season.drama
+      @season = @episode.season
       @titles.push(@drama.title)
       @impression_title_preffix ="このエピソード"
 
