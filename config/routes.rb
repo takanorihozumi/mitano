@@ -1,4 +1,5 @@
 Rails.application.routes.draw do  
+  get 'pages/privacy_policy'
   get 'episodes/show'
 
   get 'seasons/show'
