@@ -9,8 +9,7 @@ class DramasController < ApplicationController
 
   def show
     @drama = Drama.find(params[:id])
-    @impressions = Impression.find_by(drama_id: @drama.id, impression_type: 0)
-    # @count = @impressions.size
+    @impressions = Impression.where(drama_id: @drama.id, impression_type: "0")
   end
 
   private

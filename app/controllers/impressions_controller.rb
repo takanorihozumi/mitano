@@ -16,7 +16,8 @@ class ImpressionsController < ApplicationController
       @impression_title_preffix ="このエピソード"
 
     else #drama
-      @titles = Drama.pluck(:title)
+      @drama = Drama.find(params[:drama_id])
+      @titles.push(@drama.title)
       @impression_title_preffix ="ドラマ全体"
     end
   end
@@ -24,6 +25,7 @@ class ImpressionsController < ApplicationController
   def create
     @impression = current_user.impressions.build(impression_params)
     if @impression.save
+      redirect_to drama_path(@impression.drama_id), notice: "作成しました" if impression_params[:impression_type] == "0"
       redirect_to season_path(@impression.season_id), notice: "作成しました" if impression_params[:impression_type] == "1"
       redirect_to episode_path(impression_params[:episode_id]), notice: "作成しました" if impression_params[:impression_type] == "2"
     else
