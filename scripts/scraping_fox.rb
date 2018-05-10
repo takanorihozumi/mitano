@@ -5,16 +5,19 @@ class ScrapingFox
   page = agent.get(url)
   titles = page.search('.my-c')
   contents = page.search('.box-text')
-      # puts contents.first.inner_text
-      count.times do |i|
-        zenkaku = i.to_s
-        del1 =titles[i].inner_text.delete('第#{zenkaku}話')
-        title = del1.delete(zenkaku).delete("0").delete("1").delete("2").delete("3").delete("4").delete("5").delete("6").delete("7").delete("8").delete("9").strip
-        content= contents[i].inner_text.strip
-        Episode.create(episode_name: title, over_view: content, season_id: id)
-      end
-    end
+  count.times do |i|
+    zenkaku = i.to_s
+    del1 =titles[i].inner_text.delete('第#{zenkaku}話')
+    title = del1.delete(zenkaku).delete("0").delete("1").delete("2").delete("3").delete("4").delete("5").delete("6").delete("7").delete("8").delete("9").strip
+    content= contents[i].inner_text.strip
+    Episode.create(episode_name: title, over_view: content, season_id: id)
+  end
 end
+end
+
+# foxはurlのidが連番ではないので以下の対応が必要
+# 1.url探す(ググる) 2.episode数 season_id
+
 # ウォーキング・デッド
 ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1348",13,20)
 ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1498",16,21)
