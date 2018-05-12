@@ -1,8 +1,17 @@
 <%= render 'partial/navbar' %>
 <div class="row">
+  <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
+    <div class="row">
+      <div class="col-md-9 col-md-offset-2 col-xs-12">
+        <h1><small><%=link_to "#{@impression.drama.title}", drama_path(@impression.drama) %></small></h1> 
+        <p><%=link_to "#{@impression.season.title}", season_path(@impression.season) %></p>
+        <p><%=link_to "#{@impression.episode.episode_name}", episode_path(@impression.episode) %></p>
+      </div>
+    </div>
+
+  </div>
   <%= render  "partial/impressionContentsArea", impression: @impression, isShowCommentBtn: false %>
 </div>
-<div class="container"></div>
 <div class="row">
   <!-- main -->
   <div class="col-md-9 col-md-offset-2 col-xs-12">
