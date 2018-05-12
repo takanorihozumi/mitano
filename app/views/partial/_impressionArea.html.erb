@@ -21,7 +21,6 @@
                   <div class="faceicon">
                     <% if !impression.user.image.nil? %>
                     <%= image_tag impression.user.image, class:"img-circle profile-0" %>
-                    <p><%= impression.user.name %>さん</p>
                     <% else %>
                     <%= image_tag 'no-image', class:"img-circle profile-0" %>
                     <% end %>
