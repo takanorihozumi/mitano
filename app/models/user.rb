@@ -7,6 +7,7 @@ class User < ApplicationRecord
   # user.impressionsみたいな取得が可能になる
   has_many :impressions, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, presence: true
 

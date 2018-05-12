@@ -14,7 +14,7 @@
             <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
             <% end %>
             <% @impressions.each do |impression|%>
-            <%= render  "partial/impressionContentsArea", impression: impression %>
+            <%= render  "partial/impressionContentsArea", impression: impression, isShowCommentBtn: true %>
             <% end %>
           </div>
           <div class="col-md-3 col-xs-12">

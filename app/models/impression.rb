@@ -4,8 +4,10 @@ class Impression < ApplicationRecord
   belongs_to :season
   belongs_to :episode
   has_many :likes, dependent: :destroy
-  validates :impression, presence: true
   has_many :like_users, through: :likes, source: :user
+  has_many :comments, dependent: :destroy
+
+  validates :impression, presence: true
 
   def add_like(user)
     likes.create(user_id: user.id)  

@@ -1,0 +1,17 @@
+<% if !comments.nil? %>
+<div class="row">
+  <% comments.each do |comment| %>
+  <% unless comment.id.nil? %>
+  <div>
+    <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %></p>
+    <p>コメント：<%= comment.content %></p>
+  </div>
+  <% if comment.user == current_user %>
+  <%= link_to  impression_comment_path(comment.impression_id, comment.id), method: :delete, remote: true , :class => "btn square_btn", target: "_blank" do %>削除
+    <% end %>
+  <% end %>
+  <% end %>
+  <% end %>
+</div>
+<% end %>
+

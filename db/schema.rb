@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180511121314) do
+ActiveRecord::Schema.define(version: 20180512114211) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "impression_id"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["impression_id"], name: "index_comments_on_impression_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "dramas", force: :cascade do |t|
     t.string "title"
@@ -45,6 +55,7 @@ ActiveRecord::Schema.define(version: 20180511121314) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "likes_count", default: 0, null: false
+    t.integer "comments_count", default: 0, null: false
     t.index ["drama_id"], name: "index_impressions_on_drama_id"
     t.index ["episode_id"], name: "index_impressions_on_episode_id"
     t.index ["season_id"], name: "index_impressions_on_season_id"

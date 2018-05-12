@@ -1,4 +1,8 @@
 Rails.application.routes.draw do  
+  resources :impressions do
+    resources :comments, only: [:create, :destroy]
+  end
+
   resources :likes, only: [:create, :destroy]
 
   get 'pages/privacy_policy'

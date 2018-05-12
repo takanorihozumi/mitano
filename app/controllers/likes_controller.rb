@@ -12,7 +12,6 @@ class LikesController < ApplicationController
     end
 
     @impression = Impression.find(params[:impression_id])
-    puts 'start'
 
     unless @impression.like?(current_user)
       @impression.add_like(current_user)

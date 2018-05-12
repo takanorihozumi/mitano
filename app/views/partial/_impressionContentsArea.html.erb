@@ -1,4 +1,4 @@
-<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2 portfolio-item row-space-2 impression-overview">
+<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2 row-space-2 impression-overview">
   <div class="portfolio-caption">
     <span style="font-weight: bold;"></span>
     <div class="balloon5">
@@ -19,11 +19,13 @@
               <div class="btn-group">
                 <%= render "likes/like",impression: impression %>
               </div>
+              <% if isShowCommentBtn %>
               <div class="btn-group">
                 <%= link_to impression_path(impression), class: 'btn btn-default btn-sm' do %>
-                <span class="glyphicon glyphicon-edit"></span> コメントする
+                <span class="glyphicon glyphicon-edit"></span><%= impression.comments_count %>コメント
                 <% end %>
               </div>
+              <% end %>
             </div>
           </div>
         </div>
