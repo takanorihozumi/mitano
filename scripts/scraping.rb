@@ -16,17 +16,17 @@ class Scraping
 
 end
 # season_idをただす！！！！！！！！！！！！
-Scraping.execute('grimm',1,22,33)
-Scraping.execute('grimm',2,22,34)
-Scraping.execute('grimm',3,22,35)
-Scraping.execute('grimm',4,22,36)
-Scraping.execute('grimm',5,22,37)
+# Scraping.execute('grimm',1,22,33)
+# Scraping.execute('grimm',2,22,34)
+# Scraping.execute('grimm',3,22,35)
+# Scraping.execute('grimm',4,22,36)
+# Scraping.execute('grimm',5,22,37)
 
-Scraping.execute('breakingbad',1,7,38)
-Scraping.execute('breakingbad',2,13,39)
-Scraping.execute('breakingbad',3,13,40)
-Scraping.execute('breakingbad',4,13,41)
-Scraping.execute('breakingbad',5,16,42)
+# Scraping.execute('breakingbad',1,7,38)
+# Scraping.execute('breakingbad',2,13,39)
+# Scraping.execute('breakingbad',3,13,40)
+# Scraping.execute('breakingbad',4,13,41)
+# Scraping.execute('breakingbad',5,16,42)
 
 # Scraping.execute4
 # Scraping.execute5
