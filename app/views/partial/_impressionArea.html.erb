@@ -10,6 +10,9 @@
             <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
               <h1><small><%= subtitle %>対するみんなの感想</small></h1>
             </div>
+            <% if @impressions.empty? %>
+              <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
+            <% end %>
             <% @impressions.each do |impression|%>
             <div class="col-md-9 col-sm-12 col-md-offset-2 portfolio-item row-space-2 impression-overview">
               <div class="portfolio-caption">
