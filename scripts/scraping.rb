@@ -1,98 +1,33 @@
 class Scraping
   # heroku run rails runner scripts/scraping.rb
-  # gossip girl
- #  def self.execute1
- #    target = 18
- #    target.times do |i|
- #      agent = Mechanize.new
- #      page = agent.get("http://www.superdramatv.com/line/gossipgirl/episode/detail1-#{i+1}.html")
- #      titles = page.search('h3')
- #      puts titles.first.inner_text
- #      contents = page.search('.onetxt')
- #      puts contents.first.inner_text
- #      Episode.create(episode_name: titles.first.inner_text, over_view: contents.first.inner_text, season_id: 27)
- #    end
- #  end
- # def self.execute2
- #    target = 25
- #    target.times do |i|
- #      agent = Mechanize.new
- #      page = agent.get("http://www.superdramatv.com/line/gossipgirl/episode/detail2-#{i+1}.html")
- #      titles = page.search('h3')
- #      puts titles.first.inner_text
- #      contents = page.search('.onetxt')
- #      puts contents.first.inner_text
- #      Episode.create(episode_name: titles.first.inner_text, over_view: contents.first.inner_text, season_id: 28)
- #    end
- #  end
-  #  def self.execute
-  #   target = 5
-  #   target.times do |i|
-  #     agent = Mechanize.new
-  #     page = agent.get("http://www.superdramatv.com/line/grimm/episode/detail1-#{i+1}.html")
-  #     titles = page.search('h2')
-  #     puts titles.first.inner_text
-  #     contents = page.search('.onetxt')
-  #     puts contents.first.inner_text
-  #   end
 
-  # end
- def self.execute3
-    target = 22
-    target.times do |i|
+ def self.execute(drama, season, count, id)
+    count.times do |i|
       agent = Mechanize.new
-      page = agent.get("http://www.superdramatv.com/line/gossipgirl/episode/detail3-#{i+1}.html")
+      page = agent.get("http://www.superdramatv.com/line/#{drama}/episode/detail#{season}-#{i+1}.html")
       titles = page.search('h2')
-      puts titles.first.inner_text
+      del1 =titles.first.inner_text.delete('第話')
+      puts title = del1.delete("0").delete("1").delete("2").delete("3").delete("4").delete("5").delete("6").delete("7").delete("8").delete("9").delete("/ [ シリーズ通算 #］").strip
       contents = page.search('.onetxt')
       puts contents.first.inner_text
-      Episode.create(episode_name: titles.first.inner_text, over_view: contents.first.inner_text, season_id: 29)
+      Episode.create(episode_name: title, over_view: contents.first.inner_text, season_id: id,episode_no: i+1, source_url: "http://www.superdramatv.com/line/#{drama}/episode/detail#{season}-#{i+1}.html")
     end
   end
- def self.execute4
-    target = 22
-    target.times do |i|
-      agent = Mechanize.new
-      page = agent.get("http://www.superdramatv.com/line/gossipgirl/episode/detail4-#{i+1}.html")
-      titles = page.search('h2')
-      puts titles.first.inner_text
-      contents = page.search('.onetxt')
-      puts contents.first.inner_text
-      Episode.create(episode_name: titles.first.inner_text, over_view: contents.first.inner_text, season_id: 30)
-    end
-  end
- def self.execute5
-    target = 24
-    target.times do |i|
-      agent = Mechanize.new
-      page = agent.get("http://www.superdramatv.com/line/gossipgirl/episode/detail5-#{i+1}.html")
-      titles = page.search('h2')
-      puts titles.first.inner_text
-      contents = page.search('.onetxt')
-      puts contents.first.inner_text
-      Episode.create(episode_name: titles.first.inner_text, over_view: contents.first.inner_text, season_id: 31)
-    end
-  end
- def self.execute6
-    target = 10
-    target.times do |i|
-      agent = Mechanize.new
-      page = agent.get("http://www.superdramatv.com/line/gossipgirl/episode/detail6-#{i+1}.html")
-      titles = page.search('h2')
-      puts titles.first.inner_text
-      contents = page.search('.onetxt')
-      puts contents.first.inner_text
-      Episode.create(episode_name: titles.first.inner_text, over_view: contents.first.inner_text, season_id: 32)
-    end
-  end
+
 end
-# Scraping.execute
+# season_idをただす！！！！！！！！！！！！
+# Scraping.execute('grimm',1,22,38)
+# Scraping.execute('grimm',2,22,39)
+# Scraping.execute('grimm',3,22,40)
+# Scraping.execute('grimm',4,22,41)
+# Scraping.execute('grimm',5,22,42)
 
-# Scraping.execute1
-# Scraping.execute2
+# Scraping.execute('breakingbad',1,7,43)
+# Scraping.execute('breakingbad',2,13,44)
+# Scraping.execute('breakingbad',3,13,45)
+# Scraping.execute('breakingbad',4,13,46)
+# Scraping.execute('breakingbad',5,16,48)
 
-# fail ...
-Scraping.execute3
-Scraping.execute4
-Scraping.execute5
-Scraping.execute6
+# Scraping.execute4
+# Scraping.execute5
+# Scraping.execute6

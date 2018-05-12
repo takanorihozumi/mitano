@@ -16,7 +16,7 @@ class ImpressionsController < ApplicationController
       @impression_title_preffix ="このエピソード"
 
     else #drama
-      @drama = Drama.find(params[:drama_id])
+      @drama = Drama.find(params[:drama_id]) 
       @titles.push(@drama.title)
       @impression_title_preffix ="ドラマ全体"
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180505064825) do
+ActiveRecord::Schema.define(version: 20180511121314) do
 
   create_table "dramas", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180505064825) do
     t.datetime "updated_at", null: false
     t.string "image_url"
     t.integer "seasons_count", default: 0, null: false
+    t.string "source_url"
   end
 
   create_table "episodes", force: :cascade do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180505064825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "episode_no", default: 0, null: false
+    t.string "source_url"
     t.index ["season_id"], name: "index_episodes_on_season_id"
   end
 
@@ -42,10 +44,21 @@ ActiveRecord::Schema.define(version: 20180505064825) do
     t.integer "episode_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "likes_count", default: 0, null: false
     t.index ["drama_id"], name: "index_impressions_on_drama_id"
     t.index ["episode_id"], name: "index_impressions_on_episode_id"
     t.index ["season_id"], name: "index_impressions_on_season_id"
     t.index ["user_id"], name: "index_impressions_on_user_id"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "impression_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["impression_id"], name: "index_likes_on_impression_id"
+    t.index ["user_id", "impression_id"], name: "index_likes_on_user_id_and_impression_id", unique: true
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "seasons", force: :cascade do |t|
@@ -56,6 +69,7 @@ ActiveRecord::Schema.define(version: 20180505064825) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "season_no", default: 0, null: false
+    t.string "source_url"
     t.index ["drama_id"], name: "index_seasons_on_drama_id"
   end
 

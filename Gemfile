@@ -41,6 +41,7 @@ gem 'figaro', '~> 1.1.0'
 gem 'meta-tags'
 
 gem 'mechanize'
+gem 'counter_culture', '~> 1.8'
 
 
 group :development, :test do

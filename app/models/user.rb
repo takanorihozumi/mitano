@@ -5,7 +5,9 @@ class User < ApplicationRecord
   :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   # user.impressionsみたいな取得が可能になる
-  has_many :impressions
+  has_many :impressions, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
@@ -16,5 +18,6 @@ class User < ApplicationRecord
     # uncomment the line below to skip the confirmation emails.
     # user.skip_confirmation!
   end
+
 end
 end
