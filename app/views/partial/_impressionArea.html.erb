@@ -11,33 +11,10 @@
               <h1><small><%= subtitle %>対するみんなの感想</small></h1>
             </div>
             <% if @impressions.empty? %>
-              <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
+            <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
             <% end %>
             <% @impressions.each do |impression|%>
-            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2 portfolio-item row-space-2 impression-overview">
-              <div class="portfolio-caption">
-                <span style="font-weight: bold;"></span>
-                <div class="balloon5">
-                  <div class="faceicon">
-                    <% if !impression.user.image.nil? %>
-                    <%= image_tag impression.user.image, class:"img-circle profile-0" %>
-                    <% else %>
-                    <%= image_tag 'no-image', class:"img-circle profile-0" %>
-                    <% end %>
-                    <p><%= impression.user.name %>さん</p>
-                  </div>
-
-                  <div class="chatting">
-                    <div class="says">
-                      <p><%= simple_format(impression.impression) %></p>
-                      <div id="impression-<%= impression.id %>" data-impression-id="<%= impression.id %>">
-                        <%= render "likes/like",impression: impression %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <%= render  "partial/impressionContentsArea", impression: impression %>
             <% end %>
           </div>
           <div class="col-md-3 col-xs-12">

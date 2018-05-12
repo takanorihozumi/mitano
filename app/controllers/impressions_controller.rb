@@ -39,6 +39,10 @@ class ImpressionsController < ApplicationController
     @episode = Episode.find(@impression.episode_id)
     @drama = @episode.season.drama
   end
+
+  def show
+    @impression = Impression.find(params[:id])
+  end
   private
   def impression_params
     params.require(:impression).permit(:user_id,:drama_id, :season_id, :episode_id, :impression_type, :impression)

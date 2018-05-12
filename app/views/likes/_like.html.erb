@@ -1,14 +1,14 @@
 <span class="like" id="">
   <% if impression.like?(current_user) %>
   <%= form_for(impression.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
-  <%= button_tag(class: "btn btn-default btn-xs") do %>
+  <%= button_tag(class: "btn btn-default btn-sm") do %>
   <%= content_tag :span, "#{impression.likes_count}", class: "glyphicon glyphicon-heart" %>
   <% end %>
   <% end %>
   <% else %>
   <%= form_for(impression.likes.build, remote: true) do |f| %>
   <div><%= hidden_field_tag :impression_id, impression.id %></div>
-  <%= button_tag(class: "btn btn-default btn-xs") do %>
+  <%= button_tag(class: "btn btn-default btn-sm") do %>
   <%= content_tag :span, "#{impression.likes_count}", class: "glyphicon glyphicon-heart-empty" %>
   <% end %>
   <% end %>
