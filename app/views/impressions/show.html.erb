@@ -1,26 +1,26 @@
 <%= render 'partial/navbar' %>
-  <div class="row">
-    <%= render  "partial/impressionContentsArea", impression: @impression, isShowCommentBtn: false %>
-  </div>
-  <div class="container"></div>
-        <div class="row">
-          <!-- main -->
-          <div class="col-md-9 col-md-offset-2 col-xs-12">
-            <!-- apply custom style -->
-            <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-              <h1><small>コメント一覧</small></h1>
-            </div>
+<div class="row">
+  <%= render  "partial/impressionContentsArea", impression: @impression, isShowCommentBtn: false %>
+</div>
+<div class="container"></div>
+<div class="row">
+  <!-- main -->
+  <div class="col-md-9 col-md-offset-2 col-xs-12">
+    <!-- apply custom style -->
+    <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
+      <h1><small>コメント一覧</small></h1>
+    </div>
     <div id="comments_area">
       <% if !@comments.empty? %>
       <%= render partial: 'comments/index',locals: {  comments: @comments } %>
       <% end %>
     </div>  
     <% if user_signed_in? %>
-      <%= render partial: 'comments/form', locals: { comment: @comment, impression: @impression } %>
+    <%= render partial: 'comments/form', locals: { comment: @comment, impression: @impression } %>
     <% end %>
   </div>
-  </div>
-  </div>
+</div>
+</div>
 </div>
 <%= render 'partial/footer' %>
 

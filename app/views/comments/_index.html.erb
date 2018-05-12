@@ -2,7 +2,7 @@
 <div class="row">
   <% comments.each do |comment| %>
   <% unless comment.id.nil? %>
-  <div>
+  <div class="comment-layout" >
     <p><%= link_to "#{comment.user.name}さん", user_path(comment.user.id) %></p>
     <p>コメント：<%= comment.content %></p>
   </div>

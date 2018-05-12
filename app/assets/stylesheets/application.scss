@@ -419,4 +419,16 @@ footer ul.quicklinks {
 .square_btn:active:after,.square_btn:active:before {
     content: none;/*ボタンを押すと線が消える*/
 }
+
+.comment-layout  {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+}
+.comment-layout  p {
+    margin: 0; 
+    padding: 0;
+}
  
