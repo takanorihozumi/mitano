@@ -16,16 +16,14 @@ class Scraping
 
 end
 # season_idをただす！！！！！！！！！！！！
-Scraping.execute('criminalmind',1,22,43)
-Scraping.execute('criminalmind',2,23,44)
-Scraping.execute('criminalmind',3,20,45)
-Scraping.execute('criminalmind',4,26,46)
-Scraping.execute('criminalmind',5,23,47)
-Scraping.execute('criminalmind',6,24,48)
-Scraping.execute('criminalmind',7,24,49)
-Scraping.execute('criminalmind',8,24,50)
-Scraping.execute('criminalmind',9,24,51)
-Scraping.execute('criminalmind',10,9,52)
+Scraping.execute('criminalmind',1,23,53)
+Scraping.execute('criminalmind',2,23,54)
+Scraping.execute('criminalmind',3,24,55)
+Scraping.execute('criminalmind',4,24,56)
+Scraping.execute('criminalmind',5,22,57)
+Scraping.execute('criminalmind',6,22,58)
+Scraping.execute('criminalmind',7,13,59)
+
 
 # Scraping.execute4
 # Scraping.execute5
