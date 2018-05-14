@@ -10,19 +10,19 @@ class Scraping
       puts title = del1.delete("0").delete("1").delete("2").delete("3").delete("4").delete("5").delete("6").delete("7").delete("8").delete("9").delete("/ [ シリーズ通算 #］").strip
       contents = page.search('.onetxt')
       puts contents.first.inner_text
-      Episode.create(episode_name: title, over_view: contents.first.inner_text, season_id: id,episode_no: i+1, source_url: "http://www.superdramatv.com/line/#{drama}/episode/detail#{season}-#{i+1}.html")
+      # Episode.create(episode_name: title, over_view: contents.first.inner_text, season_id: id,episode_no: i+1, source_url: "http://www.superdramatv.com/line/#{drama}/episode/detail#{season}-#{i+1}.html")
     end
   end
 
 end
 # season_idをただす！！！！！！！！！！！！
-Scraping.execute('criminalmind',1,23,53)
-Scraping.execute('criminalmind',2,23,54)
-Scraping.execute('criminalmind',3,24,55)
-Scraping.execute('criminalmind',4,24,56)
-Scraping.execute('criminalmind',5,22,57)
-Scraping.execute('criminalmind',6,22,58)
-Scraping.execute('criminalmind',7,13,59)
+Scraping.execute('mentalist',1,23,53)
+Scraping.execute('mentalist',2,23,54)
+Scraping.execute('mentalist',3,24,55)
+Scraping.execute('mentalist',4,24,56)
+Scraping.execute('mentalist',5,22,57)
+Scraping.execute('mentalist',6,22,58)
+Scraping.execute('mentalist',7,13,59)
 
 
 # Scraping.execute4
