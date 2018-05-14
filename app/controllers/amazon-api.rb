@@ -1,5 +1,5 @@
-# # #! /usr/bin/ruby
-# # # coding: UTF-8
+# #! /usr/bin/ruby
+# # coding: UTF-8
 
 # require 'rubygems'
 # require 'amazon/ecs'
@@ -12,22 +12,22 @@
 #     :AWS_secret_key => "iLyRgMSc10c/loGnk+G2OErvLSofcJiSecmeKSa8"
 # }
 
-# # # res = Amazon::Ecs.item_search('ゲームオブスローンズ ', {:item_id => 'B07CGZ3YNP', :response_group => 'Medium,ItemAttributes,Images', :country => 'jp'})
-# #   # res = ::Amazon::Ecs.item_lookup("B07CGZ3YNP", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # ウォーキング・デッド
-# #    # res = ::Amazon::Ecs.item_lookup("B07659TGS5", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # 24
-# #   # res = ::Amazon::Ecs.item_lookup("B01A1BY4HC", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # ゴシップガール
-# #   # res = ::Amazon::Ecs.item_lookup("B002M3UEOA", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # シカゴ・ファイア
-# #   # res = ::Amazon::Ecs.item_lookup("B07CH52Y94", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # マジシャンズ
-# #   # res = ::Amazon::Ecs.item_lookup("B079TN5PR8", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # グリム
-# #   # res = ::Amazon::Ecs.item_lookup("B07261KV5B", country: 'jp', response_group: 'Large,ItemAttributes,Images')
-# #   # ブレイキング・バッド
-#    res = ::Amazon::Ecs.item_lookup("B076BS84JV", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+# # res = Amazon::Ecs.item_search('ゲームオブスローンズ ', {:item_id => 'B07CGZ3YNP', :response_group => 'Medium,ItemAttributes,Images', :country => 'jp'})
+#   # res = ::Amazon::Ecs.item_lookup("B07CGZ3YNP", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # ウォーキング・デッド
+#    # res = ::Amazon::Ecs.item_lookup("B07659TGS5", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # 24
+#   # res = ::Amazon::Ecs.item_lookup("B01A1BY4HC", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # ゴシップガール
+#   # res = ::Amazon::Ecs.item_lookup("B002M3UEOA", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # シカゴ・ファイア
+#   # res = ::Amazon::Ecs.item_lookup("B07CH52Y94", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # マジシャンズ
+#   # res = ::Amazon::Ecs.item_lookup("B079TN5PR8", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # グリム
+#   # res = ::Amazon::Ecs.item_lookup("B07261KV5B", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # ブレイキング・バッド
+#    res = ::Amazon::Ecs.item_lookup("B00KYIN73K", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 
 
 # res.items.each do |item|

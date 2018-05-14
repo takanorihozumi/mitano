@@ -1,10 +1,6 @@
-Drama.create(title: "メンタリスト",over_view: "全米CBSネットワークで2008年9月に放送開始し、同年12月には週間視聴率ランキングで第1位に到達。最終的に2008-2009年のシーズンで新番組中トップ※に立った、大ヒットドラマ「メンタリスト」。本国アメリカでは全7シーズン放送され、日本でも高視聴率を記録し人気を集めている話題の犯罪捜査ミステリーだ。",image_url: "https://images-fe.ssl-images-amazon.com/images/I/51%2BOMpQFXQL._SL300_.jpg", seasons_count: 0,source_url: 'http://www.superdramatv.com/line/mentalist/')
-Season.create(title: "シーズン1", over_view: "プロゴルファーのプライスは、自宅で妻アリソンと主治医タネンの遺体を発見。ＣＢＩ（カリフォルニア州捜査局）の捜査コンサルタント、パトリック・ジェーンは捜査に同行し、犯行現場に向かった。", drama_id: 10, season_no: 1, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
-Season.create(title: "シーズン2", over_view: "ある事件を解決後、CBIに戻ったリズボンとジェーンは、ミネッリから捜査のやり方について叱責を受ける。またリズボンのチームは「行き詰っている」としてレッド・ジョンの件からはずされることに", drama_id: 10, season_no: 2, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
-Season.create(title: "シーズン3", over_view: "町の有力者、ダブリンが誘拐され、運転手が３発撃ち込まれ、殺されているのが発見される。", drama_id: 10, season_no: 3, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
-Season.create(title: "シーズン4", over_view: "事件から２日後、モールで「レッド･ジョン」と名乗る男を射殺したジェーンの裁判が始まる。", drama_id: 10, season_no: 4, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
-Season.create(title: "シーズン5", over_view: "ＦＢＩとＣＢＩは手打ちし、両者の協力潜入捜査によってウェインライトは殉職したが、ローレライを逮捕したと発表。", drama_id: 10, season_no: 5, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
-Season.create(title: "シーズン6", over_view: "レッド･ジョンの手下から受け取った映像を見るジェーンとリズボン。ジェーンが7人に絞り込んだレッド･ジョンの容疑者リストを、レッド･ジョンは言い当てる。", drama_id: 10, season_no: 6, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
-Season.create(title: "シーズン7", over_view: "FBI潜入捜査官ジェレミー･ガイストが何者かに銃撃された後に死亡する。", drama_id: 10, season_no: 7, source_url: 'http://www.superdramatv.com/line/mentalist/story/')
+Drama.create(title: "スコーピオン",over_view: "全米ネットワークCBSで2014年9月から放送を開始し、現在も高視聴率ヒットを記録している人気ドラマ「SCORPION／スコーピオン」。IQ197の頭脳を持つ天才、凄腕の行動心理学者、機械工学の天才、天才数学者の4人組とアメリカ合衆国国土安全保障省のベテラン捜査官、そして対人能力に乏しい天才4人組の渉外係を引き受けたシングル・マザーらで構成される天才集団チーム",image_url: "https://images-fe.ssl-images-amazon.com/images/I/517joESU4XL._SL300_.jpg", seasons_count: 0,source_url: 'http://www.superdramatv.com/line/scorpion/')
+Season.create(title: "シーズン1", over_view: "IQ197の頭脳の持ち主ウォルター・オブライエン、凄腕行動心理学者のトビー、メカの達人ハッピー、天才数学者のシルヴェスター、アメリカ合衆国国土安全保障省捜査官のケイブ・ガロ、そして対人能力に乏しい天才4人組の渉外係を引き受けたシングル・マザーのペイジと、彼女の息子で天才少年のラルフより成るチームスコーピオン。彼らは、解決不可能に思える様々な難事件に最新テクノロジーと頭脳を駆使して挑む天才集団だ", drama_id: 11, season_no: 1, source_url: 'http://www.superdramatv.com/line/scorpion/story/')
+Season.create(title: "シーズン2", over_view: "国土安全保障省からスコーピオンに招集命令がかかる。復職を許された捜査官のガロはリハビリ中のウォルターを連れガレージへ向かうと、そこには新たな案件を待ち焦がれたメンバーたちの姿が。", drama_id: 11, season_no: 2, source_url: 'http://www.superdramatv.com/line/scorpion/story/')
+Season.create(title: "シーズン3", over_view: "ハッピーに求婚したが「すでに結婚している」という理由で断られ落ち込むトビー。ウォルターはペイジとティムの週末旅行が気になり後を追う。", drama_id: 11, season_no: 3, source_url: 'http://www.superdramatv.com/line/scorpion/story/')
 
 
