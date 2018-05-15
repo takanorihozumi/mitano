@@ -11,10 +11,6 @@
      <%= link_to "Facebookで登録", user_facebook_omniauth_authorize_path, class:"btn btn-facebook" %>
      <hr>
      <div class="form-group">
-      <%= f.label :アカウント名 %><br />
-      <%= f.email_field :name,:class => 'form-control',:placeholder => "アカウント名", autofocus: true, autocomplete: "email" %>
-    </div>
-     <div class="form-group">
       <%= f.label :email %><br />
       <%= f.email_field :email,:class => 'form-control',:placeholder => "email", autofocus: true, autocomplete: "email" %>
     </div>
