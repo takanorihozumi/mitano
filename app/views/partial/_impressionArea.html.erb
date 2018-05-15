@@ -13,9 +13,12 @@
             <% if @impressions.empty? %>
             <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
             <% end %>
-            <% @impressions.each do |impression|%>
-            <%= render  "partial/impressionContentsArea", impression: impression, isShowCommentBtn: true %>
-            <% end %>
+            <div  id="loadpage">
+              <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: true %>
+            </div>
+            <div class="col-md-9 col-md-offset-2">
+            <%= link_to_next_page @impressions, 'もっと見る', remote: true, id: 'more_link' %>          
+            </div>
           </div>
           <div class="col-md-3 col-xs-12">
             <div class="panel panel-default">

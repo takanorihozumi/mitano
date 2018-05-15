@@ -1,0 +1,2 @@
+$('#loadpage').append("<%= escape_javascript(render 'impressions/impression',{impressions:@impressions}) %>")
+$("#more_link").replaceWith("<%= escape_javascript(link_to_next_page(@impressions, 'もっと見る', remote: true, id: 'more_link')) %>");

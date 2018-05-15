@@ -43,6 +43,8 @@ class ImpressionsController < ApplicationController
 
   def show
     @impression = Impression.find(params[:id])
+    @impressions = Array.new
+    @impressions.push(@impression)
     @comment = Comment.new
     @comments = @impression.comments
   end

@@ -1,6 +1,7 @@
 require 'amazon/ecs'
 require 'amazon-api'
 class DramasController < ApplicationController
+  PER = 7
   # 同じ処理をactionの前で行いたい場合、こんな風に描ける
   # before_action :hogehoge, only: [:index,:show]
   def index
@@ -9,7 +10,7 @@ class DramasController < ApplicationController
 
   def show
     @drama = Drama.find(params[:id])
-    @impressions = Impression.where(drama_id: @drama.id, impression_type: "0").order(:created_at).reverse_order
+    @impressions = Impression.where(drama_id: @drama.id, impression_type: "0").order(:created_at).reverse_order.page(params[:page]).per(PER)
     @dramas = Drama.order(created_at: 'desc')
   end
 
