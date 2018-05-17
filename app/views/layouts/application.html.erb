@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119415811-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-119415811-1');
-  </script>
-
+  <%= analytics_init if Rails.env.production? %>
   <%= display_meta_tags(default_meta_tags) %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -30,6 +21,6 @@
     <% end %>
   </script>
   <% end %>
-  
+
 </body>
 </html>
