@@ -17,7 +17,7 @@
           <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
         </span>
         <div class="text-info hidden-xs .bg-info">
-          <%= link_to drama.title %>
+          <%= link_to drama.title, drama_path(drama) %>
         </div>
       </div>
       <% end %>
