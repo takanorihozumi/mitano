@@ -1,6 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   GA.tracker = "UA-119415811-1"
+  config.force_ssl = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
