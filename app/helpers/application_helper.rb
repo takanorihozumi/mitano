@@ -24,7 +24,7 @@ module ApplicationHelper
       },
       twitter: {
         card: 'summary',
-        site: '@2109359',
+        site: '@mitano4',
       }
     }
   end
