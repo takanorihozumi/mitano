@@ -47,6 +47,8 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'jquery-ui-rails'
 gem 'google-analytics-rails'
 gem 'active_link_to'
+gem 'sitemap_generator'
+
 source "https://rubygems.org"
 ruby "2.4.0" # for heroku
 
