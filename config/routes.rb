@@ -1,4 +1,6 @@
 Rails.application.routes.draw do  
+  get '/.well-known/acme-challenge/:id' => 'pages#certbot'
+
   resources :impressions do
     resources :comments, only: [:create, :destroy]
   end
