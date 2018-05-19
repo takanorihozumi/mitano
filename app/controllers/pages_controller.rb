@@ -6,10 +6,8 @@ class PagesController < ApplicationController
     
   end
   def certbot
-    if ENV["LETS_ENCRYPT_CHALLENGE"]
-      render text: ENV["LETS_ENCRYPT_CHALLENGE"], layout: nil
-    else
-      raise ActionController::RoutingError.new('Not Found')
+    if params[:id] == ENV["LETSENCRYPT_REQUEST"]
+    render text: ENV["LETSENCRYPT_RESPONSE"]
     end
   end
 end
