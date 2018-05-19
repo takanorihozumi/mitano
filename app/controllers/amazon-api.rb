@@ -29,7 +29,9 @@
 #   # ブレイキング・バッド
 #   # res = ::Amazon::Ecs.item_lookup("B00KYIN73K", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 #   # ザ・フォロイング
-#   res = ::Amazon::Ecs.item_lookup("B00R705PD8", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # res = ::Amazon::Ecs.item_lookup("B00R705PD8", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # パーソン・オブ・インタレスト
+#   res = ::Amazon::Ecs.item_lookup("B00MM06OII", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 
 
 # res.items.each do |item|
