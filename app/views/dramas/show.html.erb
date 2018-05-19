@@ -18,6 +18,7 @@
           <div class="row">
             <div class="col-md-12 col-sm-12">
               <h3 class="episode-summary"><%= @drama.over_view %></h3>
+              <%= link_to "出典: #{@drama.source_url}", @drama.source_url %>
             </div>
 
           </div>
