@@ -74,23 +74,6 @@ border-color: #3e6962;
     background-color: black;
 }
 
-//navbar-deviseのcss
-.navbar-devise {
-    background: #fff;
-    border-color: #fff;
-    z-index: 10;
-}
-
-.navbar-devise .navbar-nav > li > a {
-    color: #222222;
-    font-size: 13px;
-}
-
-.navbar-devise .navbar-brand {
-    color: #222222;
-}
-
-
 // トップページのnavbarのドロップダウンがクリックされた時
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     background-color: transparent;
