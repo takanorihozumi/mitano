@@ -5,7 +5,14 @@ class DramasController < ApplicationController
   # 同じ処理をactionの前で行いたい場合、こんな風に描ける
   # before_action :hogehoge, only: [:index,:show]
   def index
-    @dramas = Drama.order(created_at: 'desc')
+    unless (params[:category]).nil? then
+      @title = "海外ドラマ：#{getCategoryName}"
+      @dramas = Drama.where(category: params[:category]).order(created_at: 'desc')
+    else  
+      @title = "話題のドラマ"
+      @dramas = Drama.order(created_at: 'desc')
+    end
+    @subTitle = getSubTitle
   end
 
   def show
@@ -15,7 +22,34 @@ class DramasController < ApplicationController
   end
 
   private
-  def hogehoge
-    
+  def getCategoryName
+    if params[:category] == "0" then
+      return "アクション"
+    elsif params[:category] == "1" then
+      return "ファンタジー"
+    elsif params[:category] == "2" then
+      return "ドラマ"
+    elsif params[:category] == "3" then
+      return "サスペンス・ミステリー"
+    elsif params[:category] == "4" then
+      return "ラブロマンス"
+    else
+      return "話題のドラマ"
+    end
+  end
+  def getSubTitle
+    if params[:category] == "0" then
+      return "海外ドラマといえばド派手なアクション！"
+    elsif params[:category] == "1" then
+      return "壮大な世界観で描かれるファンタジーの世界へ"
+    elsif params[:category] == "2" then
+      return "人間の出会い・別れの中で繰り広げられるストーリーに酔いしれる"
+    elsif params[:category] == "3" then
+      return "様々なストーリーに没頭"
+    elsif params[:category] == "4" then
+      return "恋がしたくなるような恋愛ドラマを見つけましょう"
+    else
+      return "mitano編集長がオススメする今話題のドラマです"
+    end
   end
 end

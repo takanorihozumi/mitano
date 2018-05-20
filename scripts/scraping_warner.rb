@@ -1,4 +1,5 @@
 class ScrapingWarner
+  # heroku run rails runner scripts/scraping_warner.rb
  def self.execute(url,total_episode)
   season = 7
   season_id =77

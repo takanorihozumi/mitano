@@ -32,6 +32,12 @@
           <!-- ログインしている -->
           <!-- ログインしている時 -->
           <li><%= link_to "話題のドラマ", dramas_path %></li>
+          <li><%= link_to "アクション", dramas_path(category: 0) %></li>
+          <li><%= link_to "ファンタジー", dramas_path(category: 1) %></li>
+          <li><%= link_to "ドラマ", dramas_path(category: 2) %></li>
+          <li><%= link_to "サスペンス・ミステリー", dramas_path(category: 3) %></li>
+          <li><%= link_to "ラブロマンス", dramas_path(category: 4) %></li>
+
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <% if current_user.provider %>
