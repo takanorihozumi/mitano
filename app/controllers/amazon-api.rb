@@ -31,7 +31,9 @@
 #   # ザ・フォロイング
 #   # res = ::Amazon::Ecs.item_lookup("B00R705PD8", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 #   # パーソン・オブ・インタレスト
-#   res = ::Amazon::Ecs.item_lookup("B00MM06OII", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # res = ::Amazon::Ecs.item_lookup("B00MM06OII", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # トゥルー・ブラッド 
+#   res = ::Amazon::Ecs.item_lookup("B006FPU7CU", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 
 
 # res.items.each do |item|

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180512114211) do
+ActiveRecord::Schema.define(version: 20180519161314) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20180512114211) do
     t.string "image_url"
     t.integer "seasons_count", default: 0, null: false
     t.string "source_url"
+    t.integer "category"
   end
 
   create_table "episodes", force: :cascade do |t|
