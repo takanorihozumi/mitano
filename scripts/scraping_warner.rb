@@ -2,7 +2,7 @@ class ScrapingWarner
   # heroku run rails runner scripts/scraping_warner.rb
  def self.execute(url,total_episode)
   season = 2
-  season_id =82
+  season_id =79
   episode_no =1
   # target = 13
   agent = Mechanize.new
@@ -17,7 +17,7 @@ class ScrapingWarner
     if i+1 == 16 then
       episode_no =1
       puts season = 1
-      puts season_id = 81
+      puts season_id = 78
     end
     Episode.create(episode_name: title,episode_no:episode_no, over_view: content, season_id: season_id, source_url: url)
     episode_no = episode_no+1
