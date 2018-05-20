@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to root_path do %>
-          <%= image_tag "mitano_icon.png" %>
+        <%= image_tag "mitano_icon.png" %>
         <% end %>
       </div>
 
@@ -22,42 +22,40 @@
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form> -->
-        <ul class="nav navbar-nav navbar-right">
-          <% if (!user_signed_in?) %>
-
-          <li><%= link_to "話題のドラマ", dramas_path %></li>
-          <li><%= link_to "アカウント作成", new_user_registration_path %></li>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
-          <% else %>
-          <!-- ログインしている -->
-          <!-- ログインしている時 -->
+        <ul class="nav navbar-nav navbar-left top-adjust">
           <li><%= link_to "話題のドラマ", dramas_path %></li>
           <li><%= link_to "アクション", dramas_path(category: 0) %></li>
           <li><%= link_to "ファンタジー", dramas_path(category: 1) %></li>
           <li><%= link_to "ドラマ", dramas_path(category: 2) %></li>
           <li><%= link_to "サスペンス・ミステリー", dramas_path(category: 3) %></li>
           <li><%= link_to "ラブロマンス", dramas_path(category: 4) %></li>
-
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if (!user_signed_in?) %>
+          <li class=" top-adjust"><%= link_to "アカウント作成", new_user_registration_path %></li>
+          <li class=" top-adjust"><%= link_to "ログイン", new_user_session_path %></li>
+          <% else %>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <% if current_user.provider %>
-                <!-- 認証ログインをしている時 -->
+              <!-- 認証ログインをしている時 -->
 
-                <%= image_tag current_user.image, class:"img-circle profile-0" %>
-                <%= current_user.name %>
+              <%= image_tag current_user.image, class:"img-circle profile-0" %>
+              <%= current_user.name %>
               <% else %>
-                <% current_user.email %>
+              <% current_user.email %>
               <% end %>
               <span class="caret"></span>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu nab">
               <li><%= link_to "プロフィール", user_path(current_user) %></li>
               <li><%= link_to "プロフィールを編集する", edit_user_registration_path %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             </ul>
-          </li>          
+          </li>  
           <% end %>
         </ul>
+
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
