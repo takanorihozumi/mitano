@@ -33,7 +33,9 @@
 #   # パーソン・オブ・インタレスト
 #   # res = ::Amazon::Ecs.item_lookup("B00MM06OII", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 #   # トゥルー・ブラッド 
-#   res = ::Amazon::Ecs.item_lookup("B006FPU7CU", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # res = ::Amazon::Ecs.item_lookup("B006FPU7CU", country: 'jp', response_group: 'Large,ItemAttributes,Images')
+#   # DALLAS/ダラス スキャンダラス・シティ 
+#   res = ::Amazon::Ecs.item_lookup("B013UO2N0M", country: 'jp', response_group: 'Large,ItemAttributes,Images')
 
 
 # res.items.each do |item|
