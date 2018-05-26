@@ -2,7 +2,7 @@ class ScrapingWarner
   # heroku run rails runner scripts/scraping_warner.rb
  def self.execute(url,total_episode)
   season = 1
-  season_id =86
+  season_id =91
   episode_no =1
   # target = 13
   agent = Mechanize.new
@@ -37,7 +37,7 @@ end
 # 1.全シーズンのエピソード数を指定(シーズンファイナルから順に登録)
 
 # ザ・フォロイング
-ScrapingWarner.execute("http://wwws.warnerbros.co.jp/kaidora/jurassic_new_world/ep.php",13)
+ScrapingWarner.execute("http://wwws.warnerbros.co.jp/kaidora/hostages/ep.php",15)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1498",16,21)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1759",16,22)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/2069",16,23)
