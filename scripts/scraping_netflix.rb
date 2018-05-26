@@ -4,6 +4,7 @@ class ScrapingFox
   season_id =87
   # target = 13
   agent = Mechanize.new
+  agent.user_agent_alias = "Windows Mozilla"
   page = agent.get(url)
   titles = page.search('.title-episode-name')
   contents = page.search('.title-episode-synopsis')
