@@ -22,7 +22,7 @@ end
 # 1.全シーズンのエピソード数を指定(シーズンファイナルから順に登録)
 
 # ザ・フォロイング
-ScrapingFox.execute("http://www.netflix.com/jp/title/70140425",22)
+ScrapingFox.execute("https://www.netflix.com/jp/title/70140425",22)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1498",16,21)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1759",16,22)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/2069",16,23)
