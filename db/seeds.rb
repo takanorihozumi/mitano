@@ -1,4 +1,8 @@
-Drama.create(title: "ジュラシック・ニューワールド",over_view: "バンクーバーで、巨大生物によるものと思われる襲撃事件が発生。発明家の主人公エヴァンは、ラジオ電波に何かが干渉していることに気付き、「時空の亀裂」を発見する。なんとそれは、太古の時代と現代をつなぐ扉だった！",image_url: "https://images-na.ssl-images-amazon.com/images/I/915fS9c8NtL._SY300_.jpg", seasons_count: 0,source_url: 'http://wwws.warnerbros.co.jp/kaidora/jurassic_new_world/intro.php',category: 0)
-Season.create(title: "シーズン1", over_view: "不規則的に発生する亀裂から、次々に現れる危険で凶暴な肉食恐竜や、大蛇、昆虫！エヴァンらは極秘に特殊部隊を結成し、恐竜らを無事に元の時空に返し、事故を未然に防ぐべく立ち上がる！しかしそこに忍び寄る政府軍の影ー。", drama_id: 18, season_no: 1, source_url: 'http://wwws.warnerbros.co.jp/kaidora/jurassic_new_world/intro.php')
+Drama.create(title: "プリズン・ブレイク ",over_view: "兄が殺人の罪で不当に有罪判決を受けた建築技師マイケルは、悪名高いフォックスリバー州立刑務所から兄を救い出すことを決意する。",image_url: "https://images-na.ssl-images-amazon.com/images/I/510-38abIeL._SY300_.jpg", seasons_count: 0,source_url: 'https://www.netflix.com/jp/title/70140425',category: 0)
+Season.create(title: "シーズン1", over_view: "兄の脱獄に手を貸すことを決めた建築技師マイケルは、刑務所の設計図を獄内に持ち込むために自ら逮捕されることを狙って銀行強盗を犯す。", drama_id: 19, season_no: 1, source_url: 'https://www.netflix.com/jp/title/70140425')
+# Season.create(title: "シーズン2", over_view: "", drama_id: 18, season_no: 2, source_url: 'https://www.netflix.com/jp/title/70140425')
+# Season.create(title: "シーズン3", over_view: "", drama_id: 18, season_no: 3, source_url: 'https://www.netflix.com/jp/title/70140425')
+# Season.create(title: "シーズン4", over_view: "", drama_id: 18, season_no: 4, source_url: 'https://www.netflix.com/jp/title/70140425')
+
 
 
