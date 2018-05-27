@@ -7,20 +7,22 @@
      <div class="container">
       <% drama= @drama%>
       <%= render "partial/seasonTab", drama: drama %>
-      <div class="episode-overview col-md-12">
-        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block">
-          <span style="vertical-align:middle;">
+      <div class="episode-overview col-md-12 ">
+        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
+          <span style="vertical-align:middle;" c>
             <%= image_tag("#{drama.image_url}",:align => 'center') %>
             <%= link_to image_tag("share_season"),
             new_impression_path(impression_type: '1', season_id: @season.id) %>
           </span>
         </div>
         <div class="col-md-8 col-sm-8 portfolio-item">
-          <h3 class="episode-title"><%= @season.title %></h3>
+          <h4 class="episode-title"><%= @season.title %></h4>
           <div class="row">
             <div class="col-md-12 col-sm-12">
-              <h3 class="episode-summary"><%= @season.over_view %></h3>
+              <h4 class="episode-summary"><%= @drama.over_view %></h4>
+              <div class="episode-summary">
               <%= link_to "出典: #{@season.source_url}", @season.source_url %>
+              </div>
             </div>
 
           </div>

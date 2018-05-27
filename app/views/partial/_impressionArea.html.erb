@@ -31,10 +31,10 @@
 
                   <% if drama.id != 0 %>
                   <div class="">
-                    <span style="vertical-align:middle;">
+                    <span>
                       <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
                     </span>
-                    <p class="text-info hidden-xs .bg-info"><%= drama.title =%></p>
+                    <p class="text-info .bg-info"><%= drama.title =%></p>
                   </div>
                   <% end %>
                   <% end %>

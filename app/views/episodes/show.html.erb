@@ -7,7 +7,7 @@
  <div class="container">
   <%= render "partial/seasonTab", drama: drama %>
   <div class="episode-overview col-md-12">
-    <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block">
+    <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
       <span style="vertical-align:middle;">
         <%= image_tag("#{drama.image_url}",:align => 'center') %>
         <%= link_to image_tag("share_drama"),
@@ -16,11 +16,13 @@
       <p class="text-info hidden-xs .bg-info"><%= @episode.season.over_view =%></p>
     </div>
     <div class="col-md-8 col-sm-8 portfolio-item">
-      <h3 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h3>
+      <h4 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h4>
       <div class="row">
         <div class="col-md-12 col-sm-12">
-          <h3 class="episode-summary"><%= @episode.over_view %></h3>
+          <h4 class="episode-summary"><%= @episode.over_view %></h4>
+          <div class="episode-summary">
           <%= link_to "出典: #{@episode.source_url}", @episode.source_url %>
+          </div>
         </div>
 
       </div>
