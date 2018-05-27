@@ -13,14 +13,14 @@
         <%= link_to image_tag("share_drama"),
         new_impression_path(impression_type: '2', episode_id: @episode.id) %>
       </span>
-      <p class="text-info hidden-xs .bg-info"><%= @episode.season.over_view =%></p>
+      <p class="text-info .bg-info"><%= @episode.season.over_view =%></p>
     </div>
     <div class="col-md-8 col-sm-8 portfolio-item">
       <h4 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h4>
       <div class="row">
         <div class="col-md-12 col-sm-12">
           <h4 class="episode-summary"><%= @episode.over_view %></h4>
-          <div class="episode-summary">
+          <div class="episode-summary row-space-1">
           <%= link_to "出典: #{@episode.source_url}", @episode.source_url %>
           </div>
         </div>
