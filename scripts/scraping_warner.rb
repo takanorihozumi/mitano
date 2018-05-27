@@ -1,8 +1,8 @@
 class ScrapingWarner
   # heroku run rails runner scripts/scraping_warner.rb
  def self.execute(url,total_episode)
-  season = 3
-  season_id =94
+  season = 5
+  season_id =99
   episode_no =1
   # target = 13
   agent = Mechanize.new
@@ -14,13 +14,21 @@ class ScrapingWarner
     del1 =titles[i].inner_text.delete('第#{zenkaku}話')
     puts title = del1.delete(zenkaku).delete("0").delete("1").delete("2").delete("3").delete("4").delete("5").delete("6").delete("7").delete("8").delete("9").strip
     puts content= contents[i].inner_text.strip
-    if i+1 == 21 then
+    if i+1 == 11 then
+      puts season = 4
+      puts season_id = 98
+      episode_no =1
+    elsif i+1 == 23 then
+      puts season = 3
+      puts season_id = 97
+      episode_no =1
+    elsif i+1 == 33 then
       puts season = 2
-      puts season_id = 93
+      puts season_id = 96
       episode_no =1
     elsif i+1 == 43 then
       puts season = 1
-      puts season_id = 92
+      puts season_id = 95
       episode_no =1
     end
     Episode.create(episode_name: title,episode_no:episode_no, over_view: content, season_id: season_id, source_url: url)
@@ -33,7 +41,7 @@ end
 # 1.全シーズンのエピソード数を指定(シーズンファイナルから順に登録)
 
 # ザ・フォロイング
-ScrapingWarner.execute("http://wwws.warnerbros.co.jp/kaidora/veronica-mars/ep.php",64)
+ScrapingWarner.execute("http://wwws.warnerbros.co.jp/kaidora/fallingskies/ep.php",52)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1498",16,21)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1759",16,22)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/2069",16,23)
