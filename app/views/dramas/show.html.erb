@@ -1,11 +1,11 @@
 <% set_meta_tags title: @drama.title+" - 感想・レビュー・評価・あらすじ ", description: @drama.over_view, keywords: "#{@drama.title},海外ドラマ,感想,評価",og: { title: @drama.title, type: 'article', image: @drama.image_url } %>
 
  <%= render "partial/navbar" %>
-    <section id="drama-show" class="bg-light-gray row-space-top-4 row-space-4">
+    <section id="drama-show" class="bg-light-gray row-space-top-4 ">
      <div class="container">
       <% drama= @drama%>
       <%= render "partial/seasonTab", drama: drama %>
-      <div class="episode-overview col-md-12">
+      <div class="episode-overview col-md-12 col-xs-12">
         <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
           <span style="vertical-align:middle;">
             <%= image_tag("#{drama.image_url}",:align => 'center') %>
@@ -13,7 +13,7 @@
             new_impression_path(impression_type: '0', drama_id: @drama.id) %>          
           </span>
         </div>
-        <div class="col-md-12 col-sm-12 portfolio-item">
+        <div class="col-md-8 col-sm-8 portfolio-item">
           <h4 class="episode-title"><%= @drama.title %></h4>
           <div class="row">
             <div class="col-md-12 col-sm-12">
