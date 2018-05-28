@@ -3,6 +3,8 @@
 @import "toastr";
 @import "font-awesome";
 
+
+
 .jumbotron {
   padding-top: 0px;
   position: relative;
@@ -67,11 +69,11 @@ border-color: #3e6962;
     font-size: 13px;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-toggle .navbar-brand {
     color: white;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
+.navbar-default .icon-bar {
     background-color: black;
 }
 
@@ -420,5 +422,21 @@ footer ul.quicklinks {
 }
 .top-layout {
     margin-top: 15px; 
+}
+
+@media screen and (max-width: 500px) {
+  .display-3{
+    font-size: 25px;
+    line-height: 5.4;
+  }
+  .drama-title2{
+    font-size: 20px;
+    margin-left: 19px;
+  }
+.jumbotron {
+  padding-top: 0px;
+  position: relative;
+  height: 250px;
+}
 }
  

@@ -6,6 +6,9 @@
     <section id="episode-show" class="bg-light-gray row-space-top-4 row-space-4">
       <% drama= @drama%>
       <%= render "partial/seasonTab", drama: drama %>
+     <%= link_to "アクション", dramas_path(category: drama.category) %> >
+     <%=link_to "#{drama.title}", drama_path(drama) %> >
+     <%=link_to "#{@season.title}", season_path(@season) %>
       <div class="episode-overview col-md-12 ">
         <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
           <span style="vertical-align:middle;" c>

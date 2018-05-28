@@ -5,6 +5,8 @@
      <div class="container">
       <% drama= @drama%>
       <%= render "partial/seasonTab", drama: drama %>
+     <%= link_to "アクション", dramas_path(category: drama.category) %> >
+     <%=link_to "#{drama.title}", drama_path(drama) %>
       <div class="episode-overview col-md-12 col-xs-12">
         <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
           <span style="vertical-align:middle;">
