@@ -21,7 +21,10 @@
         <div class="col-md-12 col-sm-12">
           <h4 class="episode-summary"><%= @episode.over_view %></h4>
           <div class="episode-summary row-space-1">
-          <%= link_to "出典: #{@episode.source_url}", @episode.source_url %>
+            <%= link_to "出典: #{@episode.source_url}", @episode.source_url %>
+          </div>
+          <div>
+            <%= social_share_button_tag(drama.title+"の感想をmitanoで話し合おう！") %>         
           </div>
         </div>
 

@@ -17,3 +17,4 @@
 //= require bootstrap-sprockets
 //= require toastr
 //= require jquery-ui
+//= require social-share-button

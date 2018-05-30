@@ -48,6 +48,8 @@ gem 'jquery-ui-rails'
 gem 'google-analytics-rails'
 gem 'active_link_to'
 gem 'sitemap_generator'
+gem 'roboto'
+gem 'social-share-button'
 
 source "https://rubygems.org"
 ruby "2.4.0" # for heroku

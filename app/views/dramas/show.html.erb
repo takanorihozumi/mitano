@@ -12,7 +12,7 @@
           <span style="vertical-align:middle;">
             <%= image_tag("#{drama.image_url}",:align => 'center') %>
             <%= link_to image_tag("share_drama"),
-            new_impression_path(impression_type: '0', drama_id: @drama.id) %>          
+            new_impression_path(impression_type: '0', drama_id: @drama.id) %> 
           </span>
         </div>
         <div class="col-md-8 col-sm-8 portfolio-item">
@@ -22,6 +22,9 @@
               <h4 class="episode-summary"><%= @drama.over_view %></h4>
               <div class="episode-summary row-space-1">
               <%= link_to "出典: #{@drama.source_url}", @drama.source_url %>
+              </div>
+              <div>
+                <%= social_share_button_tag(drama.title+"の感想をmitanoで話し合おう！") %>         
               </div>
             </div>
 
