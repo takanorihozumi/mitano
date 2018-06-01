@@ -5,53 +5,58 @@
 <script type="text/javascript">
   $(function(){
     <% if !@user.email.blank? %>
-      $("#ver-email").attr('class','vertification-checked');
+    $("#ver-email").attr('class','vertification-checked');
     <% end %>
 
     <% if !@user.phone_number.blank? %>
-      $("#ver-tel").attr('class','vertification-checked');
+    $("#ver-tel").attr('class','vertification-checked');
     <% end %>
 
     <% if @user.provider == "facebook" %>
-      $("#ver-facebook").attr('class','vertification-checked');
+    $("#ver-facebook").attr('class','vertification-checked');
     <% end %>
   });
 </script>
 
-<div class="container2">
+<div class="container">
   <div class="row">
     <div class="col-lg-3 col-md-4">
       <% unless @user.image.blank? %>
-
       <div class="user-profile row-space-4 text-center">
         <%= image_tag @user.image, class: "profile-full img-circle" %>
       </div>
       <% end %>
       <div class="panel panel-default verifications hidden-xs hidden-sm">
         <div class="panel-heading">
-          認証済みID
+          プロフィール
         </div>
         <div class="panel-body">
-          <div id="ver-email">
-            メールアドレス
+          <div id="name">
+            <%= @user.name %>
           </div>
           <br>
-          <div id="ver-tel">
-            電話番号
-          </div>
-          <br>
-          <div id="ver-facebook">
-            Facebook
-          </div>
-        </div>
-      </div>
-    </div>
+          <div id="description">
+           <%= simple_format(@user.description) %>
+         </div>
 
-    <div class="col-lg-9 col-md-8 col-sm-12">
-      <p>自己紹介</p>
-      <%= @user.name %>
-      <%= simple_format(@user.description) %>
+       </div>
+     </div>
+   </div>
+
+   <div class="col-md-9 col-xs-12">
+    <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
+      <h1><small><%= @user.name %>さんの投稿一覧</small></h1>
     </div>
-  </div>    
+    <% if @impressions.empty? %>
+    <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
+    <% end %>
+    <div  id="loadpage">
+      <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: true %>
+    </div>
+    <div class="col-md-9 col-md-offset-2">
+      <%= link_to_next_page @impressions, 'もっと見る', remote: true, id: 'more_link' %>          
+    </div>
+  </div>
+</div>    
 </div>
 <%= render 'partial/footer' %>
