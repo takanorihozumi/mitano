@@ -1,7 +1,7 @@
 <% drama= @episode.season.drama%>
 <% season= @episode.season%>
 
-<% set_meta_tags title: drama.title+season.title+"第#{@episode.episode_no}話"+" - 感想・レビュー・評価・あらすじ ", description: season.over_view, keywords: "#{drama.title}#{season.title}第#{@episode.episode_no}話,海外ドラマ,感想,評価",og: { title: drama.title, type: 'article', image: drama.image_url } %>
+<% set_meta_tags title: drama.title+season.title+"第#{@episode.episode_no}話"+" - 感想・レビュー・評価・あらすじ ", description: "#{drama.title}の感想、レビュー。#{@episode.over_view}", keywords: "#{drama.title}#{season.title}第#{@episode.episode_no}話,海外ドラマ,感想,評価",og: { title: drama.title, type: 'article', image: drama.image_url } %>
 <%= render "partial/navbar" %>
 <section id="episode-show" class="bg-light-gray row-space-top-4 row-space-4">
  <div class="container">
