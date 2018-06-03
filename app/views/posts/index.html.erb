@@ -1,2 +1,217 @@
-<%= render "partial/navbar" %>
-<%= render 'partial/footer' %>
+<% set_meta_tags title: "今話題!おすすめ 面白い海外ドラマ 最新ランキング 4選【2018年】", description: "絶対おすすめ！プリズンブレイクやゲームオブスローンズなど、世界中の海外ドラマを観た編集長が選んだ、2018年、今話題の最高のドラマとは？国内最大級の海外ドラマSNSの人気の海外ドラマランキングをご紹介します。", keywords: "海外ドラマ,ランキング,おすすめ,ニュース,ネタバレ,海外ドラマ,ランキング,2018,おすすめ",og: { title: "今話題　おすすめ 面白い海外ドラマ 最新ランキング 4選【2018年】", type: 'article', image: "https://images-fe.ssl-images-amazon.com/images/I/51TlSQLhuSL._SL300_.jpg"} %>
+
+
+<div class="jumbotron2">
+  <%= render 'partial/navbar' %>
+  <div>
+    <h1 class="matome-title" color="white">【2018年】今話題！おすすめ最新海外ドラマ4選！</h1>
+  </div>
+</div>
+<section class="row-space-top-4">
+  <div class="container">
+    <div class="col-lg-12 col-xs-12">
+      <div class="container">
+        <div class="row" style="padding:10px 0 0 0">
+          <div class="box7">
+            <p>数多くの海外ドラマを観てきたmitano編集長がおすすめする、2018年に観るべき面白いドラマ４選をご紹介します。<br>
+            このまとめを読んで、素敵な海外ドラマに出会えれば幸いです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="row-space-top-4">
+    <div class="container">
+      <div class="col-lg-12 col-xs-12">
+        <div class="container">
+          <div class="row" style="padding:10px 0 0 0">
+            <h2 class="matome-midasi"><small>第4位：<%= link_to @following.title, drama_path(@following) %></small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="episode-overview col-md-12 col-xs-12">
+        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
+          <span style="vertical-align:middle;">
+            <%= link_to image_tag(@following.image_url), drama_path(@following),:align => 'center'  %>
+          </span>
+        </div>
+        <div class="col-md-8 col-sm-8 portfolio-item">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h4 class="episode-summary"><%= @following.over_view %></h4>
+              <div class="episode-summary row-space-1">
+                <%= link_to "出典: #{@following.source_url}", @following.source_url %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="container">
+      <div class="box26">
+        <span class="box-title">mitano編集長おすすめポイント</span>
+        <div class="item2">１.刑務所にいながら洗脳殺人鬼キャロルが圧倒的に優勢</div>
+        <p class="item">
+          キャロルはシーズン１第１話でいきなり主人公のライアンに捕まり、刑務所に入れられます。。これがまずいきなり衝撃！！<br>
+        ただ、２話目以降キャロルは刑務所にいながら、フォロワーと呼ばれる彼の信者たちを操り、大量殺人をやってのけ、主人公たちFBIを苦しめます。</p>
+        <br>
+        <div class="item2">2.主人公のライアンがとにかくイイ！！</div>
+        <p class="item">
+          海外ドラマでは珍しく、主人公は超有名俳優ケヴィン・ベーコンです。それだけでも魅力的なザ・フォロイング。<br>
+          また、彼が演じるライアンは、２４のジャックバウアーのような乱暴さがありそこもまた魅力の一つ。刑務所にキャロルがいる時は、
+          彼から情報を聞き出すために平気で彼の指の骨を折ったりと、かなり乱暴でした。また、乱暴さを持ちながらも彼はかなり正義感が強いです。
+        洗脳されたフォロワーたちに多くの人が殺されて行くたびに彼は苦悩し、精神的に追い詰められていきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row-space-top-4">
+    <div class="container">
+      <div class="col-lg-12 col-xs-12">
+        <div class="container">
+          <div class="row" style="padding:10px 0 0 0">
+            <h2 class="matome-midasi"><small>第3位：<%= link_to @reason.title, drama_path(@reason) %></small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="episode-overview col-md-12 col-xs-12">
+        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
+          <span style="vertical-align:middle;">
+            <%= link_to image_tag(@reason.image_url), drama_path(@reason),:align => 'center'  %>
+          </span>
+        </div>
+        <div class="col-md-8 col-sm-8 portfolio-item">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h4 class="episode-summary"><%= @reason.over_view %></h4>
+              <div class="episode-summary row-space-1">
+                <%= link_to "出典: #{@reason.source_url}", @reason.source_url %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="container">
+      <div class="box26">
+        <span class="box-title">mitano編集長おすすめポイント</span>
+        <div class="item2">１.ビデオテープから始まるストーリーが斬新</div>
+        <p class="item">
+          １３の理由は小説が原作。アメリカの新鋭児童書作家アッシャーが２００７年に発表し大反響を呼んだ衝撃的なデビュー長編問題作です。<br>ストーリーは現在と過去という2つの時間軸で展開されます。クレイがカセットを聞くことによって過去の話に遡るという流れです。<br>話の切り口がビデオテープというのがとても斬新で今までありそうでなかったようなストーリーで、かつこの話がとてもリアル!!
+        </p>
+        <br>
+
+        <div class="item2">2.高校生活のリアルな描写がすごい..!!</div>
+        <p class="item">
+          ハンナが生前に録音したカセットテープを受け取った同級生の少年クレイが、自殺へと至った13の理由をたどっていくというストーリー。。この中で繰り広げられるストーリーががなりリアルで重いですがそこが本作の魅力。これほどまでにいじめ、自殺、恋愛、家族愛、友情などの要素をリアルに描いた作品はかつてない内容だと思います。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row-space-top-4">
+    <div class="container">
+      <div class="col-lg-12 col-xs-12">
+        <div class="container">
+          <div class="row" style="padding:10px 0 0 0">
+            <h2 class="matome-midasi"><small>第2位：<%= link_to @prison.title, drama_path(@prison) %></small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="episode-overview col-md-12 col-xs-12">
+        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
+          <span style="vertical-align:middle;">
+            <%= link_to image_tag(@prison.image_url), drama_path(@prison),:align => 'center'  %>
+          </span>
+        </div>
+        <div class="col-md-8 col-sm-8 portfolio-item">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h4 class="episode-summary"><%= @prison.over_view %></h4>
+              <div class="episode-summary row-space-1">
+                <%= link_to "出典: #{@prison.source_url}", @prison.source_url %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="container">
+      <div class="box26">
+        <span class="box-title">mitano編集長おすすめポイント</span>
+        <div class="item2">１.マイケルがとにかくかっこいい！</div>
+        <p class="item">
+          無実の罪で捕まり、死刑の迫っている兄を救うため、マイケルは自ら刑務所に入ります。 <br>
+          まず、この兄想いなところが素敵です。<br>
+          また、マイケルは「潜在制止の機能障害」という先天性の脳の病気のため、自分を犠牲にして他人のしあわせを優先する性格が備わっています。<br>
+          兄を脱獄させ、逃亡生活の中で止むを得ず彼は様々な罪を犯す必要が出てきます。正義感との狭間でマイケルは苦悩しながらも兄や仲間のため、戦い続けます。
+        </p>
+        <br>
+
+        <div class="item2">2.脱獄仲間の個性が豊か</div>
+        <p class="item">
+          兄想いで頭の切れるマイケルと違い、猪突猛進型の本能や直感で行動する兄。<br>
+          ケンカっ早い性格ですが弟や息子を大切にしており、自分を脱獄させるため刑務所にやってきたマイケルを心配しています。<br>
+          マイケルの親友的ポジションのスクレ。<br>
+          マイケルと同房になった元軍人で、のちにマイケルとは親友になりました。酒屋に強盗に入ったところを現行犯逮捕され、5年の刑期を務めています。彼の刑は軽めでしたが、恋人と結ばれるために脱獄に加わるというのも面白いです。<br>
+          変態殺人鬼のティーバッグ。ティーバッグは、6人の幼女と少年をレイプ・殺害した凶悪犯で、終身刑で服役しています。なにかあるとすぐに人を殺そうとする危険な人物
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="row-space-top-4">
+    <div class="container">
+      <div class="col-lg-12 col-xs-12">
+        <div class="container">
+          <div class="row" style="padding:10px 0 0 0">
+            <h2 class="matome-midasi"><small>第1位：<%= link_to @game.title, drama_path(@game) %>
+            </small></h2>
+          </div>
+        </div>
+      </div>
+      <div class="episode-overview col-md-12 col-xs-12">
+        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
+          <span style="vertical-align:middle;">
+            <%= link_to image_tag(@game.image_url), drama_path(@game),:align => 'center'  %>
+          </span>
+        </div>
+        <div class="col-md-8 col-sm-8 portfolio-item">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h4 class="episode-summary"><%= @game.over_view %></h4>
+              <div class="episode-summary row-space-1">
+                <%= link_to "出典: #{@game.source_url}", @game.source_url %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="container">
+      <div class="box26">
+        <span class="box-title">mitano編集長おすすめポイント</span>
+        <div class="item2">１.主役級のメインキャラクターがバンバン死ぬ！</div>
+        <p class="item">
+          ゲームオブスローンズは鉄の玉座と言われる王の座を巡って7大国で覇権争いをする物語です。<br>
+          7大国にはそれぞれターガリエン家、ラニスター家、スターク家などの家系が存在します。<br>
+          この家系ごとに個性の強いキャラクターが存在し物語が展開されます。<br>
+          ゲームオブスローンズでは各家系のメインどころのキャラクターがバンバン死にます。 <br>
+          同僚の言葉を借りると生きていて欲しいキャラクターほどすぐ死に、コイツはよ死ねや！ってキャラクターほどなかなか死にません。。 <br>
+        ただ、この辺りも視聴者を引き込むポイントなのでしょう。 </p>
+        <br>
+        <div class="item2">2.リアルな世界観の中に、絶妙にファンタジー要素が織り交ぜられている！</div>
+        <p class="item">
+          リアルな歴史物かと思いきや、シーズン2当たりから、ホワイトウォーカーと呼ばれるゾンビや、ドラゴンなども登場します。 <br>
+          ただ、これらファンタジー要素の強いキャラクターは、限りなく現実に近い形で登場してきます。 <br>
+          そこがまた素晴らしいです。<br>
+
+          ゲームオブスローンズはとにかく素晴らしいドラマです。<br> 
+          私はこれまで、プリズンブレイク、ロスト、24、ターミネーター、ウォーキングデッドなどの数々の名作ドラマを見てきました。<br> 
+          その中でも頭一つ抜きん出ています。
+        </p>
+      </div>
+    </div>
+  </section>
+  <%= render 'partial/footer' %>

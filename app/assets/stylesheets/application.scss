@@ -4,8 +4,62 @@
 @import "font-awesome";
 @import "social-share-button";
 
+.matome-title {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 40px;
+}
+.matome-midasi {
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px black;/*上線*/
+  border-bottom: solid 3px black;/*下線*/
+}
 
+.box26 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 8px;
+}
+.box26 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -13px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    font-size: 19px;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+}
+.box26 p {
+    margin: 0; 
+    padding: 0;
+}
 
+.item {
+    background-color: #f7f7f7;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    margin: 2em auto;
+    padding: 24px;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+.item2 {
+  font-weight :bold;
+  font-size: 1.6rem;
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+  border-color:#ffb2b2;
+}
 .jumbotron {
   padding-top: 0px;
   position: relative;
@@ -17,6 +71,19 @@
 	height: 520px;
 	color: white;
 }
+
+.jumbotron2 {
+  padding-top: 0px;
+  position: relative;
+  // 背景画像を暗くする
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(start.jpg);
+  background-size: cover;
+  // 背景画像の位置を決める
+  background-position: 50% 50%;
+  height: 420px;
+  color: white;
+}
+
 .top-adjust {
   margin-top: 2px;
 }
@@ -424,6 +491,20 @@ footer ul.quicklinks {
 .top-layout {
     margin-top: 15px; 
 }
+.box7{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #474747;
+    background: whitesmoke;/*背景色*/
+    border-left: double 7px #4ec4d3;/*左線*/
+    border-right: double 7px #4ec4d3;/*右線*/
+    font-size: 1.6rem;
+
+}
+.box7 p {
+    margin: 0; 
+    padding: 0;
+}
 
 @media screen and (max-width: 500px) {
   .display-3{
@@ -434,7 +515,24 @@ footer ul.quicklinks {
     font-size: 20px;
     margin-left: 19px;
   }
+  .matome-title {
+    margin-top: 60px;
+    font-size: 20px;
+  }
+
 .jumbotron {
+  padding-top: 0px;
+  position: relative;
+  height: 250px;
+}
+.display-4 {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.02em;
+    line-height: 2.4;
+    font-size: 20px;
+}
+.jumbotron2 {
   padding-top: 0px;
   position: relative;
   height: 250px;
