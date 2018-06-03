@@ -16,7 +16,11 @@ class Scraping
 
 end
 # season_idをただす！！！！！！！！！！！！
-Scraping.execute('heroesreborn',1,13,162)
+Scraping.execute('fringe',1,21,170)
+Scraping.execute('fringe',2,22,171)
+Scraping.execute('fringe',3,22,172)
+Scraping.execute('fringe',4,22,173)
+Scraping.execute('fringe',5,13,174)
 
 # Scraping.execute('scorpion',2,25,61)
 # Scraping.execute('scorpion',3,25,62)

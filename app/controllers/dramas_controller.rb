@@ -7,10 +7,10 @@ class DramasController < ApplicationController
   def index
     unless (params[:category]).nil? then
       @title = "海外ドラマ：#{getCategoryName}"
-      @dramas = Drama.where(category: params[:category]).order(created_at: 'desc')
+      @dramas = Drama.where(category: params[:category])
     else  
       @title = "話題のドラマ"
-      @dramas = Drama.order(created_at: 'desc')
+      @dramas = Drama.all
     end
     @subTitle = getSubTitle
   end
@@ -18,7 +18,7 @@ class DramasController < ApplicationController
   def show
     @drama = Drama.find(params[:id])
     @impressions = Impression.where(drama_id: @drama.id, impression_type: "0").order(:created_at).reverse_order.page(params[:page]).per(PER)
-    @dramas = Drama.order(created_at: 'desc')
+    @dramas = Drama.all
   end
 
   private
@@ -33,6 +33,8 @@ class DramasController < ApplicationController
       return "サスペンス・ミステリー"
     elsif params[:category] == "4" then
       return "ラブロマンス"
+    elsif params[:category] == "5" then
+      return "韓流"
     else
       return "話題のドラマ"
     end
@@ -48,6 +50,8 @@ class DramasController < ApplicationController
       return "様々なストーリーに没頭"
     elsif params[:category] == "4" then
       return "恋がしたくなるような恋愛ドラマを見つけましょう"
+    elsif params[:category] == "5" then
+      return "話題の韓流ドラマをピックアップ"
     else
       return "mitano編集長がオススメする今話題のドラマです"
     end

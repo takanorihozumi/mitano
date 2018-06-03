@@ -1,8 +1,9 @@
-Drama.create(title: "クローザー",over_view: "重大犯罪課チーフ、ブレンダ・ジョンソン。通称「クローザー」CIA仕込みの尋問テクニックで、容疑者を自白に追い込み難事件を解決(クローズ)するプロフェッショナル。彼女の出番がやってきた。",image_url: "https://images-na.ssl-images-amazon.com/images/I/81Ch-wOmfLL._SY300_.jpg", seasons_count: 0,source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/index.php',category: 0)
-Season.create(title: "シーズン1", over_view: "アトランタ市警からLAPD（ロス市警）の殺人特捜班にチーフとして引き抜かれたブレンダ･ジョンソンは、CIAで訓練を受けた尋問のプロ。叩き上げの刑事たちは突然やってきた女性上司に反発し、全員が移動願いを提出する。しかし、解明の糸口すら見えなかった難事件を、容疑者の自白を引き出すことによって解決に導くクローザーとしての手腕を目の当たりにしたチームのメンバーは、次第にブレンダに一目置くようになる。", drama_id: 41, season_no: 1, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
-Season.create(title: "シーズン2", over_view: "ロス市警中央署のマーティン刑事と彼の担当していた事件の容疑者である麻薬ディーラーが死体で見つかり、現場は仲間の死にいきり立つ刑事たちであふれかえる。", drama_id: 41, season_no: 2, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
-Season.create(title: "シーズン3", over_view: "一家3人が惨殺された。殺人特捜班の現場検証中に、唯一生き残った長男のエリックが屋根裏で発見されるが、彼はドラッグを使用していた上、ブレンダに対して嘘の供述をする。", drama_id: 41, season_no: 3, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
-Season.create(title: "シーズン4", over_view: "グリフィスパークで山火事が発生し灼熱地獄と化する。消防隊の必死の消火活動にもかかわらず、4人が焼死体となって発見された。", drama_id: 41, season_no: 4, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
-Season.create(title: "シーズン5", over_view: "静かな住宅街で子供２人を含む一家４人が銃殺され、ブレンダと重大犯罪課のメンバーは現場へ向かう。", drama_id: 41, season_no: 5, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
-Season.create(title: "シーズン6", over_view: "建築業を営む男が、屋上で星の写真を撮っている最中に殺された。重大犯罪課のメンバーは、被害者と浮気をしていた女性の夫が事件に絡んでいるとにらむが、凶器がどこにも見つからず捜査は難航する。", drama_id: 41, season_no: 6, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
-Season.create(title: "シーズン7", over_view: "ラップ・ミュージック界期待の新人スターがその弟を含む６人と共に射殺されるという事件が起こる。", drama_id: 41, season_no: 7, source_url: 'http://wwws.warnerbros.co.jp/kaidora/thecloser/intro.php')
+
+Drama.create(title: "Queen of the South",over_view: "メキシコの貧困街に生まれ育ったひとりの平凡な女が、いかにして、麻薬取引という非情の世界に君臨するほどに成り上がっていったのか。すべての始まりは、突然かかってきた男の死を告げる一本の電話だった…。",image_url: "https://images-na.ssl-images-amazon.com/images/I/71UdE%2BQ7OyL._SY300_.jpg", seasons_count: 0,source_url: 'http://tv.foxjapan.com/fse/program/index/prgm_id/20806',category: 2)
+Season.create(title: "シーズン1", over_view: "ある日突然、男からの1本の電話が…。彼の死を伝える電話だった。それが彼女の人生を狂わせ始める。大切な人を失ったテレサ自身もメキシコの麻薬カルテルに追われる身となってしまう。友人の夫も殺され、友人と共に生き残るために逃げ続けることを余儀なくされる。", drama_id: 50, season_no: 1, source_url: 'http://tv.foxjapan.com/fse/program/index/prgm_id/20806')
+Season.create(title: "シーズン2", over_view: "シーズン1の最後では、バルガス夫婦の戦いが激化！テレサは、親友のブレンダまでも殺されてしまいさらに追い込まれる。また、死んだはずのグエロが生きていたのだった。今シーズンでは、テレサがカミラと手を組み、さらに麻薬の世界のトップへ上りつめていく！生きていたグエロの正体は？！", drama_id: 50, season_no: 2, source_url: 'http://tv.foxjapan.com/fse/program/index/prgm_id/21206')
+
+
+# Drama.create(title: "",over_view: "",image_url: "", seasons_count: 0,source_url: '',category: 5)
+# Season.create(title: "シーズン1", over_view: "", drama_id: 43, season_no: 1, source_url: '')
+
