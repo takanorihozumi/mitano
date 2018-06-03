@@ -37,8 +37,25 @@ class ImpressionsController < ApplicationController
 
   def edit
     @impression = Impression.find(params[:id])
-    @episode = Episode.find(@impression.episode_id)
-    @drama = @episode.season.drama
+    @titles = Array.new
+    @titles.push(@impression.drama.title)
+    @season = @impression.season if @impression.impression_type != 0
+    @episode = @impression.episode if @impression.impression_type == 2
+  end
+
+  def update
+    @impression = Impression.find(params[:id])
+    if @impression.update_attributes(impression_params)
+      # 更新に成功したときの処理
+      redirect_to impression_path(@impression)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Impression.find(params[:id]).destroy
+    redirect_to user_path(current_user)
   end
 
   def show

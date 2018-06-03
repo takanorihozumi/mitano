@@ -29,6 +29,13 @@
                 <% end %>
               </div>
               <% end %>
+              <% if impression.user == current_user %>
+              <div>
+              <%= link_to "編集する", edit_impression_path(impression) %>
+              <%= link_to "削除", impression_path(impression), method: :delete, remote: true ,
+                                  data: { confirm: "削除しますか?" } %>
+              </div>
+              <% end %>
             </div>
           </div>
         </div>

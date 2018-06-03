@@ -1,4 +1,6 @@
 Rails.application.routes.draw do  
+  resources :posts
+
   get '/.well-known/acme-challenge/:id' => 'pages#certbot'
 
   resources :impressions do
