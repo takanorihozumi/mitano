@@ -506,14 +506,21 @@ footer ul.quicklinks {
     padding: 0;
 }
 
+.drama-title2{
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 @media screen and (max-width: 500px) {
   .display-3{
     font-size: 25px;
     line-height: 5.4;
   }
   .drama-title2{
-    font-size: 20px;
     margin-left: 19px;
+  }
+  .episode-title {
+    font-size: 1.4rem;
   }
   .matome-title {
     margin-top: 60px;
@@ -536,6 +543,12 @@ footer ul.quicklinks {
   padding-top: 0px;
   position: relative;
   height: 250px;
+}
+.episode-summary {
+  font-size: 1.4rem;
+}
+.no-impression {
+  font-size: 2.4rem;
 }
 }
  

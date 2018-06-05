@@ -5,7 +5,7 @@
  <div class="container">
   <section id="episode-show" class="bg-light-gray row-space-top-4 row-space-4">
     <% drama= @drama%>
-    <%= render "partial/seasonTab", drama: drama %>
+    <%= render "partial/seasonTab", drama: drama,title: drama.title+@season.title %>
     <%= link_to "アクション", dramas_path(category: drama.category) %> >
     <%=link_to "#{drama.title}", drama_path(drama) %> >
     <%=link_to "#{@season.title}", season_path(@season) %>
@@ -21,7 +21,7 @@
         <h4 class="episode-title"><%= @season.title %></h4>
         <div class="row">
           <div class="col-md-12 col-sm-12">
-            <h4 class="episode-summary"><%= @season.over_view %></h4>
+            <p class="episode-summary"><%= @season.over_view %></p>
             <div class="episode-summary row-space-1">
               <%= link_to "出典: #{@season.source_url}", @season.source_url %>
             </div>

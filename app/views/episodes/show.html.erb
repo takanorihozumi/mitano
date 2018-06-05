@@ -5,7 +5,7 @@
 <%= render "partial/navbar" %>
 <section id="episode-show" class="bg-light-gray row-space-top-4 row-space-4">
  <div class="container">
-  <%= render "partial/seasonTab", drama: drama %>
+  <%= render "partial/seasonTab", drama: drama,title: drama.title+@episode.season.title+"第"+@episode.episode_no.to_s+"話" %>
   <div class="episode-overview col-md-12">
     <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
       <span style="vertical-align:middle;">
@@ -16,10 +16,10 @@
       <p class="text-info .bg-info"><%= @episode.season.over_view =%></p>
     </div>
     <div class="col-md-8 col-sm-8 portfolio-item">
-      <h4 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h4>
+      <h2 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h2>
       <div class="row">
         <div class="col-md-12 col-sm-12">
-          <h4 class="episode-summary"><%= @episode.over_view %></h4>
+          <p class="episode-summary"><%= @episode.over_view %></p>
           <div class="episode-summary row-space-1">
             <%= link_to "出典: #{@episode.source_url}", @episode.source_url %>
           </div>
