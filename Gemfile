@@ -50,6 +50,7 @@ gem 'active_link_to'
 gem 'sitemap_generator'
 gem 'roboto'
 gem 'social-share-button'
+gem 'rack-user_agent' 
 
 source "https://rubygems.org"
 ruby "2.4.0" # for heroku

@@ -13,7 +13,6 @@
         <%= link_to image_tag("share_drama"),
         new_impression_path(impression_type: '2', episode_id: @episode.id) %>
       </span>
-      <p class="text-info .bg-info"><%= @episode.season.over_view =%></p>
     </div>
     <div class="col-md-8 col-sm-8 portfolio-item">
       <h2 class="episode-title"><%= "第"+@episode.episode_no.to_s+"話:"+@episode.episode_name %></h2>
