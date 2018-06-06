@@ -1,17 +1,16 @@
 <section class="bg-light-gray row-space-top-4 row-space-4">
   <div class="container">
     <div class="col-lg-12 col-xs-12 text-center">
-      <div class="container">
-        <!-- content -->
-        <div class="row" style="padding:10px 0 0 0">
-          <!-- main -->
-          <div class="col-md-9 col-xs-12">
-            <!-- apply custom style -->
-            <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-              <h2 class="no-impression"><small><%= subtitle %>対するみんなの感想</small></h2>
-            </div>
-            <% if @impressions.empty? %>
-            <h2><small>まだ感想はありません。最初の感想を投稿してみましょう</h2>
+      <!-- content -->
+      <div class="row" style="padding:10px 0 0 0">
+        <!-- main -->
+        <div class="col-md-9 col-xs-12">
+          <!-- apply custom style -->
+          <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
+            <h2 class="no-impression"><small><%= subtitle %>対するみんなの感想</small></h2>
+          </div>
+          <% if @impressions.empty? %>
+          <h2><small>まだ感想はありません。最初の感想を投稿してみましょう</h2>
             <% end %>
             <div  id="loadpage">
               <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: true %>
@@ -22,6 +21,6 @@
           </div>
           <%= render "partial/relationalDrama" %>
         </div>
-
       </div>
-    </section>
+    </div>
+  </section>

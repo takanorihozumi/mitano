@@ -14,7 +14,7 @@
     <div class="row">
       <% @dramas.each do |drama|%>
       <% if drama.id != 0 %>
-      <div class="col-md-4 col-sm-6 portfolio-item  text-center">
+      <div class="col-md-4 col-sm-6 col-xs-6 portfolio-item  text-center">
         <span style="vertical-align:middle;">
           <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
         </span>
@@ -27,4 +27,3 @@
     </div>
   </div>
 </section>
-<%= render 'partial/footer' %>

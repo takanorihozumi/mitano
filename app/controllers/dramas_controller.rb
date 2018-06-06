@@ -12,6 +12,12 @@ class DramasController < ApplicationController
       @title = "話題のドラマ"
       @dramas = Drama.all
     end
+    if request.from_smartphone? then
+      @dramas.each do |drama|
+        image = drama.image_url
+        drama.image_url=image.to_s.sub!('300', '200')
+      end
+    end
     @subTitle = getSubTitle
   end
 
