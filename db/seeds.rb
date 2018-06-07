@@ -1,9 +1,9 @@
+Drama.create(title: "NCIS: LA 極秘潜入捜査班",over_view: "米カリフォルニア州ロサンゼルスを拠点に、アメリカ海軍に関わる数々の難事件に立ち向かう潜入捜査チームの活躍を描く本作は、ハイテク技術を駆使して潜入捜査にあたるメンバーらの鮮やかな捜査テクニックや、ハードなアクション･シーンが見どころ。カメレオンのように別人になりすますことができる潜入捜査のプロのG・カレンや、彼と息のあったコンビネーションで数々の事件捜査にあたる米海軍特殊部隊（SEALs）出身のサム・ハンナ、そしてNCIS内外を問わず幅広い人脈を持ち、あらゆる捜査のサポート業務をこなす上司のヘティ、男勝りでタフな女性捜査官のケンジー・ブライら、個性的で魅力あふれるメンバーたちの信頼関係と絶妙なチームワークも本作の魅力だ。",image_url: "https://images-na.ssl-images-amazon.com/images/I/91qHoBVfFfL._SY300_.jpg", seasons_count: 0,source_url: 'http://www.superdramatv.com/line/ncis_la/',category: 3)
+Season.create(title: "シーズン1", over_view: "NCIS ロサンゼルス支局、スペシャル・プロジェクトオフィス（Office of Special Projects）、略称OSPは、潜入捜査やハイテク技術を専門とする、NCIS 海軍犯罪捜査局 （Naval Criminal Investigative Service）のエリート極秘捜査チーム。ベテランのヘンリエッタ・“ヘティ”・ラング管理部長の指揮のもと、 潜入捜査のプロ、G・カレン、その相棒で米海軍特殊部隊（SEALs）出身のサム・ハンナ、タフで頭の切れる美人捜査官ケンジー・ブライ、ITオペレーター、エリック・ビールらが一丸となって、次々と起こる数々の難事件を抜群のチームワークで解決していく。", drama_id: 54, season_no: 1, source_url: 'http://www.superdramatv.com/line/ncis_la/story/')
+Season.create(title: "シーズン2", over_view: "ロス市警の潜入捜査中だったディークスが行方不明になったとNCISに連絡が入る。その少し前、エミリオ・オルテガと護衛の乗った車が爆破される事件があり、その2人がディークスの捜査対象だったことが判明。エミリオはレイゼックというセルビア人に雇われてメキシコから“荷物”を運ぶ下準備をしていた。", drama_id: 54, season_no: 2, source_url: 'http://www.superdramatv.com/line/ncis_la/episode/detail2-1.html')
+Season.create(title: "シーズン3", over_view: "ヘティを追ってルーマニアへ向かったカレン、サム、ケンジー、ディークス。ビーチハウスの近くの海岸で、カレンに記憶がよみがえる。一方ヘティはビーチハウスでコメスクファミリーのボス、アレクサと対面する。アレクサは、コメスクファミリーとカレンの確執について口を開く。", drama_id: 54, season_no: 3, source_url: 'http://www.superdramatv.com/line/ncis_la/episode/detail3-1.html')
 
-Drama.create(title: "Queen of the South",over_view: "メキシコの貧困街に生まれ育ったひとりの平凡な女が、いかにして、麻薬取引という非情の世界に君臨するほどに成り上がっていったのか。すべての始まりは、突然かかってきた男の死を告げる一本の電話だった…。",image_url: "https://images-na.ssl-images-amazon.com/images/I/71UdE%2BQ7OyL._SY300_.jpg", seasons_count: 0,source_url: 'http://tv.foxjapan.com/fse/program/index/prgm_id/20806',category: 2)
-Season.create(title: "シーズン1", over_view: "ある日突然、男からの1本の電話が…。彼の死を伝える電話だった。それが彼女の人生を狂わせ始める。大切な人を失ったテレサ自身もメキシコの麻薬カルテルに追われる身となってしまう。友人の夫も殺され、友人と共に生き残るために逃げ続けることを余儀なくされる。", drama_id: 50, season_no: 1, source_url: 'http://tv.foxjapan.com/fse/program/index/prgm_id/20806')
-Season.create(title: "シーズン2", over_view: "シーズン1の最後では、バルガス夫婦の戦いが激化！テレサは、親友のブレンダまでも殺されてしまいさらに追い込まれる。また、死んだはずのグエロが生きていたのだった。今シーズンでは、テレサがカミラと手を組み、さらに麻薬の世界のトップへ上りつめていく！生きていたグエロの正体は？！", drama_id: 50, season_no: 2, source_url: 'http://tv.foxjapan.com/fse/program/index/prgm_id/21206')
-
+# Season.create(title: "シーズン1", over_view: "", drama_id: 43, season_no: 1, source_url: '')
 
 # Drama.create(title: "",over_view: "",image_url: "", seasons_count: 0,source_url: '',category: 5)
 # Season.create(title: "シーズン1", over_view: "", drama_id: 43, season_no: 1, source_url: '')
-
