@@ -8,19 +8,24 @@ Rails.application.routes.draw do
   end
 
   resources :likes, only: [:create, :destroy]
-
+  resources :impressions,:episodes
+  resources :relationships, only: [:create, :destroy]
   get 'pages/privacy_policy'
   get 'episodes/show'
 
   get 'seasons/show'
 
-  resources :impressions,:episodes
+
 
   root :to => 'pages#index'
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",:registrations => 'registrations' }
 
-  resources :users, only: [:show]
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
 
     resources :dramas do
     resources :seasons, shallow: true
