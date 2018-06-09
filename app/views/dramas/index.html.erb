@@ -19,7 +19,11 @@
           <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
         </span>
         <div class="text-info .bg-info">
-          <%= link_to drama.title, drama_path(drama) %>
+          <% if request.from_smartphone? %>
+            <%= link_to truncate(drama.title, length: 13), drama_path(drama) %>
+          <% else %>
+            <%= link_to drama.title, drama_path(drama) %>
+          <% end %>
         </div>
       </div>
       <% end %>
