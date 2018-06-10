@@ -4,13 +4,9 @@
   <div class="portfolio-caption">
     <span style="font-weight: bold;"></span>
     <div class="balloon5">
-      <div class="faceicon">
-        <% if !impression.user.image.nil? %>
-        <%= image_tag impression.user.image, class:"img-circle profile-0" %>
-        <% else %>
-        <%= image_tag 'no-image', class:"img-circle profile-0" %>
-        <% end %>
-        <p><%= link_to "#{impression.user.name}さん", user_path(impression.user.id) %></p>
+      <div class="faceicon img-rounded">
+        <%= image_tag impression.drama.image_url, class:"img-rounded" %>
+        <p><%= link_to "#{impression.drama.title}", drama_path(impression.drama.id) %></p>
       </div>
 
       <div class="chatting">

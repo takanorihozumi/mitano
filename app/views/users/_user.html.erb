@@ -4,9 +4,9 @@
   <div class="balloon5">
     <div class="faceicon">
       <% unless user.image.nil? %>
-      <%= image_tag user.image, class:"img-circle profile-0" %>
+      <%= link_to image_tag(user.image, class:"img-circle profile-0"),user_path(user.id) %>
       <% else %>
-      <%= image_tag 'no-image', class:"img-circle profile-0" %>
+      <%= link_to image_tag('no-image', class:"img-circle profile-0"),user_path(user.id)  %>
       <% end %>
       <p><%= link_to "#{user.name}さん", user_path(user.id) %></p>
     </div>
