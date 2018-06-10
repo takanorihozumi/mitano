@@ -9,7 +9,7 @@
       <% end %>
       <p><%= link_to "#{user.name}さん", user_path(user.id) %></p>
     </div>
-    <% unless user.description.empty? %>
+    <% unless user.description.blank? %>
     <div class="chatting">
       <div class="says">
         <p><%= simple_format(user.description) %></p>
