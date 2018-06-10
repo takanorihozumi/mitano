@@ -404,6 +404,14 @@ footer ul.quicklinks {
   border-bottom: 1px solid #ccc;
   word-wrap:break-word;
 }
+.kakomi-box8 {
+   padding: 1em;
+   width: 90%;
+   border: 3px dashed #c0c0c0; /*太さ・線種・色*/
+   color: #a0a0a0; /* 文字色 */
+   background-color: #FFF; /* 背景色 */
+   border-radius: 1px; /*角の丸み*/
+}
 
 .impression-overview{
     position: relative;
