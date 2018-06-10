@@ -1,6 +1,6 @@
 <div class="row">
 <% @users.each do |user| %>
-<div class="col-md-9 col-sm-9 col-xs-12  row-space-2 kakomi-box8">
+<div class="col-md-9 col-sm-9 col-md-offset-1  row-space-2 kakomi-box8">
   <div class="balloon5">
     <div class="faceicon">
       <% unless user.image.nil? %>
@@ -13,6 +13,7 @@
     <% unless user.description.blank? %>
     <div class="chatting">
       <div class="says">
+        <p>プロフィール：</p>
         <p><%= simple_format(user.description) %></p>
       </div>
     </div>
