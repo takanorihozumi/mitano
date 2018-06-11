@@ -33,7 +33,7 @@
           <li><%= link_to "海外ドラマまとめ", posts_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <% if (!user_signed_in?) %>
+          <% if !user_signed_in? %>
           <li class=" top-adjust"><%= link_to "アカウント作成", new_user_registration_path %></li>
           <li class=" top-adjust"><%= link_to "ログイン", new_user_session_path %></li>
           <% else %>
