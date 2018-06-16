@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :likes, only: [:create, :destroy]
   resources :impressions,:episodes
   resources :relationships, only: [:create, :destroy]
+  resources :articles
   get 'pages/privacy_policy'
   get 'episodes/show'
 

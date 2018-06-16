@@ -13,6 +13,9 @@
   margin-top: 100px;
   font-size: 40px;
 }
+.card-title {
+  font-size: 20px;
+}
 .matome-midasi {
   color: #364e96;/*文字色*/
   padding: 0.5em 0;/*上下の余白*/
@@ -51,13 +54,14 @@
     display: flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    margin: 2em auto;
-    padding: 24px;
+    margin: 0.5em auto;
+    padding: 5px;
     position: relative;
     font-size: 1.6rem;
     line-height: 1.8;
 }
 .item2 {
+  margin: 0.5em auto;
   font-weight :bold;
   font-size: 1.6rem;
   border-bottom: solid 3px #cce4ff;
@@ -80,7 +84,7 @@
   padding-top: 0px;
   position: relative;
   // 背景画像を暗くする
-  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) ), url(start.jpg);
+  background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05) );
   background-size: cover;
   // 背景画像の位置を決める
   background-position: 50% 50%;
@@ -190,6 +194,10 @@ body {
 
 .row-space-4 {
   margin-bottom: 25px;
+}
+
+.row-space-5 {
+  margin-bottom: -15px;
 }
 
 .btn-full {
@@ -380,7 +388,7 @@ footer ul.quicklinks {
 
 .box1 {
     padding: 0.5em 1em;
-    margin: 2em 0;
+    margin: 1em 0;
     font-weight: bold;
     border: solid 3px #000000;
 }
@@ -575,7 +583,9 @@ footer ul.quicklinks {
     margin-top: 60px;
     font-size: 20px;
   }
-
+.card-title {
+  font-size: 20px;
+}
 .jumbotron {
   padding-top: 0px;
   position: relative;

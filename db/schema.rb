@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180609114045) do
+ActiveRecord::Schema.define(version: 20180616112225) do
+
+  create_table "article_contents", force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "drama_id"
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_article_contents_on_article_id"
+    t.index ["drama_id"], name: "index_article_contents_on_drama_id"
+  end
+
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.text "heading"
+    t.text "trailer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "casts", force: :cascade do |t|
+    t.string "name"
+    t.text "over_view"
+    t.string "image_url"
+    t.integer "movie_db_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -20,6 +49,13 @@ ActiveRecord::Schema.define(version: 20180609114045) do
     t.datetime "updated_at", null: false
     t.index ["impression_id"], name: "index_comments_on_impression_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "drama_cast_relations", force: :cascade do |t|
+    t.integer "drama_id"
+    t.integer "cast_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "dramas", force: :cascade do |t|
@@ -71,6 +107,17 @@ ActiveRecord::Schema.define(version: 20180609114045) do
     t.index ["impression_id"], name: "index_likes_on_impression_id"
     t.index ["user_id", "impression_id"], name: "index_likes_on_user_id_and_impression_id", unique: true
     t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["user_id"], name: "index_photos_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|

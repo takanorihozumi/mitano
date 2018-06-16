@@ -1,0 +1,62 @@
+<% set_meta_tags title: "「海外ドラマまとめ」の記事一覧", description: "海外ドラマのニュースや作品情報、レビュー、キャスト情報、視聴率、ランキングなどを掲載している海外ドラマサイト。", keywords: "話題の海外ドラマ,海外ドラマ,感想,評価",og: { title: "「海外ドラマまとめ」の記事一覧", type: 'article'} %>
+
+<%= render "partial/navbar" %>
+<div class="container">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+      <h1 class="matome-titl">海外ドラマまとめ
+      </h1>
+      <% @articles.each do |article| %>
+
+      <!-- Blog Post -->
+      <div class="card mb-4">
+        <%size = "750x250" %>
+        <%size = "310x150" if request.from_smartphone?%>
+        <%= link_to image_tag(article.image,:size =>size),article_path(article) %>
+        <div class="card-body">
+          <h2 class="card-title"><%=article.title%></h2>
+          <p class="card-text"><%=article.heading%></p>
+          <%= link_to "続きを読む", article_path(article)%>  
+        </div>
+        <div class="card-footer">
+          更新：<%=article.updated_at.strftime("%Y年%m月%d日%H時%M分") %>by
+          <a href="#">mitano編集部</a>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4">
+
+      <!-- Categories Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">カテゴリー</h5>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a href="#">アクション</a>
+                </li>
+                <li>
+                  <a href="#">ファンタジー</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Widget -->
+      <div class="card my-4">
+        <h5 class="card-header">ライター募集</h5>
+        <div class="card-body">
+          あなたもまとめを投稿してみませんか？<br>mitanoではまとめライターを募集しています。<br>興味がある方はmitanoまでご連絡ください。
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
