@@ -2,7 +2,7 @@
   <div class="col-md-12 drama-title">
     <ul class="nav nav-tabs">
       <li class="nav-item dropdown">
-        <%= active_link_to "作品概要",drama_path(drama), :wrap_tag => :li %>
+        <%= active_link_to "概要",drama_path(drama), :wrap_tag => :li %>
 
       </li>
       <% drama.seasons.order(:id).each do |season| %>
