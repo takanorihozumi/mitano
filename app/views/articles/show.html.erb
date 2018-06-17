@@ -1,4 +1,4 @@
-<% set_meta_tags title: @article.title, description: "絶対おすすめ！プリズンブレイクやゲームオブスローンズなど、世界中の海外ドラマを観た編集長が選んだ、2018年、今話題の最高のドラマとは？#{@article.title}", keywords: "海外ドラマ,ランキング,おすすめ,ニュース,ネタバレ,海外ドラマ,ランキング,2018,おすすめ",og: { title: "@article.title", type: 'article', image: "@article.image"} %>
+<% set_meta_tags title: @article.title, description: "絶対おすすめ！プリズンブレイクやゲームオブスローンズなど、世界中の海外ドラマを観た編集長が選んだ、2018年、今話題の最高のドラマとは？#{@article.title}", keywords: "海外ドラマ,ランキング,おすすめ,ニュース,ネタバレ,2018",og: { title: "@article.title", type: 'article', image: "@article.image"} %>
 
 
 <div class="jumbotron2" style="background-image: url(<%= @article.image%>)">
@@ -12,6 +12,9 @@
     <div class="col-lg-12 col-xs-12">
       <div class="container">
         <div class="row" style="padding:10px 0 0 0">
+     <%= link_to "HOME", root_path %> >
+     <%= link_to "海外ドラマまとめ", articles_path %> >
+     <%=link_to "#{@article.title}", article_path(@article) %>
           <div class="box7">
             <p><%= simple_format(@article.heading) %></p>
           </div>
@@ -70,5 +73,19 @@
     </div>
   </section>
     <% count += 1 %>
-
   <% end %>
+  <section class="row-space-5">
+  <div class="container row-space-5">
+    <div class="col-lg-12 col-xs-12">
+        <div class="row"">
+          <div class="item">
+            <p><%= simple_format(@article.trailer) %></p>
+          </div>
+     <%= link_to "HOME", root_path %> >
+     <%= link_to "海外ドラマまとめ", articles_path %> >
+     <%=link_to "#{@article.title}", article_path(@article) %>
+        </div>
+    </div>
+
+  </section>
+     <br>
