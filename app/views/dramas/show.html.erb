@@ -27,7 +27,7 @@
               <div class="episode-summary row-space-1">
                 出演：
               <% @casts.each do |cast| %>
-              <%=cast.name%>
+              <%=link_to(cast.name,cast_path(cast))%>
               <% end %>
               </div>
               <div>
