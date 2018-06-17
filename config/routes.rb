@@ -1,5 +1,4 @@
 Rails.application.routes.draw do  
-  resources :posts
 
   get '/.well-known/acme-challenge/:id' => 'pages#certbot'
 
@@ -10,7 +9,10 @@ Rails.application.routes.draw do
   resources :likes, only: [:create, :destroy]
   resources :impressions,:episodes
   resources :relationships, only: [:create, :destroy]
+  resources :casts, only: [:index, :show]
   resources :articles
+  resources :posts
+
   get 'pages/privacy_policy'
   get 'episodes/show'
 

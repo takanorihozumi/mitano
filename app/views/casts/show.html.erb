@@ -1,0 +1,12 @@
+
+ <%= render "partial/navbar" %>
+ <div class="container">
+   <div class="row">
+     <div class="col-md-4">
+       <%= image_tag(@cast.image_url,:size =>"320x400")%>
+     </div>
+     <div class="col-md-8">
+       <%= @cast.over_view%>
+     </div>
+   </div>
+ </div>
