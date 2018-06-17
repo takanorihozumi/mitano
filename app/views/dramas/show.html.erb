@@ -22,7 +22,13 @@
             <div class="col-md-12 col-sm-12">
               <p class="episode-summary"><%= @drama.over_view %></p>
               <div class="episode-summary row-space-1">
-              <%= link_to "出典: #{@drama.source_url}", @drama.source_url %>
+                <%= link_to "出典：#{drama.source_url}", drama.source_url %>
+              </div>
+              <div class="episode-summary row-space-1">
+                出演：
+              <% @casts.each do |cast| %>
+              <%=cast.name%>
+              <% end %>
               </div>
               <div>
                 <%= social_share_button_tag(drama.title+"の感想をmitanoで話し合おう！") %>         

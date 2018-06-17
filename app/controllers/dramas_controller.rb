@@ -26,6 +26,7 @@ class DramasController < ApplicationController
     @drama.image_url=@drama.image_url.sub!('300', '100') if request.from_smartphone?
     @impressions = Impression.where(drama_id: @drama.id, impression_type: "0").order(:created_at).reverse_order.page(params[:page]).per(PER)
     @dramas = Drama.all
+    @casts = @drama.casts
   end
 
   private
