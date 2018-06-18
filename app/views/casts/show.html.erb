@@ -1,12 +1,33 @@
+<% set_meta_tags title: @cast.name, description: "#{@cast.name}の出演ドラマ、誕生日、年齢、写真、画像、動画、関連ニュースの情報。", keywords: "#{@cast.name},海外ドラマ,可愛い,イケメン",og: { title: @cast.name, type: 'article', image: @cast.image_url } %>
 
- <%= render "partial/navbar" %>
- <div class="container">
-   <div class="row">
-     <div class="col-md-4">
-       <%= image_tag(@cast.image_url,:size =>"320x400")%>
-     </div>
-     <div class="col-md-8">
-       <%= @cast.over_view%>
-     </div>
+<%= render "partial/navbar" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+     <%= link_to "HOME", root_path %> >
+     <%= link_to "#{@cast.name}", cast_path(@cast) %> 
    </div>
  </div>
+ <div class="row">
+  <div class="col-md-4 row-space-1">
+     <%= image_tag(@cast.image_url,:size =>"320x400",:align => 'center')%>
+   </div>
+   <div class="col-md-8">
+    <h1 class="cast-name"><%=@cast.name%></h1>
+    <div class="episode-summary">
+     <%= @cast.over_view%>
+   </div>
+   <div class="matome-midasi top-layout row-space-1">
+    出演作
+  </div>
+
+  <div class="row-space-1">
+    <% @dramas.each do |drama| %>
+    <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
+    <% end %>
+
+  </div>
+</div>
+</div>
+</div>
