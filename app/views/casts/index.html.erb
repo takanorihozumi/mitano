@@ -1,2 +1,27 @@
-<h1>Casts#index</h1>
-<p>Find me in app/views/casts/index.html.erb</p>
+<% set_meta_tags title: "今話題の海外ドラマのキャストの一覧", description: "今話題の海外ドラマのキャストの一覧、キャスト情報、誕生日、年齢、写真、画像、動画、関連ニュースの情報。", keywords: "キャスト一覧,海外ドラマ,可愛い,イケメン",og: { title: "今話題の海外ドラマのキャストの一覧", type: 'article' } %>
+
+<%= render "partial/navbar" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="row-space-3 episode-title">話題の海外ドラマのキャスト一覧
+      </h1>
+    </div>
+ </div>
+ <% @casts.each do |cast| %>
+ <div class="row row-space-3">
+  <div class="col-md-4 row-space-1">
+   <%= link_to image_tag(cast.image_url,:size =>"320x400",:align => 'center'), cast_path(cast)%>
+ </div>
+ <div class="col-md-8">
+  <h2 class="cast-name"><%= link_to(cast.name,cast_path(cast))%></h2>
+  <div class="episode-summary">
+   <%= cast.over_view%>
+ </div>
+</div>
+<br>
+</div>
+<% end %>
+
+</div>

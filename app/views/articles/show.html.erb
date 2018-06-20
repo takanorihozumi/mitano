@@ -12,80 +12,89 @@
     <div class="col-lg-12 col-xs-12">
       <div class="container">
         <div class="row" style="padding:10px 0 0 0">
-     <%= link_to "HOME", root_path %> >
-     <%= link_to "海外ドラマまとめ", articles_path %> >
-     <%=link_to "#{@article.title}", article_path(@article) %>
-          <div class="box7">
-            <p><%= simple_format(@article.heading) %></p>
-          </div>
+         <%= link_to "HOME", root_path %> >
+         <%= link_to "海外ドラマまとめ", articles_path %> >
+         <%=link_to "#{@article.title}", article_path(@article) %>
+         <div class="box7">
+          <p><%= simple_format(@article.heading) %></p>
         </div>
       </div>
     </div>
+  </div>
 
-  </section>
-  <% dramaMae = "" %>
+</section>
+<% dramaMae = "" %>
+<% count = 1 %>
+<% @articleContents.each do |content|%>
+
+<% drama = content.drama %>
+<section class="">
+  <% if dramaMae != drama%>
   <% count = 1 %>
-  <% @articleContents.each do |content|%>
-
-  <% drama = content.drama %>
-   <section class="">
-    <% if dramaMae != drama%>
-    <% count = 1 %>
-    <div class="container">
-      <div class="col-lg-12 col-xs-12">
-        <div class="container">
-          <div class="row" style="padding:10px 0 0 0">
-            <h2 class="matome-midasi"><small><%= link_to drama.title, drama_path(drama) %></small></h2>
-          </div>
+  <div class="container">
+    <div class="col-lg-12 col-xs-12">
+      <div class="container">
+        <div class="row" style="padding:10px 0 0 0">
+          <h2 class="matome-midasi"><small><%= link_to drama.title, drama_path(drama) %></small></h2>
         </div>
       </div>
-      <div class="episode-overview col-md-12 col-xs-12">
-        <div class="col-md-4 col-sm-4 portfolio-item box1 center-block text-center">
-          <span style="vertical-align:middle;">
-            <%= link_to image_tag(drama.image_url), drama_path(drama),:align => 'center'  %>
-          </span>
-        </div>
-        <div class="col-md-8 col-sm-8 portfolio-item">
-          <div class="row">
-            <div class="col-md-12 col-sm-12">
-              <h4 class="episode-summary"><%= drama.over_view %></h4>
-              <div class="episode-summary row-space-1">
-                <%= link_to "出典：#{drama.source_url}", drama.source_url %>
-              </div>
+    </div>
+    <div class="episode-overview col-md-12 col-xs-12">
+      <div class="col-md-4 col-sm-4 portfolio-item box1 center-block text-center">
+        <span style="vertical-align:middle;">
+          <%= link_to image_tag(drama.image_url), drama_path(drama),:align => 'center'  %>
+        </span>
+      </div>
+      <div class="col-md-8 col-sm-8 portfolio-item">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <h4 class="episode-summary"><%= drama.over_view %></h4>
+            <div class="episode-summary row-space-1">
+              <%= link_to "出典：#{drama.source_url}", drama.source_url %>
+            </div>
+            <div class="episode-summary row-space-1">
+              出演：
+              <% drama.casts.each do |cast| %>
+              <%=link_to(cast.name,cast_path(cast))%>
+              <% end %>
+            </div>
+            <div>
+              <%= social_share_button_tag(@article.title) %>         
             </div>
           </div>
         </div>
-      </div> 
-    </div>
-      <% dramaMae = drama %>
-    <% end %>
-    <div class="container row-space-5">
-      <div class="box26">
-        <span class="box-title">おすすめポイント<%=count%></span>
-        
-        <div class="item2 "><%= content.title %></div>
-        <div class="item">
+      </div>
+    </div> 
+  </div>
+  <% dramaMae = drama %>
+  <% end %>
+  <div class="container row-space-5">
+    <div class="box26">
+      <span class="box-title">おすすめポイント<%=count%></span>
+
+      <div class="item2 "><%= content.title %></div>
+      <div class="item">
         <p>
           <%= simple_format(content.content) %>
         </p>
-        </div>
       </div>
     </div>
-  </section>
-    <% count += 1 %>
-  <% end %>
-  <section class="row-space-5">
+  </div>
+</section>
+<% count += 1 %>
+<% end %>
+<section class="row-space-5">
   <div class="container row-space-5">
     <div class="col-lg-12 col-xs-12">
-        <div class="row"">
-          <div class="item">
-            <p><%= simple_format(@article.trailer) %></p>
-          </div>
-     <%= link_to "HOME", root_path %> >
-     <%= link_to "海外ドラマまとめ", articles_path %> >
-     <%=link_to "#{@article.title}", article_path(@article) %>
+      <div class="row"">
+        <div class="item">
+          <p><%= simple_format(@article.trailer) %></p>
         </div>
+        <%= link_to "HOME", root_path %> >
+        <%= link_to "海外ドラマまとめ", articles_path %> >
+        <%=link_to "#{@article.title}", article_path(@article) %>
+      </div>
     </div>
 
   </section>
-     <br>
+  <br>
