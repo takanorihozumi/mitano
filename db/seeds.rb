@@ -1,9 +1,12 @@
-Cast.create(name:"エド・ウェストウィック",over_view:"エド・ウェストウィック（Ed Westwick、本名：エドワード・ウェストウィック、Edward Westwick）は、イギリスの俳優、ミュージシャン。イングランド・ハートフォードシャー州スティーブニッジ出身。ロンドンのナショナル・ユース・シアターで学ぶ。2006年にデビューし、『Doctors』や『Casualty』などのテレビシリーズにゲスト出演。同年には二本の映画（『トゥモロー・ワールド』、『こわれゆく世界の中で』）に出演。翌年放送開始のテレビシリーズ『ゴシップガール』のチャック・バス役でブレイクし、ティーン・チョイス・アワードやヤング・ハリウッド・アワードを受賞した。音楽活動も行っており、イギリスで活動するThe Filthy Youthというインディー・ロックバンドでヴォーカルを務めている。『ゴシップガール』のシーズン1第12話の劇中でバンドの曲が2曲使用された。",image_url:"https://image.tmdb.org/t/p/original/lDHxIZFUR3DjJcmx2oT367QNrQs.jpg",movie_id: 21662,birthday:"1987年6月27日")
-DramaCastRelation.create(drama_id:2,cast_id:33)
-Cast.create(name:"クリストファー・チェイス・クロフォード",over_view:"クリストファー・チェイス・クロフォード（Christopher Chace Crawford）は、アメリカの俳優。テレビドラマシリーズ『ゴシップガール』のネイト・アーチボルド役で最も知られている。テキサス州ラボック出身。父親は皮膚科医で母親は教師。妹のキャンディス・クロフォード（英語版）はミスコンのミス・ミズーリ USA（英語版）の2008年度の優勝者である。高校時代にモデルの仕事をしていて、最終学年の頃に校内のベストドレッサー賞に選ばれたこともある。また当時はゴルフに興じていた。2003年の高校卒業後、カリフォルニア州マリブに引越しペパーダイン大学で学ぶ。大学では男子学生の友愛会であるフラタニティに所属していた。進路の方向性が定まらずにいた頃に母親から演技を勧められ役者の道を志す",image_url:"https://image.tmdb.org/t/p/original/1gLWD3KlPIqcI8yVrP2FMeulePG.jpg",movie_id: 60899,birthday:"1985年7月18日")
-DramaCastRelation.create(drama_id:2,cast_id:34)
-
-
+Cast.create(name:"エヴァン・レイチェル・ウッド",over_view:"エヴァン・レイチェル・ウッド（Evan Rachel Wood）は、アメリカ合衆国の女優。ノースカロライナ州ローリー出身にてユダヤ教徒の両親のもとに生まれる。父親のアイラ・デヴィッド・ウッド3世は俳優兼舞台監督、母親のサラ・リン・ムーアは女優。2人の兄がおり、デーナはミュージシャン、アイラは俳優をしている。叔父のキャロル・ウィンステッド・ウッドはプロダクション・デザイナー。幼い頃から父親が主宰する舞台に出演していた。1994年の映画『インタビュー・ウィズ・ヴァンパイア』でキルスティン・ダンストと少女クローディア役を最後まで競い合うが、役を得られずに終わった。その後はテレビドラマなどに出演した。1997年に両親が離婚し、母親と兄（アイラ）と共にロサンゼルスへ引越す。1998年に『ウィズ・ユー』で映画デビューする。2003年に多感な13歳の少女を演じた『サーティーン あの頃欲しかった愛のこと』が批評家の高い評価を受け、ゴールデングローブ賞 主演女優賞 (ドラマ部門)や全米映画俳優組合賞主演女優賞などにノミネートされ、一躍ハリウッド期待の若手女優となる。",image_url:"https://image.tmdb.org/t/p/original/8FlQq58MYv3Wd91R8WV6jrWIeLy.jpg",movie_id: 38940,birthday:"1987年9月7日")
+DramaCastRelation.create(drama_id:64,cast_id:38)
+DramaCastRelation.create(drama_id:14,cast_id:38)
+Cast.create(name:"ジェームズ・マースデン",over_view:"ジェームズ・ポール・マースデン（James Paul Marsden）は、アメリカ合衆国の俳優。ジミー・マースデン（Jimmy Marsden）と表記されることもある。オクラホマ州出身。オクラホマ州立大学中退。1973年9月18日、オクラホマ州スティルウォーター出身。カンザス州立大学の教授である父と、栄養士の母の間に生まれる。両親は彼が9歳の時に離婚している。年下の兄妹ジェニファーとエリザベス、ジェフとロバートがいる。女優のリサ・リンド（エルヴィス・プレスリーにも『Burning Love』など楽曲提供した、カントリー歌手のデニス・リンドの娘）と結婚。息子のジャックと娘のメアリーがいるが、2011年に離婚。2012年にはブラジル人モデルのローズ・コスタとの間に男児が生まれている。家族旅行で訪れたハワイでの俳優のカーク・キャメロンとキャンディス・キャメロン兄妹との出会いがきっかけで俳優になることを決意。父の友人を頼りにロサンゼルスへ移り、俳優としての活動を始めた。2003年に『X-MEN2』に出演した後は、全米でサプライズヒットとなったラブロマンス『きみに読む物語』で、ヒロインの婚約者ロンを演じた。2004年から2006年にかけて、日本劇場未公開の作品ではHIVを題材にした The 24th Day でゲイの青年役、グレン・クロース、エリザベス・バンクス共演の Heights では隠された過去を持つ弁護士を演じ、マフィア映画『狼の街』ではジョバンニ・リビシらと共演。インディーズ映画への出演が目立つ年となっている。",image_url:"https://image.tmdb.org/t/p/original/htBil0Vayd09haeUVoKEPxuantT.jpg",movie_id: 11006,birthday:"1973年9月18日")
+DramaCastRelation.create(drama_id:64,cast_id:39)
+Cast.create(name:"テッサ・トンプソン",over_view:"テッサ・トンプソン (Tessa Thompson) は、アメリカの女優、ミュージシャン。カリフォルニア州ロサンゼルスに生まれ、休暇中はバンド、チョコレート・ジーニアス（英語版）に所属するシンガーソングライターの父マーク・アンソニー・トンプソンの住むニューヨークで過ごして育つ。サンタモニカカレッジで文化人類学を学んだ。2010年には、タイラー・ペリーが監督した戯曲の映画化『For Colored Girls』に自ら働きかけて出演を果たした。2014年にはともに高く評価された『Dear White People』『グローリー/明日への行進』に、2015年にはライアン・クーグラーが監督する『ロッキー』シリーズのスピンオフ映画『クリード チャンプを継ぐ男』に出演している。",image_url:"https://image.tmdb.org/t/p/original/l9o1HsPN78dAU6MqqTYHVZhPAwa.jpg",movie_id: 62561,birthday:"1983年10月3日")
+DramaCastRelation.create(drama_id:64,cast_id:40)
+DramaCastRelation.create(drama_id:21,cast_id:40)
+DramaCastRelation.create(drama_id:32,cast_id:40)
 # Drama.create(title: "",over_view: "",image_url: "", seasons_count: 0,source_url: '',category: 5)
 # Season.create(title: "シーズン1", over_view: "", drama_id: 43, season_no: 1, source_url: '')
 # Article.create(title: "",image: "",heading: "",trailer: "",created_at: Time.zone.now,updated_at: Time.zone.now)
