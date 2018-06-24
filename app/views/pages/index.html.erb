@@ -33,20 +33,31 @@
      </div>
    </div>
    <div class="row text-center">
-    <div class="col-md-4 col-sm-12">
+    <div class="col-md-4 col-sm-12 row-space-2">
       <%= link_to image_tag('search-icon'),dramas_path %>
       <h4 class="service-heading">探す</h4>
-      <p class="text-muted">まず、あなたが観ているドラマを探しましょう。</p>
+      <p class="text-muted">あなたが観ているドラマを探しましょう。</p>
+      <%= link_to "話題のドラマ",dramas_path %> /
+      <%= link_to "人気キャスト",casts_path %> /
+      <%= link_to "海外ドラマまとめ",articles_path %>
+
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 row-space-2">
       <%= image_tag 'home-icon'%>
       <h4 class="service-heading">感想をシェア</h4>
       <p class="text-muted">ドラマを観たら感想をシェアしてみましょう。</p>
+        <%= link_to "アクション", dramas_path(category: 0) %> /
+        <%= link_to "ファンタジー", dramas_path(category: 1) %> /
+        <%= link_to "ドラマ", dramas_path(category: 2) %> /
+        <%= link_to "韓流", dramas_path(category: 5) %>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 row-space-2">
       <%= image_tag 'colab-icon'%>
       <h4 class="service-heading">みんなと議論</h4>
-      <p class="text-muted">ドラマを観て感じた興奮・感動をみんなと議論しましょう。</p>
+      <p class="text-muted">ドラマを観て感じた興奮をみんなと議論。</p>
+      <%= link_to "ゲームオブスローンズ",drama_path(6)%> /
+      <%= link_to "13の理由",drama_path(24) %> /
+      <%= link_to "プリズンブレイク",drama_path(19)%>
     </div>
   </div>
 </section> 
