@@ -51,7 +51,7 @@ gem 'sitemap_generator'
 gem 'roboto'
 gem 'social-share-button'
 gem 'rack-user_agent' 
-
+gem 'feedjira'
 source "https://rubygems.org"
 ruby "2.4.0" # for heroku
 

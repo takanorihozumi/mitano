@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180617111915) do
+ActiveRecord::Schema.define(version: 20180630073114) do
 
   create_table "article_contents", force: :cascade do |t|
     t.integer "article_id"
@@ -72,6 +72,25 @@ ActiveRecord::Schema.define(version: 20180617111915) do
     t.integer "category"
   end
 
+  create_table "entries", force: :cascade do |t|
+    t.string "title"
+    t.datetime "published"
+    t.text "content"
+    t.string "url"
+    t.string "author"
+    t.integer "feed_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "entry_categories", force: :cascade do |t|
+    t.integer "entry_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["entry_id"], name: "index_entry_categories_on_entry_id"
+  end
+
   create_table "episodes", force: :cascade do |t|
     t.string "episode_name"
     t.text "over_view"
@@ -81,6 +100,14 @@ ActiveRecord::Schema.define(version: 20180617111915) do
     t.integer "episode_no", default: 0, null: false
     t.string "source_url"
     t.index ["season_id"], name: "index_episodes_on_season_id"
+  end
+
+  create_table "feeds", force: :cascade do |t|
+    t.string "name"
+    t.string "url"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "impressions", force: :cascade do |t|

@@ -1,5 +1,6 @@
-Cast.create(name:"ジェイソン・ラルフ",over_view:"マジシャンズで主役を演じている、ジェイソン・ラルフ。彼が本格的に俳優として挑んだ作品は2014年に放送されたコメディードラマでした。キャリアのスタートは2010年なのですが、2014年頃から仕事がコンスタントに入るようになり、マジシャンズで主演を勝ち取る事ができたジェイソン。キャリア的にまだまだ新人の部類かと思いますが、確実にこの数年でビッグになりますよ！マジシャンズでの演技が大絶賛されているので、今後はオファーが絶えないでしょう。",image_url:"https://image.tmdb.org/t/p/original/gVLvOT8PYZC5U5yvW7UkePL8MxJ.jpg",movie_id: 1104136,birthday:"1986年4月7日")
-DramaCastRelation.create(drama_id:5,cast_id:46)
+Feed.create(name:"ハリウッドニュース",url:"http://www.hollywood-news.jp/feed/")
+
+
 # Drama.create(title: "",over_view: "",image_url: "", seasons_count: 0,source_url: '',category: 5)
 # Season.create(title: "シーズン1", over_view: "", drama_id: 43, season_no: 1, source_url: '')
 # Article.create(title: "",image: "",heading: "",trailer: "",created_at: Time.zone.now,updated_at: Time.zone.now)
