@@ -9,10 +9,11 @@
     <i class="left"><%= @entry.published %> <%= @entry.author %>の投稿</i>
     <br>
     <div class="box26">
-
+      <div class="text-muted">
     <% @entryCategories.each do |ec| %>
     <%= ec.name %>
     <% end %>
+    </div>
     <p class="episode-summary">
       <%= @entry.content.html_safe %>
       <%= link_to "もっと見る", @entry.url %>
