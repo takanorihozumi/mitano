@@ -6,9 +6,9 @@
     <div class="balloon5">
      <div class="faceicon">
       <% if !impression.user.image.nil? %>
-        <%= image_tag impression.user.image, class:"img-circle profile-0" %>
+      <%= image_tag impression.user.image, class:"img-circle profile-0" %>
       <% else %>
-        <%= image_tag 'no-image', class:"img-circle profile-0" %>
+      <%= image_tag 'no-image', class:"img-circle profile-0" %>
       <% end %>
       <p><%= link_to "#{impression.user.name}さん", user_path(impression.user.id) %></p>
     </div>
@@ -44,15 +44,17 @@
 </div>
 
 <% end %>
-          <div class="col-md-12 page-header">
-            <h2 class="no-impression"><small><%=@drama.title%>に関する最新ニュース</small></h2>
-          </div>
+<% if isShowNewsArea %>
+<div class="col-md-12 page-header">
+  <h2 class="no-impression"><small><%=@drama.title%>に関する最新ニュース</small></h2>
+</div>
 <div class="col-md-12">
   <% @entries.each do |entry| %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
-      </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
     </div>
+  </div>
   <% end %>
 </div>
+<% end %>
