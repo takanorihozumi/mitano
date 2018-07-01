@@ -8,6 +8,9 @@ namespace :sync do
           local_entry.update_attributes(content: entry.summary, author: entry.author, url: entry.url, published: entry.published)
         elsif feed.id==3  then
           local_entry.update_attributes(content: Sanitize.clean(entry.summary), author: entry.author, url: entry.url, published: entry.last_modified)
+        elsif feed.id==4 then
+          p Sanitize.clean(entry.summary)
+          local_entry.update_attributes(content: Sanitize.clean(entry.summary), author: entry.author, url: entry.url, published: entry.last_modified)
         else          
           local_entry.update_attributes(content: entry.content, author: entry.author, url: entry.url, published: entry.published)
         end
@@ -16,9 +19,7 @@ namespace :sync do
           local_category = local_entry.entry_categories.where(name: category).first_or_initialize
           local_category.update_attributes(name: category)
         end
-        p "Synced Entry - #{entry.title}"
       end
-      p "Synced Feed - #{feed.name}"
     end
   end
 end
