@@ -1,6 +1,6 @@
 <% impressions.each do |impression|%>
 
-<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-2 row-space-2 impression-overview">
+<div class="col-md-12 col-sm-9 col-xs-12  row-space-2 impression-overview">
   <div class="portfolio-caption">
     <span style="font-weight: bold;"></span>
     <div class="balloon5">
@@ -42,4 +42,17 @@
   </div>
 </div>
 </div>
+
 <% end %>
+          <div class="col-md-12 page-header">
+            <h2 class="no-impression"><small><%=@drama.title%>に関する最新ニュース</small></h2>
+          </div>
+<div class="col-md-12">
+  <% @entries.each do |entry| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+      </div>
+    </div>
+  <% end %>
+</div>

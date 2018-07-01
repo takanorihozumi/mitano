@@ -15,9 +15,7 @@
             <div  id="loadpage">
               <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: true %>
             </div>
-            <div class="col-md-9 col-md-offset-2">
-              <%= link_to_next_page @impressions, 'もっと見る', remote: true, id: 'more_link' %>          
-            </div>
+
           </div>
           <%= render "partial/relationalDrama" %>
         </div>

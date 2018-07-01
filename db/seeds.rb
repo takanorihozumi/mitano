@@ -1,4 +1,4 @@
-Feed.create(name:"ハリウッドニュース",url:"http://www.hollywood-news.jp/feed/")
+Feed.create(name:"海外ドラマナビ",url:"https://dramanavi.net/atom.xml")
 
 
 # Drama.create(title: "",over_view: "",image_url: "", seasons_count: 0,source_url: '',category: 5)

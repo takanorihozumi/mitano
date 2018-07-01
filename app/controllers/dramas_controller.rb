@@ -27,6 +27,11 @@ class DramasController < ApplicationController
     @impressions = Impression.where(drama_id: @drama.id, impression_type: "0").order(:created_at).reverse_order.page(params[:page]).per(PER)
     @dramas = Drama.all
     @casts = @drama.casts
+    @entryCategories = EntryCategory.where(name:@drama.title)
+    @entries = Array.new
+    @entryCategories.each do |entryCategory|
+        @entries.push(entryCategory.entry)
+    end
   end
 
   private
