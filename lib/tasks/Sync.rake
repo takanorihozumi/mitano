@@ -5,11 +5,10 @@ namespace :sync do
       content.entries.each do |entry|
         local_entry = feed.entries.where(title: entry.title).first_or_initialize
         if feed.id==2  then
-          p entry.summary
-          p entry.content.index("img")
           local_entry.update_attributes(content: entry.summary, author: entry.author, url: entry.url, published: entry.published)
-
-        else      
+        elsif feed.id==3  then
+          local_entry.update_attributes(content: Sanitize.clean(entry.summary), author: entry.author, url: entry.url, published: entry.last_modified)
+        else          
           local_entry.update_attributes(content: entry.content, author: entry.author, url: entry.url, published: entry.published)
         end
         # p entry.categories
