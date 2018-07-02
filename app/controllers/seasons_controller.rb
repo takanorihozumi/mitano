@@ -8,6 +8,10 @@ class SeasonsController < ApplicationController
     @episodes =@season.episodes.order(:id)
     @impressions = Impression.where(season_id: @season.id, impression_type: "1").order(:created_at).reverse_order.page(params[:page]).per(PER)
     @dramas = Drama.order(created_at: 'desc')
-
+    @entryCategories = EntryCategory.where(name:@drama.title)
+    @entries = Array.new
+    @entryCategories.each do |entryCategory|
+        @entries.push(entryCategory.entry)
+    end
   end
 end
