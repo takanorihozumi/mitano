@@ -278,5 +278,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   # config.omniauth :facebook, ENV["facebook_app_id"], ENV["facebook_app_secret"], scope: 'email', info_fields: 'email,name'
   config.omniauth :facebook, "147717249235882", "9ce8ad494950897d50a7c73559ecc3b4", scope: 'email', info_fields: 'email,name'
-
+  config.omniauth :twitter, "c1UNZgRA94TZRTk3Km6XxD1hC", "3YZ7Ob5KCuCfYkInYRFaR4CldqC9rhRtA6bgX8sxyd8gl6fGUE"
 end
