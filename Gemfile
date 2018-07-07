@@ -11,6 +11,7 @@ gem 'amazon-ecs'
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
+gem 'activerecord-session_store'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 gem 'toastr-rails'

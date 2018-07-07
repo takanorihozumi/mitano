@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+  :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:facebook, :twitter]
 
   has_many :impressions, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -31,9 +31,14 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
+      user.email= "#{auth.uid}-#{auth.provider}@example.com" if user.email.nil?
       user.password = Devise.friendly_token[0,20]
     user.name = auth.info.name   # assuming the user model has a name
-    user.image = "https://graph.facebook.com/#{auth.uid}/picture?type=large" # assuming the user model has an image
+    if auth.provider "twitter" then
+      user.image= auth.info.image
+    else
+      user.image = "https://graph.facebook.com/#{auth.uid}/picture?type=large" # assuming the user model has an image
+    end
     # If you are using confirmable and the provider(s) you use validate emails, 
     # uncomment the line below to skip the confirmation emails.
     # user.skip_confirmation!
