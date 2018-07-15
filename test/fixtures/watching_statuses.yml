@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  drama: one
+  season: one
+  episode: one
+  watching_type: 1
+  status: 1
+
+two:
+  user: two
+  drama: two
+  season: two
+  episode: two
+  watching_type: 1
+  status: 1

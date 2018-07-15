@@ -27,7 +27,7 @@
           <li><%= link_to "アクション", dramas_path(category: 0) %></li>
           <li><%= link_to "ファンタジー", dramas_path(category: 1) %></li>
           <li><%= link_to "ドラマ", dramas_path(category: 2) %></li>
-          <li><%= link_to "サスペンス・ミステリー", dramas_path(category: 3) %></li>
+          <li><%= link_to "サスペンス", dramas_path(category: 3) %></li>
           <li><%= link_to "韓流", dramas_path(category: 5) %></li>
           <li><%= link_to "キャスト一覧", casts_path %></li>
           <li><%= link_to "最新News", entries_index_path %></li>
@@ -51,7 +51,7 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu nab">
-              <li><%= link_to "プロフィール", user_path(current_user) %></li>
+              <li><%= link_to "マイページ", user_path(current_user) %></li>
               <li><%= link_to "プロフィールを編集する", edit_user_registration_path %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
             </ul>

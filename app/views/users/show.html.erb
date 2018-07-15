@@ -54,15 +54,47 @@
    <div class="col-md-9 col-xs-12">
 
     <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-      <h1><small><%= @user.name %>さんの投稿一覧</small></h1>
+      <h1><small><%= @user.name %>さんの視聴記録</small></h1>
 
     </div>
-    <% if @impressions.empty? %>
-    <h1><small>まだ感想はありません。最初の感想を投稿してみましょう</small></h1>
+    <div  class="episode-overview col-md-12 col-xs-12">
+      <h2 class="episode-title drama-title3"><small>みてる</small></h2>
+    <% @miterus.each do |drama| %>
+    <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
     <% end %>
-    <div  id="loadpage">
-      <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: true,isShowNewsArea: false %>
+    <% if @miterus.empty? %>
+    <div>まだドラマが登録されていません</div>
+    <% end %>
+    <div class="row-space-1">
+    </div>
+
+    </div>
+    <div  class="episode-overview col-md-12 col-xs-12 top-layout">
+    <h2 class="episode-title drama-title3"><small>みた</small></h2>
+    <% @mitas.each do |drama| %>
+    <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
+    <% end %>
+    <% if @mitas.empty? %>
+    <div>まだドラマが登録されていません</div>
+    <% end %>
+    <div class="row-space-1">
+    </div>
+    </div>
+    <div  class="episode-overview col-md-12 col-xs-12 top-layout">
+    <h2 class="episode-title drama-title3"><small>みたい</small></h2>
+    <% @mitais.each do |drama| %>
+    <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
+    <% end %>
+    <% if @mitais.empty? %>
+    <div>まだドラマが登録されていません</div>
+    <% end %>
+    <div class="row-space-1">
+    </div>
     </div>
   </div>
-</div>    
+      <br>
+
+</div> 
+    <br>
+
 </div>

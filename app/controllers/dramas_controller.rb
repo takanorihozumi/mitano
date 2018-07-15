@@ -32,6 +32,10 @@ class DramasController < ApplicationController
     @entryCategories.each do |entryCategory|
         @entries.push(entryCategory.entry)
     end
+    @watchingStatus
+    @watchingStatus = @drama.watching_statuses.where(user_id: current_user.id, drama_id: @drama.id) if user_signed_in?
+    @status = 1 #ステータスを選択してください（デフォルト）
+    @status = @watchingStatus.first.status unless @watchingStatus.blank?
   end
 
   private

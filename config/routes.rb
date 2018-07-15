@@ -1,5 +1,7 @@
 Rails.application.routes.draw do  
 
+  post 'watching_statuses/select'
+
   get 'entries/index'
 
   get 'entries/show'
