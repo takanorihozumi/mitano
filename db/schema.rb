@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180707080557) do
+ActiveRecord::Schema.define(version: 20180714052931) do
 
   create_table "article_contents", force: :cascade do |t|
     t.integer "article_id"
@@ -203,6 +203,24 @@ ActiveRecord::Schema.define(version: 20180707080557) do
     t.string "description"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "watching_statuses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "drama_id"
+    t.integer "season_id"
+    t.integer "episode_id"
+    t.integer "watching_type"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drama_id"], name: "index_watching_statuses_on_drama_id"
+    t.index ["episode_id"], name: "index_watching_statuses_on_episode_id"
+    t.index ["season_id"], name: "index_watching_statuses_on_season_id"
+    t.index ["user_id", "drama_id"], name: "index_watching_statuses_on_user_id_and_drama_id"
+    t.index ["user_id", "episode_id"], name: "index_watching_statuses_on_user_id_and_episode_id"
+    t.index ["user_id", "season_id"], name: "index_watching_statuses_on_user_id_and_season_id"
+    t.index ["user_id"], name: "index_watching_statuses_on_user_id"
   end
 
 end

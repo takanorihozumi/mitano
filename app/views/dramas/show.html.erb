@@ -1,44 +1,58 @@
 <% set_meta_tags title: @drama.title+" - 感想・レビュー・評価・あらすじ", description: "#{@drama.title}の感想、レビュー。#{@drama.over_view}", keywords: "#{@drama.title},#{@drama.title}感想,感想,評価,海外ドラマ",og: { title: @drama.title, type: 'article', image: @drama.image_url } %>
 
- <%= render "partial/navbar" %>
-    <section id="drama-show" class="bg-light-gray row-space-top-4 ">
-     <div class="container">
-      <% drama= @drama%>
-      <%= render "partial/seasonTab", drama: drama, title: drama.title %>
-     <%= link_to "HOME", root_path %> >
-     <%= link_to "アクション", dramas_path(category: drama.category) %> >
-     <%=link_to "#{drama.title}", drama_path(drama) %>
-      <div class="episode-overview col-md-12 col-xs-12">
-        <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
-          <span style="vertical-align:middle;">
-            <%= image_tag("#{drama.image_url}",:align => 'center') %>
-            <%= link_to image_tag("share_drama"),
-            new_impression_path(impression_type: '0', drama_id: @drama.id) %> 
-          </span>
-        </div>
-        <div class="col-md-8 col-sm-8 portfolio-item">
-          <h4 class="episode-title"><%= @drama.title %></h4>
+<%= render "partial/navbar" %>
+<section id="drama-show" class="bg-light-gray row-space-top-4 ">
+ <div class="container">
+  <% drama= @drama%>
+  <%= render "partial/seasonTab", drama: drama, title: drama.title %>
+  <%= link_to "HOME", root_path %> >
+  <%= link_to "アクション", dramas_path(category: drama.category) %> >
+  <%=link_to "#{drama.title}", drama_path(drama) %>
+  <div class="episode-overview col-md-12 col-xs-12">
+    <div class="col-md-4 col-sm-4 portfolio-item box1 row-space-2 center-block text-center">
+      <span style="vertical-align:middle;">
+        <%= image_tag("#{drama.image_url}",:align => 'center') %>
+        <%= link_to image_tag("share_drama"),
+        new_impression_path(impression_type: '0', drama_id: @drama.id) %> 
+      </span>
+    </div>
+    <div class="col-md-8 col-sm-8 portfolio-item">
+      <h4 class="episode-title"><%= @drama.title %></h4>
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <p class="episode-summary"><%= @drama.over_view %></p>
+          <div class="episode-summary row-space-1">
+            <%= link_to "出典：#{drama.source_url}", drama.source_url %>
+          </div>
+          <div class="episode-summary row-space-1">
+            出演：
+            <% @casts.each do |cast| %>
+            <%=link_to(cast.name,cast_path(cast))%>
+            <% end %>
+          </div>
           <div class="row">
-            <div class="col-md-12 col-sm-12">
-              <p class="episode-summary"><%= @drama.over_view %></p>
-              <div class="episode-summary row-space-1">
-                <%= link_to "出典：#{drama.source_url}", drama.source_url %>
-              </div>
-              <div class="episode-summary row-space-1">
-                出演：
-              <% @casts.each do |cast| %>
-              <%=link_to(cast.name,cast_path(cast))%>
-              <% end %>
-              </div>
-              <div>
-                <%= social_share_button_tag(drama.title+"の感想をmitanoで話し合おう！") %>         
-              </div>
-            </div>
-
+           <div class="col-md-1 col-xs-3">
+            <%= social_share_button_tag(drama.title+"の感想をmitanoで話し合おう！") %>         
+          </div>
+          <div class="col-sm-11 col-xs-9 row-space-1 selector_obj">
+            <%= form_tag(watching_statuses_select_path,remote: true) do %>
+            <select class="form-control select" name="watchingStatus" onchange="submit(this.form)">
+              <option value="1 selected="<%='selecte' if @status == 1%>">ステータスを選択</option>
+              <option value="2" <%= "selected=selected" if @status == 2%>">みてる</option>
+              <option value="3" <%= "selected=selected" if @status == 3%>">みた</option>
+              <option value="4" <%= "selected=selected" if @status == 4%>">みたい</option>
+            </select>
+            <%= hidden_field_tag :drama_id, @drama.id %>
+            <% end %>          
           </div>
         </div>
-      </div>  
+
+      </div>
+
     </div>
-  </section>
+  </div>
+</div>  
+</div>
+</section>
 <div class="row-space-1"></div>
 <%= render 'partial/impressionArea', subtitle: 'このドラマに'  %>
