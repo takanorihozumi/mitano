@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-lg-12 col-sm-12 col-xs-12 text-center">
         <h3 class="matome-midasi"><%= @title %></h3>
-        <h4 class="text-primary section-subheading"><%= @subTitle %></h4>
+        <h4 class="page-header"><%= @subTitle %></h4>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
         </span>
         <div class="text-info .bg-info">
           <% if request.from_smartphone? %>
-            <%= link_to truncate(drama.title, length: 13), drama_path(drama) %>
+            <%= link_to truncate(drama.title, length: 12), drama_path(drama) %>
           <% else %>
             <%= link_to drama.title, drama_path(drama) %>
           <% end %>
