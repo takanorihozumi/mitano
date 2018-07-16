@@ -2,11 +2,11 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'mitano',
-      title: 'mitano - 海外ドラマの感想を共有するSNS',
+      title: 'mitano - あなたが見ている海外ドラマの視聴記録を簡単に',
       reverse: true,
       charset: 'utf-8',
-      description: 'ゲームオブスローンズやプリズンブレイクなど、今話題の海外ドラマの感想をエピソード単位でシェアできるSNS「mitano」。みんなの感想やレビューを元に、面白い海外ドラマに出会いましょう',
-      keywords: '海外ドラマ,感想',
+      description: 'ゲームオブスローンズやプリズンブレイクなど、あなたが見ている海外ドラマの視聴記録が簡単に可能になるサービス「mitano」。みんなの視聴リストや感想、レビューを元に、面白い海外ドラマに出会いましょう',
+      keywords: '海外ドラマ,感想,視聴記録',
       canonical: 'http://www.mitano.jp/',
       separator: '|',
       icon: [
@@ -15,8 +15,8 @@ module ApplicationHelper
       ],
       og: {
         site_name: 'mitano',
-        title: 'mitano - 海外ドラマの感想を共有するSNS',
-        description: 'ゲームオブスローンズやプリズンブレイクなど、今話題の海外ドラマの感想をエピソード単位でシェアできるSNS「mitano」。みんなの感想やレビューを元に、面白い海外ドラマに出会いましょう',
+        title: 'mitano - 海外ドラマの視聴記録が簡単に',
+        description: 'ゲームオブスローンズやプリズンブレイクなど、あなたが見ている海外ドラマの視聴記録が簡単に可能になるサービス「mitano」。みんなの視聴リストや感想、レビューを元に、面白い海外ドラマに出会いましょう',
         type: 'website',
         url: 'http://www.mitano.jp/',
         image: image_url('mitano'),

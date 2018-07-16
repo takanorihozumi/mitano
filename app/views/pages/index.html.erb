@@ -8,9 +8,9 @@
 <div class="jumbotron">
   <%= render 'partial/navbar' %>
   <div>
-    <h1 class="display-3" color="white">海外ドラマの感想を共有しよう</h1>
+    <h1 class="display-3" color="white">海外ドラマの視聴記録を簡単に</h1>
     <p class="sub-title hidden-xs">ドラマを観て感じた感動も、興奮も</p>
-    <p class="sub-title hidden-xs">mitanoで同じエピソードを隣で観ているかのように語り合おう</p> 
+    <p class="sub-title hidden-xs">mitanoであなたがみた海外ドラマを視聴記録しましょう</p> 
     <% if !request.from_smartphone? && !user_signed_in? %>
     <div class="col-md-offset-2 col-xs-offset-2 row-space-2">
      <%= link_to "Facebookで登録・ログイン", user_facebook_omniauth_authorize_path, class:"btn btn-facebook facebook-1" %>
@@ -24,20 +24,20 @@
   <section id="services">
     <div class="row row-space-4">
       <div class="col-lg-12 col-sm-12 text-center">
-        <h2 class="section-heading">mitanoは海外ドラマの感想を共有するSNSです</h2>
+        <h2 class="matome-midasi">3つのステータスから、あなただけの視聴リストを作成</h2>
         <% if request.from_smartphone? && !user_signed_in? %>
         <div class="col-md-offset-2 col-xs-offset-1 row-space-1">
          <%= link_to "Facebookで登録・ログイン", user_facebook_omniauth_authorize_path, class:"btn btn-facebook facebook-1" %>
          <%= link_to "twitterで登録・ログイン", user_twitter_omniauth_authorize_path, class:"btn btn-twitter facebook-1 top-layout" %>
        </div>
        <% end %>
-       <h3 class="section-subheading">同じドラマを観ているみんなと感想を共有しましょう</h3>
+       <h3 class="section-subheading">ドラマを探して「みてる」「みた」「みたい」の3つのステータスを設定してみましょう</h3>
      </div>
    </div>
    <div class="row text-center">
     <div class="col-md-4 col-sm-12 row-space-2">
       <%= link_to image_tag('search-icon'),dramas_path %>
-      <h4 class="service-heading">探す</h4>
+      <h4 class="service-heading">1.探す</h4>
       <p class="text-muted">あなたが観ているドラマを探しましょう。</p>
       <%= link_to "話題のドラマ",dramas_path %> /
       <%= link_to "人気キャスト",casts_path %> /
@@ -46,30 +46,69 @@
     </div>
     <div class="col-md-4 row-space-2">
       <%= image_tag 'home-icon'%>
-      <h4 class="service-heading">感想をシェア</h4>
-      <p class="text-muted">ドラマを観たら感想をシェアしてみましょう。</p>
-        <%= link_to "アクション", dramas_path(category: 0) %> /
-        <%= link_to "ファンタジー", dramas_path(category: 1) %> /
-        <%= link_to "ドラマ", dramas_path(category: 2) %> /
-        <%= link_to "韓流", dramas_path(category: 5) %>
+      <h4 class="service-heading">2.視聴ステータスを設定</h4>
+      <p class="text-muted">3つのステータスを設定してマイページで管理</p>
+      <%= link_to "アクション", dramas_path(category: 0) %> /
+      <%= link_to "ファンタジー", dramas_path(category: 1) %> /
+      <%= link_to "ドラマ", dramas_path(category: 2) %> /
+      <%= link_to "韓流", dramas_path(category: 5) %>
     </div>
     <div class="col-md-4 row-space-2">
       <%= image_tag 'colab-icon'%>
-      <h4 class="service-heading">みんなと議論</h4>
-      <p class="text-muted">ドラマを観て感じた興奮をみんなと議論。</p>
+      <h4 class="service-heading">3.視聴メモ</h4>
+      <p class="text-muted">ドラマを観て感じた興奮を視聴記録してみましょう</p>
       <%= link_to "ゲームオブスローンズ",drama_path(6)%> /
       <%= link_to "13の理由",drama_path(24) %> /
       <%= link_to "プリズンブレイク",drama_path(19)%>
     </div>
   </div>
 </section> 
+<div class="top-layout"></div>
+<div class="top-layout"></div>
+
+<section id="about">
+  <div class="col-lg-12 col-sm-12 text-center">
+    <h2 class="matome-midasi">mitanoの基本的な使い方</h2>
+  </div>
+  <div class="row">
+   <div class="col-md-3">
+    <h4 class="">視聴ステータスの設定</h4>
+    <div>
+     各ドラマのページにいき、視聴ステータスを設定しましょう。
+   </div>
+   例：<%= link_to "13の理由",drama_path(24) %> 
+ </div>
+ <div class="col-md-9">
+  <% if request.from_smartphone? && !user_signed_in? %>
+  <%= image_tag('使い方',:size =>"280x150",:align => 'center') %>
+  <% else %>
+  <%= image_tag('使い方',:size =>"820x350",:align => 'center') %>
+  <% end %>
+</div>
+   <div class="col-md-3">
+    <h4 class="">マイページの視聴リストでドラマを管理</h4>
+    <div>
+     視聴ステータスを設定すると、マイページの視聴リストに登録されます
+   </div>
+   例：<%= link_to "佐藤夏菜子(mitano編集部)",user_path(10) %> 
+ </div>
+ <div class="col-md-9">
+  <% if request.from_smartphone? && !user_signed_in? %>
+  <%= image_tag('mypage',:size =>"280x150",:align => 'center') %>
+  <% else %>
+  <%= image_tag('mypage',:size =>"820x350",:align => 'center') %>
+  <% end %>
+</div>
+</section> 
+<div class="top-layout"></div>
+<div class="top-layout"></div>
 
 <section id="portfolio" class="bg-light-gray row-space-top-4 row-space-4">
   <div class="container">
     <div class="row row-space-2">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading">おすすめのレビュー</h3>
-          <h3 class="section-subheading">今話題のドラマの感想です</h4>
+        <h2 class="matome-midasi">みんなの視聴記録</h3>
+          <h3 class="section-subheading">今話題のドラマの視聴記録です</h4>
             <div class="row">
               <div class="col-md-4 col-sm-12 portfolio-item row-space-2">
                 <div class="portfolio-caption">
