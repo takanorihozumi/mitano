@@ -36,7 +36,7 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     user.name = auth.info.name   # assuming the user model has a name
     if auth.provider "twitter" then
-      user.image= auth.info.image
+      user.image= auth.info.image.gsub('normal', 'bigger')
     else
       user.image = "https://graph.facebook.com/#{auth.uid}/picture?type=large" # assuming the user model has an image
     end
