@@ -16,6 +16,11 @@
    </div>
    <div class="col-md-8">
     <h1 class="cast-name"><%=@cast.name%></h1>
+      <div class="row">
+           <div class="col-md-1 col-xs-3">
+            <%= social_share_button_tag(@cast.name+"の出演ドラマをmitanoでチェックしました！ #mitano") %>         
+          </div>
+      </div>
     <div class="episode-summary">
      <%= @cast.over_view%>
    </div>
