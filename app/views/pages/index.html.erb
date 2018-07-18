@@ -95,7 +95,7 @@
    例：<%= link_to "佐藤夏菜子(mitano編集部)",user_path(10) %> 
  </div>
  <div class="col-md-9">
-  <% if request.from_smartphone? && !user_signed_in? %>
+  <% if request.from_smartphone? %>
   <%= image_tag('mypage',:size =>"280x150",:align => 'center') %>
   <% else %>
   <%= image_tag('mypage',:size =>"820x350",:align => 'center') %>
