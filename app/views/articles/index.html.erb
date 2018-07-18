@@ -12,7 +12,7 @@
       <!-- Blog Post -->
       <div class="card mb-4 box1">
         <%size = "720x300" %>
-        <%size = "260x150" if request.from_smartphone?%>
+        <%size = "320x150" if request.from_smartphone?%>
         <%= link_to image_tag(article.image,:size =>size),article_path(article) %>
         <div class="card-body">
           <h2 class="card-title"><%=link_to(article.title,article_path(article))%></h2>
