@@ -80,7 +80,7 @@
    例：<%= link_to "13の理由",drama_path(24) %> 
  </div>
  <div class="col-md-9">
-  <% if request.from_smartphone? && !user_signed_in? %>
+  <% if request.from_smartphone? %>
   <%= image_tag('使い方',:size =>"280x150",:align => 'center') %>
   <% else %>
   <%= image_tag('使い方',:size =>"820x350",:align => 'center') %>
