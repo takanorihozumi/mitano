@@ -81,7 +81,7 @@
  </div>
  <div class="col-md-9">
   <% if request.from_smartphone? %>
-  <%= image_tag('使い方',:size =>"280x150",:align => 'center') %>
+  <%= image_tag('使い方',:class =>"sp-image",:align => 'center') %>
   <% else %>
   <%= image_tag('使い方',:size =>"820x350",:align => 'center') %>
   <% end %>
@@ -96,7 +96,7 @@
  </div>
  <div class="col-md-9">
   <% if request.from_smartphone? %>
-  <%= image_tag('mypage',:size =>"280x150",:align => 'center') %>
+  <%= image_tag('mypage',:class =>"sp-image",:align => 'center') %>
   <% else %>
   <%= image_tag('mypage',:size =>"820x350",:align => 'center') %>
   <% end %>

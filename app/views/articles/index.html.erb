@@ -11,9 +11,11 @@
 
       <!-- Blog Post -->
       <div class="card mb-4 box1">
-        <%size = "720x300" %>
-        <%size = "320x150" if request.from_smartphone?%>
-        <%= link_to image_tag(article.image,:size =>size),article_path(article) %>
+        <% if request.from_smartphone? %>
+          <%= link_to image_tag(article.image,:class =>"sp-image"),article_path(article) %>
+        <% else %>
+          <%= link_to image_tag(article.image,:size =>"720x300"),article_path(article) %>
+        <% end %>
         <div class="card-body">
           <h2 class="card-title"><%=link_to(article.title,article_path(article))%></h2>
           <p class="card-text"><%=article.heading%></p>
