@@ -23,7 +23,7 @@
         </div>
         <div class="card-footer">
           更新：<%=article.updated_at.strftime("%Y年%m月%d日%H時%M分") %>by
-          <a href="#">mitano編集部</a>
+          <%= link_to "佐藤夏菜子(mitano編集部)",user_path(10) %>
         </div>
       </div>
       <% end %>

@@ -1,4 +1,5 @@
-Feed.create(name:"IGN JAPAN/ストレンジャー・シングス",url:"http://jp.ign.com/stranger-things.xml")
+ArticleContent.create(article_id: 6,drama_id: 62,title:"可愛いキャスト、イケメンキャストが集結！",content:"主役のライアーズ女子達がすごく可愛い！ケイレブやノエルも超カッコいいです。\n現地ではファッション誌の表紙を飾ることも多々あり、\n若者たちに大人気のキャストが集結していてストーリーもさることながらみているだけで魅力的な作品です。\n",created_at: Time.zone.now,updated_at: Time.zone.now)
+
 
 # Cast.create(name:"ソフィー・ターナー",over_view:"ソフィー・ターナー（Sophie Turner）は、イギリスの女優。イングランド・ノーサンプトンシャーノーザンプトンの出身で、2歳になったときイングランド・ウォリックシャー ウォリックに移り、育つ。地元ウォリックにある学校にて学び、のちにキングス・ハイスクールに通う。子供のころから役者を志しており、ウォリックにあるプレイボックスシアターで演技を学ぶ。2011年、アメリカ合衆国HBOのテレビドラマシリーズ『ゲーム・オブ・スローンズ』で女優デビュー、サンサ・スターク役を演じ、注目を集め、現在も出演中である。2013年、主要な役柄で英西合作スリラー映画『Another Me』にジョナサン・リース＝マイヤーズ、リス・エヴァンス、クレア・フォーラニらとともに出演。",image_url:"",movie_id: ,birthday:"1996年2月21日")
 # DramaCastRelation.create(drama_id:,cast_id:)
