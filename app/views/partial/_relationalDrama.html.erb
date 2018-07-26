@@ -7,14 +7,13 @@
       <% @dramas.each do |drama|%>
 
       <% if drama.id != 0 %>
-      <div class="">
-        <span>
-          <%= link_to image_tag("#{drama.image_url}"), drama_path(drama)  %>
-        </span>
-        <p class="text-info .bg-info"><%= drama.title =%></p>
+      <div class="col-md-6">
+        <div class="row-space-2">
+          <%= link_to image_tag("#{drama.image_url}",:style =>"width:100%;"), drama_path(drama)  %>
+        </div>
       </div>
       <% end %>
       <% end %>
-    </ul> 
+    </ul>
   </div>
 </div>
