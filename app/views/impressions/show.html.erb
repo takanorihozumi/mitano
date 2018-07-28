@@ -1,37 +1,33 @@
 <%= render 'partial/navbar' %>
 <div class="container">
-<div class="row">
-  <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-    <div class="row">
-      <div class="col-md-12 col-xs-12">
-        <h1><small><%=link_to "#{@impression.drama.title}の視聴記録・感想・評価", drama_path(@impression.drama) %></small></h1>
-        <p><%=link_to "#{@impression.season.title}", season_path(@impression.season) %></p>
-        <p><%=link_to "#{@impression.episode.episode_name}", episode_path(@impression.episode) %></p>
-      </div>
-    </div>
-
-  </div>
-  <div id="impression_area">
-  <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: false,isShowNewsArea: false  %>
-  </div>
-</div>
-<div class="row">
-  <!-- main -->
-  <div class="col-md-12 col-md-offset-2 col-xs-12">
-    <!-- apply custom style -->
+  <div class="row">
     <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
-      <h1><small>コメント一覧</small></h1>
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <h1><small><%=link_to "#{@impression.drama.title}の視聴記録・感想・評価", drama_path(@impression.drama) %></small></h1>
+          <p><%=link_to "#{@impression.season.title}", season_path(@impression.season) %></p>
+          <p><%=link_to "#{@impression.episode.episode_name}", episode_path(@impression.episode) %></p>
+        </div>
+      </div>
+
     </div>
-    <div id="comments_area">
-      <% if !@comments.empty? %>
-      <%= render partial: 'comments/index',locals: {  comments: @comments } %>
-      <% end %>
+    <div id="impression_area">
+      <%= render  "impressions/impression", impressions: @impressions, isShowCommentBtn: false,isShowNewsArea: false  %>
     </div>
-    <% if user_signed_in? %>
-    <%= render partial: 'comments/form', locals: { comment: @comment, impression: @impression } %>
-    <% end %>
   </div>
-</div>
-</div>
-</div>
+  <div class="row">
+    <!-- main -->
+      <!-- apply custom style -->
+      <div class="page-header" style="margin-top:-30px;padding-bottom:0px;">
+        <h1><small>コメント一覧</small></h1>
+      </div>
+      <div id="comments_area">
+        <% if !@comments.empty? %>
+        <%= render partial: 'comments/index',locals: {  comments: @comments } %>
+        <% end %>
+      </div>
+      <% if user_signed_in? %>
+      <%= render partial: 'comments/form', locals: { comment: @comment, impression: @impression } %>
+      <% end %>
+  </div>
 </div>

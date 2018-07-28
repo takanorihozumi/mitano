@@ -1,9 +1,7 @@
-<div class="row">
   <div class="page-header" style="margin-top:0px;padding-bottom:0px;">
-    <h1><small>この感想にコメントする</small></h1>
+    <h2><small>この感想にコメントする</small></h2>
   </div>
   <%= form_with(model: [impression, comment] ) do |form| %>
   <%= form.text_area :content, :class => 'form-control' %>
   <%= form.submit "コメント", :class => "btn square_btn top-layout row-space-1" %>
   <% end %>
-</div>
