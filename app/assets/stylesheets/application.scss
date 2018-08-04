@@ -65,7 +65,7 @@ article-content {
     font-weight: bold;
 }
 .box26 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -194,9 +194,9 @@ body {
 
 @media (min-width: 992px){
 .profile-full {
-        width: 100%;
-    }    
-}   
+        width: 70%;
+    }
+}
 .profile-0 {
     width: 28px;
     height: 28px;
@@ -368,7 +368,7 @@ footer ul.quicklinks {
 
 .says {
     display: inline-block;
-    position: relative; 
+    position: relative;
     margin: 5px 0 0 105px;
     padding: 17px 13px;
     border-radius: 12px;
@@ -379,7 +379,7 @@ footer ul.quicklinks {
     content: "";
     display: inline-block;
     position: absolute;
-    top: 18px; 
+    top: 18px;
     left: -24px;
     border: 12px solid transparent;
     border-right: 12px solid #d7ebfe;
@@ -415,7 +415,7 @@ footer ul.quicklinks {
     border: solid 3px #000000;
 }
 .box1 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -480,7 +480,7 @@ footer ul.quicklinks {
     border-right: solid 5px #5375bd;/*ボタン色より暗めに*/
 }
 
-.square_btn:before{    
+.square_btn:before{
     content: " ";
     position: absolute;
     bottom: -5px;
@@ -494,7 +494,7 @@ footer ul.quicklinks {
 
 }
 
-.square_btn:after{   
+.square_btn:after{
     content: " ";
     position: absolute;
     top: -1px;
@@ -526,11 +526,11 @@ footer ul.quicklinks {
     border-left: solid 10px #ffc06e;
 }
 .comment-layout  p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 .top-layout {
-    margin-top: 15px; 
+    margin-top: 15px;
 }
 .box7{
     padding: 0.5em 1em;
@@ -543,7 +543,7 @@ footer ul.quicklinks {
 
 }
 .box7 p {
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
@@ -645,4 +645,3 @@ footer ul.quicklinks {
   font-size: 2.4rem;
 }
 }
- 
