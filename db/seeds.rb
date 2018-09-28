@@ -1,4 +1,14 @@
-ArticleContent.create(article_id: 6,drama_id: 62,title:"可愛いキャスト、イケメンキャストが集結！",content:"主役のライアーズ女子達がすごく可愛い！ケイレブやノエルも超カッコいいです。\n現地ではファッション誌の表紙を飾ることも多々あり、\n若者たちに大人気のキャストが集結していてストーリーもさることながらみているだけで魅力的な作品です。\n",created_at: Time.zone.now,updated_at: Time.zone.now)
+# Cast.create(name:"マイロ・ヴィンティミリア",over_view:"マイロ・アンソニー・ヴィンティミリア（Milo Anthony Ventimiglia）は、アメリカ合衆国の俳優。身長175cm。マイロ・ヴェンティミリアと表記されることもある。",image_url:"https://image.tmdb.org/t/p/original/maJeS6bA6ku21rSRceISQtwHL2h.jpg",movie_id: 16501,birthday:"1977年7月8日")
+Drama.create(title: "ザ・ミスト",over_view: "のどかな田舎町に突然発生した白い霧。その中に潜む正体不明の生物を発見した住人たちを、悪夢が容赦なく追い詰める…。スティーヴン・キング原作の新シリーズ。netflixオリジナル",image_url: "https://images-na.ssl-images-amazon.com/images/I/51fOL6Jx%2BZL._SY300_.jpg", seasons_count: 0,source_url: 'https://www.netflix.com/jp/title/80135414',category: 1)
+
+
+
+# ArticleContent.create(article_id: 7,drama_id: 70,title:"感動する海外ドラマといえば文句なしでTHIS IS US！",content:"泣けるし驚きの展開の連続で文句の付け所がないドラマ。\n「生」と「死」についての視点をオリジナルに味付けして描くことで、抵抗なく受け入れられる温かい人間ドラマになっています。\n是非皆さんに見ていただきたいドラマ\n",created_at: Time.zone.now,updated_at: Time.zone.now)
+
+# Article.create(title: "",image: "",heading: "",trailer: "",created_at: Time.zone.now,updated_at: Time.zone.now)
+
+# ArticleContent.create(article_id: 7,drama_id: ,title:"",content:"\n\n\n",created_at: Time.zone.now,updated_at: Time.zone.now)
+# ArticleContent.create(article_id: 7,drama_id: ,title:"",content:"\n\n\n",created_at: Time.zone.now,updated_at: Time.zone.now)
 
 
 # Cast.create(name:"ソフィー・ターナー",over_view:"ソフィー・ターナー（Sophie Turner）は、イギリスの女優。イングランド・ノーサンプトンシャーノーザンプトンの出身で、2歳になったときイングランド・ウォリックシャー ウォリックに移り、育つ。地元ウォリックにある学校にて学び、のちにキングス・ハイスクールに通う。子供のころから役者を志しており、ウォリックにあるプレイボックスシアターで演技を学ぶ。2011年、アメリカ合衆国HBOのテレビドラマシリーズ『ゲーム・オブ・スローンズ』で女優デビュー、サンサ・スターク役を演じ、注目を集め、現在も出演中である。2013年、主要な役柄で英西合作スリラー映画『Another Me』にジョナサン・リース＝マイヤーズ、リス・エヴァンス、クレア・フォーラニらとともに出演。",image_url:"",movie_id: ,birthday:"1996年2月21日")
