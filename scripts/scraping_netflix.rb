@@ -7,7 +7,7 @@ class ScrapingFox
   agent.user_agent_alias = "Windows Mozilla"
   page = agent.get(url)
   titles = page.search('.ttl-epi-item__name')
-  contents = page.search('.ttl-epi-item__icons')
+  contents = page.search('.title-episode-synopsis')
   total_episode.times do |i|
     zenkaku = i.to_s
     del1 =titles[i].inner_text.delete('第#{zenkaku}話')
@@ -23,11 +23,10 @@ end
 # 1.全シーズンのエピソード数を指定(シーズンファイナルから順に登録)
 
 # ザ・フォロイング
-ScrapingFox.execute("https://video.unext.jp/title/SID0003983",22)
+ScrapingFox.execute("https://www.netflix.com/jp/title/80135414",10)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1498",16,21)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/1759",16,22)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/2069",16,23)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/20091",16,24)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/20608",16,25)
 # ScrapingFox.execute("http://tv.foxjapan.com/fox/program/episode/index/prgm_id/21056",16,26)
-
