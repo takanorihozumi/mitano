@@ -14,6 +14,10 @@ gem 'omniauth-facebook'
 gem 'activerecord-session_store'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
+gem "ffi", ">= 1.9.24"
+gem "rubyzip", ">= 1.2.2"
+gem "loofah", ">= 2.2.3"
+
 gem 'toastr-rails'
 gem 'font-awesome-rails'
 
